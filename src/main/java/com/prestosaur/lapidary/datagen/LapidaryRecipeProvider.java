@@ -1,18 +1,14 @@
 package com.prestosaur.lapidary.datagen;
 
-import com.prestosaur.lapidary.Lapidary;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.*;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -28,8 +24,8 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer)
     {
-        addTriadRecipies(consumer, LapidaryBlocks.NETHERRACK_STAIRS, LapidaryBlocks.NETHERRACK_SLAB, LapidaryBlocks.NETHERRACK_WALL, Blocks.NETHERRACK);
-        addTriadRecipies(consumer, LapidaryBlocks.END_STONE_STAIRS, LapidaryBlocks.END_STONE_SLAB, LapidaryBlocks.END_STONE_WALL, Blocks.END_STONE);
+        addTriadRecipes(consumer, LapidaryBlocks.NETHERRACK_STAIRS, LapidaryBlocks.NETHERRACK_SLAB, LapidaryBlocks.NETHERRACK_WALL, Blocks.NETHERRACK);
+        addTriadRecipes(consumer, LapidaryBlocks.END_STONE_STAIRS, LapidaryBlocks.END_STONE_SLAB, LapidaryBlocks.END_STONE_WALL, Blocks.END_STONE);
         smeltingResultFromBase(consumer, LapidaryBlocks.CRACKED_END_STONE_BRICKS.get(), Blocks.END_STONE_BRICKS);
     }
 
@@ -67,7 +63,7 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
         addStoneCutting(consumer, result, material, 1);
     }
 
-    private void addTriadRecipies(Consumer<FinishedRecipe> consumer, RegistryObject<StairBlock> stair, RegistryObject<SlabBlock> slab, RegistryObject<WallBlock> wall, ItemLike material)
+    private void addTriadRecipes(Consumer<FinishedRecipe> consumer, RegistryObject<StairBlock> stair, RegistryObject<SlabBlock> slab, RegistryObject<WallBlock> wall, ItemLike material)
     {
         addStairRecipes(consumer, stair, material);
         addSlabRecipes(consumer, slab, material);
