@@ -29,6 +29,8 @@ public class LapidaryCreativeTabs
                 output.accept(LapidaryBlocks.END_STONE_STAIRS.get());
                 output.accept(LapidaryBlocks.END_STONE_SLAB.get());
                 output.accept(LapidaryBlocks.CRACKED_END_STONE_BRICKS.get());
+
+                output.accept(LapidaryBlocks.CRACKED_PURPUR_BLOCK.get());
             }).build());
 
     @SubscribeEvent
@@ -45,6 +47,8 @@ public class LapidaryCreativeTabs
             putAfter(event, LapidaryBlocks.END_STONE_SLAB.get(), LapidaryBlocks.END_STONE_STAIRS.get());
             putAfter(event, LapidaryBlocks.END_STONE_WALL.get(), LapidaryBlocks.END_STONE_SLAB.get());
             putAfter(event, LapidaryBlocks.CRACKED_END_STONE_BRICKS.get(), Items.END_STONE_BRICKS);
+
+            putAfter(event, LapidaryBlocks.CRACKED_PURPUR_BLOCK.get(), Items.PURPUR_BLOCK);
         }
     }
 

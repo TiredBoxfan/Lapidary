@@ -31,7 +31,9 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
                 LapidaryBlocks.END_STONE_STAIRS.get(),
                 LapidaryBlocks.END_STONE_SLAB.get(),
                 LapidaryBlocks.END_STONE_WALL.get(),
-                LapidaryBlocks.CRACKED_END_STONE_BRICKS.get()
+                LapidaryBlocks.CRACKED_END_STONE_BRICKS.get(),
+
+                LapidaryBlocks.CRACKED_PURPUR_BLOCK.get()
         );
         this.tag(BlockTags.SLABS).add(
                 LapidaryBlocks.NETHERRACK_SLAB.get(),

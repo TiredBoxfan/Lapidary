@@ -34,6 +34,8 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
         slabAllWithItem(LapidaryBlocks.END_STONE_SLAB, new ResourceLocation("block/end_stone"));
         wallAllWithItem(LapidaryBlocks.END_STONE_WALL, new ResourceLocation("block/end_stone"));
         cubeAllWithItem(LapidaryBlocks.CRACKED_END_STONE_BRICKS);
+
+        cubeAllWithItem(LapidaryBlocks.CRACKED_PURPUR_BLOCK);
     }
 
     // Creates a simple block and item with the same texture on each side.

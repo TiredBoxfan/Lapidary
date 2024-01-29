@@ -34,6 +34,9 @@ public class LapidaryBlocks
     public static final RegistryObject<Block> CRACKED_END_STONE_BRICKS = registerBlock("cracked_end_stone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.END_STONE_BRICKS)));
 
+    public static final RegistryObject<Block> CRACKED_PURPUR_BLOCK = registerBlock("cracked_purpur_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.PURPUR_BLOCK)));
+
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block)
     {
         return LapidaryItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
