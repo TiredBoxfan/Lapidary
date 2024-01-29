@@ -1,7 +1,10 @@
 {
   "itemGroup.lapidary.building_blocks": "Lapidary Building Blocks",
 
-  "block.lapidary.cracked_end_stone_bricks": "Cracked End Stone Bricks",
   "block.lapidary.netherrack_stairs": "Netherrack Stairs",
-  "block.lapidary.netherrack_slab": "Netherrack Slab"
+  "block.lapidary.netherrack_slab": "Netherrack Slab",
+
+  "block.lapidary.end_stone_stairs": "End Stone Stairs",
+  "block.lapidary.end_stone_slab": "End Stone Slab",
+  "block.lapidary.cracked_end_stone_bricks": "Cracked End Stone Bricks"
 }

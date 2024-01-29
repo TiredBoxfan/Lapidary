@@ -24,15 +24,20 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
     protected void addTags(HolderLookup.Provider provider)
     {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
-                LapidaryBlocks.CRACKED_END_STONE_BRICKS.get(),
                 LapidaryBlocks.NETHERRACK_STAIRS.get(),
-                LapidaryBlocks.NETHERRACK_SLAB.get()
+                LapidaryBlocks.NETHERRACK_SLAB.get(),
+
+                LapidaryBlocks.END_STONE_STAIRS.get(),
+                LapidaryBlocks.END_STONE_SLAB.get(),
+                LapidaryBlocks.CRACKED_END_STONE_BRICKS.get()
         );
         this.tag(BlockTags.SLABS).add(
-                LapidaryBlocks.NETHERRACK_SLAB.get()
+                LapidaryBlocks.NETHERRACK_SLAB.get(),
+                LapidaryBlocks.END_STONE_SLAB.get()
         );
         this.tag(BlockTags.STAIRS).add(
-                LapidaryBlocks.NETHERRACK_STAIRS.get()
+                LapidaryBlocks.NETHERRACK_STAIRS.get(),
+                LapidaryBlocks.END_STONE_STAIRS.get()
         );
         this.tag(BlockTags.INFINIBURN_OVERWORLD).add(
                 LapidaryBlocks.NETHERRACK_STAIRS.get(),
@@ -48,9 +53,11 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
         );
         this.tag(BlockTags.DRAGON_IMMUNE).add(
                 Blocks.END_STONE_BRICKS,
-                Blocks.END_STONE_BRICK_SLAB,
                 Blocks.END_STONE_BRICK_STAIRS,
+                Blocks.END_STONE_BRICK_SLAB,
                 Blocks.END_STONE_BRICK_WALL,
+                LapidaryBlocks.END_STONE_STAIRS.get(),
+                LapidaryBlocks.END_STONE_SLAB.get(),
                 LapidaryBlocks.CRACKED_END_STONE_BRICKS.get()
         );
     }

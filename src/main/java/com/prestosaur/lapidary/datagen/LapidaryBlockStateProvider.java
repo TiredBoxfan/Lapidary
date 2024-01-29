@@ -25,9 +25,12 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
     @Override
     protected void registerStatesAndModels()
     {
-        cubeAllWithItem(LapidaryBlocks.CRACKED_END_STONE_BRICKS);
         stairAllWithItem(LapidaryBlocks.NETHERRACK_STAIRS, new ResourceLocation("block/netherrack"));
         slabAllWithItem(LapidaryBlocks.NETHERRACK_SLAB, new ResourceLocation("block/netherrack"));
+
+        stairAllWithItem(LapidaryBlocks.END_STONE_STAIRS, new ResourceLocation("block/end_stone"));
+        slabAllWithItem(LapidaryBlocks.END_STONE_SLAB, new ResourceLocation("block/end_stone"));
+        cubeAllWithItem(LapidaryBlocks.CRACKED_END_STONE_BRICKS);
     }
 
     // Creates a simple block and item with the same texture on each side.

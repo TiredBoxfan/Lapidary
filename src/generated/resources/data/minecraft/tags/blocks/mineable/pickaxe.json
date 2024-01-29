@@ -1,7 +1,9 @@
 {
   "values": [
-    "lapidary:cracked_end_stone_bricks",
     "lapidary:netherrack_stairs",
-    "lapidary:netherrack_slab"
+    "lapidary:netherrack_slab",
+    "lapidary:end_stone_stairs",
+    "lapidary:end_stone_slab",
+    "lapidary:cracked_end_stone_bricks"
   ]
 }
