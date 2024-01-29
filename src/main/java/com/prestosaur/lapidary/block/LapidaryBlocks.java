@@ -29,6 +29,8 @@ public class LapidaryBlocks
             () -> new StairBlock(Blocks.END_STONE.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.END_STONE)));
     public static final RegistryObject<SlabBlock> END_STONE_SLAB = registerBlock("end_stone_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE)));
+    public static final RegistryObject<WallBlock> END_STONE_WALL = registerBlock("end_stone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE)));
     public static final RegistryObject<Block> CRACKED_END_STONE_BRICKS = registerBlock("cracked_end_stone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.END_STONE_BRICKS)));
 

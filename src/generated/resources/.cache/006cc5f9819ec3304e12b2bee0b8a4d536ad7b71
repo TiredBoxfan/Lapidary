@@ -1,9 +1,9 @@
-// 1.20.1	2024-01-29T14:18:15.6370235	Tags for minecraft:block mod id lapidary
+// 1.20.1	2024-01-29T14:28:56.783164	Tags for minecraft:block mod id lapidary
 92fca152467bd91179ac63190f36d0da8b4a5836 data/minecraft/tags/blocks/dragon_immune.json
 144578591f71464debdc17daa56316bcb22b094d data/minecraft/tags/blocks/infiniburn_end.json
 144578591f71464debdc17daa56316bcb22b094d data/minecraft/tags/blocks/infiniburn_nether.json
 144578591f71464debdc17daa56316bcb22b094d data/minecraft/tags/blocks/infiniburn_overworld.json
-64f2aec37bd6043bcf062c06efcf884e242cc8ec data/minecraft/tags/blocks/mineable/pickaxe.json
+696d83fa3f5bba8a2d8e844db01098c45c55170b data/minecraft/tags/blocks/mineable/pickaxe.json
 62eaf52345286d7c5459179b931239d4d7016cbc data/minecraft/tags/blocks/slabs.json
 d7cd05352154e953b5543bdc72a035c4c0abf108 data/minecraft/tags/blocks/stairs.json
-c6b19314f8516da58833b9c776c3f527ee773569 data/minecraft/tags/blocks/walls.json
+71b25f9f5b4fc2ab3965fa4cddbbfe34725b8808 data/minecraft/tags/blocks/walls.json

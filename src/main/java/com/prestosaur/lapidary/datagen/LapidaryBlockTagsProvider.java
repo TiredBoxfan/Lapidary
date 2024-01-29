@@ -30,6 +30,7 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
 
                 LapidaryBlocks.END_STONE_STAIRS.get(),
                 LapidaryBlocks.END_STONE_SLAB.get(),
+                LapidaryBlocks.END_STONE_WALL.get(),
                 LapidaryBlocks.CRACKED_END_STONE_BRICKS.get()
         );
         this.tag(BlockTags.SLABS).add(
@@ -41,7 +42,8 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
                 LapidaryBlocks.END_STONE_STAIRS.get()
         );
         this.tag(BlockTags.WALLS).add(
-                LapidaryBlocks.NETHERRACK_WALL.get()
+                LapidaryBlocks.NETHERRACK_WALL.get(),
+                LapidaryBlocks.END_STONE_WALL.get()
         );
         this.tag(BlockTags.INFINIBURN_OVERWORLD).add(
                 LapidaryBlocks.NETHERRACK_STAIRS.get(),

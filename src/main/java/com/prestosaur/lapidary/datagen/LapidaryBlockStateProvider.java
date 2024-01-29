@@ -32,6 +32,7 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
 
         stairAllWithItem(LapidaryBlocks.END_STONE_STAIRS, new ResourceLocation("block/end_stone"));
         slabAllWithItem(LapidaryBlocks.END_STONE_SLAB, new ResourceLocation("block/end_stone"));
+        wallAllWithItem(LapidaryBlocks.END_STONE_WALL, new ResourceLocation("block/end_stone"));
         cubeAllWithItem(LapidaryBlocks.CRACKED_END_STONE_BRICKS);
     }
 

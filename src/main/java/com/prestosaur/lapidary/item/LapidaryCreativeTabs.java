@@ -43,6 +43,7 @@ public class LapidaryCreativeTabs
 
             putAfter(event, LapidaryBlocks.END_STONE_STAIRS.get(), Items.END_STONE);
             putAfter(event, LapidaryBlocks.END_STONE_SLAB.get(), LapidaryBlocks.END_STONE_STAIRS.get());
+            putAfter(event, LapidaryBlocks.END_STONE_WALL.get(), LapidaryBlocks.END_STONE_SLAB.get());
             putAfter(event, LapidaryBlocks.CRACKED_END_STONE_BRICKS.get(), Items.END_STONE_BRICKS);
         }
     }
