@@ -8,6 +8,7 @@ import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -27,6 +28,7 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
     {
         stairAllWithItem(LapidaryBlocks.NETHERRACK_STAIRS, new ResourceLocation("block/netherrack"));
         slabAllWithItem(LapidaryBlocks.NETHERRACK_SLAB, new ResourceLocation("block/netherrack"));
+        wallAllWithItem(LapidaryBlocks.NETHERRACK_WALL, new ResourceLocation("block/netherrack"));
 
         stairAllWithItem(LapidaryBlocks.END_STONE_STAIRS, new ResourceLocation("block/end_stone"));
         slabAllWithItem(LapidaryBlocks.END_STONE_SLAB, new ResourceLocation("block/end_stone"));
@@ -63,6 +65,15 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
         slabBlock(slab.get(), texture, texture);
         // Do Item Model.
         simpleBlockItem(slab);
+    }
+
+    // Creates a wall with an item where all sides are the same.
+    private void wallAllWithItem(RegistryObject<WallBlock> wall, ResourceLocation texture)
+    {
+        // Do Block Model.
+        wallBlock(wall.get(), texture);
+        // Do Item Model.
+        itemModels().wallInventory(wall.getId().getPath(), texture);
     }
 }
 

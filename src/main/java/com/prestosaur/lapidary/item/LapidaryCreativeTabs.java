@@ -24,6 +24,7 @@ public class LapidaryCreativeTabs
             .displayItems((features, output) -> {
                 output.accept(LapidaryBlocks.NETHERRACK_STAIRS.get());
                 output.accept(LapidaryBlocks.NETHERRACK_SLAB.get());
+                output.accept(LapidaryBlocks.NETHERRACK_WALL.get());
 
                 output.accept(LapidaryBlocks.END_STONE_STAIRS.get());
                 output.accept(LapidaryBlocks.END_STONE_SLAB.get());
@@ -38,6 +39,7 @@ public class LapidaryCreativeTabs
         {
             putAfter(event, LapidaryBlocks.NETHERRACK_STAIRS.get(), Items.NETHERRACK);
             putAfter(event, LapidaryBlocks.NETHERRACK_SLAB.get(), LapidaryBlocks.NETHERRACK_STAIRS.get());
+            putAfter(event, LapidaryBlocks.NETHERRACK_WALL.get(), LapidaryBlocks.NETHERRACK_SLAB.get());
 
             putAfter(event, LapidaryBlocks.END_STONE_STAIRS.get(), Items.END_STONE);
             putAfter(event, LapidaryBlocks.END_STONE_SLAB.get(), LapidaryBlocks.END_STONE_STAIRS.get());

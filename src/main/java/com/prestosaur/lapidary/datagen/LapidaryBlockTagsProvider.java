@@ -26,6 +26,7 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 LapidaryBlocks.NETHERRACK_STAIRS.get(),
                 LapidaryBlocks.NETHERRACK_SLAB.get(),
+                LapidaryBlocks.NETHERRACK_WALL.get(),
 
                 LapidaryBlocks.END_STONE_STAIRS.get(),
                 LapidaryBlocks.END_STONE_SLAB.get(),
@@ -38,6 +39,9 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
         this.tag(BlockTags.STAIRS).add(
                 LapidaryBlocks.NETHERRACK_STAIRS.get(),
                 LapidaryBlocks.END_STONE_STAIRS.get()
+        );
+        this.tag(BlockTags.WALLS).add(
+                LapidaryBlocks.NETHERRACK_WALL.get()
         );
         this.tag(BlockTags.INFINIBURN_OVERWORLD).add(
                 LapidaryBlocks.NETHERRACK_STAIRS.get(),

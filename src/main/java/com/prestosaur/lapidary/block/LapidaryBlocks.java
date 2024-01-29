@@ -22,6 +22,8 @@ public class LapidaryBlocks
             () -> new StairBlock(Blocks.NETHERRACK.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.NETHERRACK)));
     public static final RegistryObject<SlabBlock> NETHERRACK_SLAB = registerBlock("netherrack_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK)));
+    public static final RegistryObject<WallBlock> NETHERRACK_WALL = registerBlock("netherrack_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK)));
 
     public static final RegistryObject<StairBlock> END_STONE_STAIRS = registerBlock("end_stone_stairs",
             () -> new StairBlock(Blocks.END_STONE.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.END_STONE)));
