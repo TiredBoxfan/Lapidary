@@ -1,2 +1,7 @@
-// 1.20.1	2024-01-28T23:52:03.0489105	Tags for minecraft:block mod id lapidary
-42105b147d3cefd58748719699b0717ad39d8905 data/minecraft/tags/blocks/mineable/pickaxe.json
+// 1.20.1	2024-01-29T03:22:14.3191724	Tags for minecraft:block mod id lapidary
+f8b95e791765558731d6ed23005ac4b81299b801 data/minecraft/tags/blocks/dragon_immune.json
+7e03b5ea729584c7cf3a34c248f8a82f778d2e94 data/minecraft/tags/blocks/infiniburn_end.json
+7e03b5ea729584c7cf3a34c248f8a82f778d2e94 data/minecraft/tags/blocks/infiniburn_nether.json
+7e03b5ea729584c7cf3a34c248f8a82f778d2e94 data/minecraft/tags/blocks/infiniburn_overworld.json
+35e53a247ea5795aa534d5ad95907d67a5034529 data/minecraft/tags/blocks/mineable/pickaxe.json
+7e03b5ea729584c7cf3a34c248f8a82f778d2e94 data/minecraft/tags/blocks/slabs.json

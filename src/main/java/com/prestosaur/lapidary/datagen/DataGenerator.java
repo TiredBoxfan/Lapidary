@@ -26,7 +26,6 @@ public class DataGenerator
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         generator.addProvider(true, new LapidaryBlockStateProvider(packOutput, existingFileHelper));
-
         generator.addProvider(true, new LapidaryBlockTagsProvider(packOutput, lookupProvider, Lapidary.MODID, existingFileHelper));
 
         generator.addProvider(true, new LootTableProvider(

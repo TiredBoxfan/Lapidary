@@ -5,6 +5,7 @@ import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -23,7 +24,20 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
     protected void addTags(HolderLookup.Provider provider)
     {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
-                LapidaryBlocks.CRACKED_END_STONE_BRICKS.get()
+                LapidaryBlocks.CRACKED_END_STONE_BRICKS.get(),
+                LapidaryBlocks.NETHERRACK_SLAB.get()
+        );
+        this.tag(BlockTags.SLABS).add(
+                LapidaryBlocks.NETHERRACK_SLAB.get()
+        );
+        this.tag(BlockTags.INFINIBURN_OVERWORLD).add(
+                LapidaryBlocks.NETHERRACK_SLAB.get()
+        );
+        this.tag(BlockTags.INFINIBURN_NETHER).add(
+                LapidaryBlocks.NETHERRACK_SLAB.get()
+        );
+        this.tag(BlockTags.INFINIBURN_END).add(
+                LapidaryBlocks.NETHERRACK_SLAB.get()
         );
         this.tag(BlockTags.DRAGON_IMMUNE).add(
                 Blocks.END_STONE_BRICKS,

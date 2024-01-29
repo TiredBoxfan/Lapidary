@@ -1,4 +1,8 @@
-// 1.20.1	2024-01-28T23:14:09.7535343	Block States: lapidary
+// 1.20.1	2024-01-29T03:14:38.845385	Block States: lapidary
 aa5fed6ff7f0d891c89f5076284802374c81b708 assets/lapidary/blockstates/cracked_end_stone_bricks.json
+aa2c1dd073311b477ed3b4348fe49c709ece0b52 assets/lapidary/blockstates/netherrack_slab.json
 72eaeae0ea54e796f39c70623d25d05b84081a32 assets/lapidary/models/block/cracked_end_stone_bricks.json
+dca36b38781fb8a04b6596cbc085686b8c39e09c assets/lapidary/models/block/netherrack_slab.json
+94ef66eae255a15e1ed09e0de1cb661fc4382c5e assets/lapidary/models/block/netherrack_slab_top.json
 9425e5d5bd97763de3d68baa4cd45cee8bc3ccdf assets/lapidary/models/item/cracked_end_stone_bricks.json
+cc599048092fcd6aefe1db748dea7b7d8fccf47d assets/lapidary/models/item/netherrack_slab.json

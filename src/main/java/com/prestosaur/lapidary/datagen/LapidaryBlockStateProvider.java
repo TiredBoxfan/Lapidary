@@ -3,9 +3,15 @@ package com.prestosaur.lapidary.datagen;
 import com.prestosaur.lapidary.Lapidary;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ItemModelProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class LapidaryBlockStateProvider extends BlockStateProvider
@@ -19,12 +25,30 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
     protected void registerStatesAndModels()
     {
         cubeAllWithItem(LapidaryBlocks.CRACKED_END_STONE_BRICKS);
+        slabAllWithItem(LapidaryBlocks.NETHERRACK_SLAB, new ResourceLocation("block/netherrack"));
     }
 
     // Creates a simple block and item with the same texture on each side.
-    private void cubeAllWithItem(RegistryObject<Block> blockRegistryObject)
+    private void cubeAllWithItem(RegistryObject<Block> block)
     {
-        Block block = blockRegistryObject.get();
-        simpleBlockWithItem(block, cubeAll(block));
+        Block b = block.get();
+        simpleBlockWithItem(b, cubeAll(b));
+    }
+
+    // Creates an item from an existing block.
+    private <T extends Block> void simpleBlockItem(RegistryObject<T> block)
+    {
+        ResourceLocation id = block.getId();
+        itemModels().getBuilder(id.getPath()).parent(models().getExistingFile(id));
+    }
+
+    // Creates a slab with an item where all sides are the same.
+    private void slabAllWithItem(RegistryObject<SlabBlock> slab, ResourceLocation texture)
+    {
+        // Do Block Model.
+        slabBlock(slab.get(), texture, texture);
+        // Do Item Model.
+        simpleBlockItem(slab);
     }
 }
+

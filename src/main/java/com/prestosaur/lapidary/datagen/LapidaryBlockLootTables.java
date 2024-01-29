@@ -21,6 +21,8 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider
     @Override
     protected void generate() {
         dropSelf(LapidaryBlocks.CRACKED_END_STONE_BRICKS.get());
+        //dropSelf(LapidaryBlocks.NETHERRACK_SLAB.get());
+        add(LapidaryBlocks.NETHERRACK_SLAB.get(), createSlabItemTable(LapidaryBlocks.NETHERRACK_SLAB.get()));
     }
 
     @Override
