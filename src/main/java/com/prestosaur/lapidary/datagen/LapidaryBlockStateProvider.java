@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -25,6 +26,7 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
     protected void registerStatesAndModels()
     {
         cubeAllWithItem(LapidaryBlocks.CRACKED_END_STONE_BRICKS);
+        stairAllWithItem(LapidaryBlocks.NETHERRACK_STAIRS, new ResourceLocation("block/netherrack"));
         slabAllWithItem(LapidaryBlocks.NETHERRACK_SLAB, new ResourceLocation("block/netherrack"));
     }
 
@@ -40,6 +42,15 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
     {
         ResourceLocation id = block.getId();
         itemModels().getBuilder(id.getPath()).parent(models().getExistingFile(id));
+    }
+
+    // Creates a stair with an item where all sides are the same.
+    private void stairAllWithItem(RegistryObject<StairBlock> stair, ResourceLocation texture)
+    {
+        // Do Block Model.
+        stairsBlock(stair.get(), texture);
+        // Do Item Model.
+        simpleBlockItem(stair);
     }
 
     // Creates a slab with an item where all sides are the same.

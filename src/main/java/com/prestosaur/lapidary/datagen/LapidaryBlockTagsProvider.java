@@ -25,18 +25,25 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
     {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 LapidaryBlocks.CRACKED_END_STONE_BRICKS.get(),
+                LapidaryBlocks.NETHERRACK_STAIRS.get(),
                 LapidaryBlocks.NETHERRACK_SLAB.get()
         );
         this.tag(BlockTags.SLABS).add(
                 LapidaryBlocks.NETHERRACK_SLAB.get()
         );
+        this.tag(BlockTags.STAIRS).add(
+                LapidaryBlocks.NETHERRACK_STAIRS.get()
+        );
         this.tag(BlockTags.INFINIBURN_OVERWORLD).add(
+                LapidaryBlocks.NETHERRACK_STAIRS.get(),
                 LapidaryBlocks.NETHERRACK_SLAB.get()
         );
         this.tag(BlockTags.INFINIBURN_NETHER).add(
+                LapidaryBlocks.NETHERRACK_STAIRS.get(),
                 LapidaryBlocks.NETHERRACK_SLAB.get()
         );
         this.tag(BlockTags.INFINIBURN_END).add(
+                LapidaryBlocks.NETHERRACK_STAIRS.get(),
                 LapidaryBlocks.NETHERRACK_SLAB.get()
         );
         this.tag(BlockTags.DRAGON_IMMUNE).add(
