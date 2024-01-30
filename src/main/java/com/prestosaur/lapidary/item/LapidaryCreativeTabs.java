@@ -19,7 +19,7 @@ public class LapidaryCreativeTabs
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Lapidary.MODID);
 
     public static RegistryObject<CreativeModeTab> LAPIDARY_BUILDING_BLOCKS = CREATIVE_MODE_TABS.register("building_blocks", () -> CreativeModeTab.builder()
-            .icon(() -> new ItemStack(LapidaryBlocks.CRACKED_END_STONE_BRICKS.get()))
+            .icon(() -> new ItemStack(LapidaryBlocks.CRACKED_BRICKS.get()))
             .title(Component.translatable("itemGroup." + Lapidary.MODID + ".building_blocks"))
             .displayItems((features, output) -> {
                 output.accept(LapidaryBlocks.CRACKED_BRICKS.get());
@@ -30,6 +30,7 @@ public class LapidaryCreativeTabs
 
                 output.accept(LapidaryBlocks.END_STONE_STAIRS.get());
                 output.accept(LapidaryBlocks.END_STONE_SLAB.get());
+                output.accept(LapidaryBlocks.END_STONE_WALL.get());
                 output.accept(LapidaryBlocks.CRACKED_END_STONE_BRICKS.get());
 
                 output.accept(LapidaryBlocks.CRACKED_PURPUR_BLOCK.get());
