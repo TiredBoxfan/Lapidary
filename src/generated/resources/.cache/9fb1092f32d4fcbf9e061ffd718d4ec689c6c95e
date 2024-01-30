@@ -1,4 +1,5 @@
-// 1.20.1	2024-01-29T17:40:01.5170122	Recipes
+// 1.20.1	2024-01-29T19:48:26.6960202	Recipes
+3d77e24ddd61be09a3e3cee6ab421e476c979357 data/lapidary/advancements/recipes/building_blocks/cracked_bricks.json
 81fd7ac2e7820673bc5f1a695d519793f5e45936 data/lapidary/advancements/recipes/building_blocks/cracked_end_stone_bricks.json
 e3316ee4098110b8e43f4b7c14150fcf759a0d4f data/lapidary/advancements/recipes/building_blocks/cracked_purpur_block.json
 f22f41af9c560c458b9e00c27b57d944921fafd6 data/lapidary/advancements/recipes/building_blocks/end_stone_slab.json
@@ -13,6 +14,7 @@ cf4330c30ebfd634e8e2c1a8642d177e835cbbd6 data/lapidary/advancements/recipes/buil
 4e740297a2aa46113dd5d5cf8562e28755388f7d data/lapidary/advancements/recipes/building_blocks/netherrack_stairs_stonecutting.json
 2f8869a2d0a122bd3d0004239de0713712bdb3e4 data/lapidary/advancements/recipes/building_blocks/netherrack_wall.json
 f180c14d40e7c6758c3ce16efdfc9c2903ddede3 data/lapidary/advancements/recipes/building_blocks/netherrack_wall_stonecutting.json
+0821ff905606fed9a62bee6db7f706ccc95e3d52 data/lapidary/recipes/cracked_bricks.json
 75dd6ff048b09218a5fc3c8fb48cbe82664bc1a9 data/lapidary/recipes/cracked_end_stone_bricks.json
 9eb958a0e2d3df35fc47184aff291882d322eaf0 data/lapidary/recipes/cracked_purpur_block.json
 7263789e0c2516eafa616dce1625f911b9ad83f0 data/lapidary/recipes/end_stone_slab.json

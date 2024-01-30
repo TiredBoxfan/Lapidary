@@ -18,6 +18,9 @@ public class LapidaryBlocks
 {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Lapidary.MODID);
 
+    public static final RegistryObject<Block> CRACKED_BRICKS = registerBlock("cracked_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
+
     public static final RegistryObject<StairBlock> NETHERRACK_STAIRS = registerBlock("netherrack_stairs",
             () -> new StairBlock(Blocks.NETHERRACK.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.NETHERRACK)));
     public static final RegistryObject<SlabBlock> NETHERRACK_SLAB = registerBlock("netherrack_slab",

@@ -1,6 +1,8 @@
 {
   "itemGroup.lapidary.building_blocks": "Lapidary Building Blocks",
 
+  "block.lapidary.cracked_bricks": "Cracked Bricks",
+
   "block.lapidary.netherrack_stairs": "Netherrack Stairs",
   "block.lapidary.netherrack_slab": "Netherrack Slab",
   "block.lapidary.netherrack_wall": "Netherrack Wall",
