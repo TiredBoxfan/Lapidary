@@ -24,6 +24,8 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
     protected void addTags(HolderLookup.Provider provider)
     {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
+                LapidaryBlocks.STONE_WALL.get(),
+
                 LapidaryBlocks.POLISHED_GRANITE_BRICKS.get(),
 
                 LapidaryBlocks.POLISHED_DIORITE_BRICKS.get(),
@@ -52,6 +54,7 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
                 LapidaryBlocks.END_STONE_STAIRS.get()
         );
         this.tag(BlockTags.WALLS).add(
+                LapidaryBlocks.STONE_WALL.get(),
                 LapidaryBlocks.NETHERRACK_WALL.get(),
                 LapidaryBlocks.END_STONE_WALL.get()
         );

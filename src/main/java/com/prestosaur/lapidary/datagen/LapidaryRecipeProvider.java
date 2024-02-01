@@ -26,6 +26,7 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer)
     {
+        addWallRecipes(consumer, LapidaryBlocks.STONE_WALL, Blocks.STONE);
         smeltingResultFromBase(consumer, LapidaryBlocks.CRACKED_BRICKS.get(), Blocks.BRICKS);
         addTriadRecipes(consumer, LapidaryBlocks.NETHERRACK_STAIRS, LapidaryBlocks.NETHERRACK_SLAB, LapidaryBlocks.NETHERRACK_WALL, Blocks.NETHERRACK);
         addTriadRecipes(consumer, LapidaryBlocks.END_STONE_STAIRS, LapidaryBlocks.END_STONE_SLAB, LapidaryBlocks.END_STONE_WALL, Blocks.END_STONE);

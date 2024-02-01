@@ -5,7 +5,9 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -22,6 +24,8 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider
     @Override
     protected void generate()
     {
+        dropOtherSilkTouch(LapidaryBlocks.STONE_WALL.get(), Blocks.COBBLESTONE_WALL);
+
         dropSelf(LapidaryBlocks.POLISHED_GRANITE_BRICKS.get());
 
         dropSelf(LapidaryBlocks.POLISHED_DIORITE_BRICKS.get());
@@ -51,5 +55,10 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider
     private void dropSlab(SlabBlock slab)
     {
         add(slab, createSlabItemTable(slab));
+    }
+
+    private void dropOtherSilkTouch(Block block, ItemLike other)
+    {
+        this.add(block, this.createSingleItemTableWithSilkTouch(block, other));
     }
 }

@@ -26,6 +26,8 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
     @Override
     protected void registerStatesAndModels()
     {
+        wallAllWithItem(LapidaryBlocks.STONE_WALL, new ResourceLocation("block/stone"));
+
         cubeAllWithItem(LapidaryBlocks.POLISHED_GRANITE_BRICKS);
 
         cubeAllWithItem(LapidaryBlocks.POLISHED_DIORITE_BRICKS);

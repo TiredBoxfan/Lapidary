@@ -1,6 +1,8 @@
 {
   "itemGroup.lapidary.building_blocks": "Lapidary Building Blocks",
 
+  "block.lapidary.stone_wall": "Stone Wall",
+
   "block.lapidary.polished_granite_bricks": "Polished Granite Bricks",
   "block.lapidary.polished_diorite_bricks": "Polished Diorite Bricks",
   "block.lapidary.polished_andesite_bricks": "Polished Andesite Bricks",

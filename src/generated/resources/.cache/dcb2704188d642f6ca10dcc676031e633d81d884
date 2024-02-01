@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-01T11:39:45.0791919	Block States: lapidary
+// 1.20.1	2024-02-01T13:20:50.6252639	Block States: lapidary
 497c1171f8d2eba5324e05d689f1914e1c72589e assets/lapidary/blockstates/cracked_bricks.json
 aa5fed6ff7f0d891c89f5076284802374c81b708 assets/lapidary/blockstates/cracked_end_stone_bricks.json
 b6cbd08c37ad4d7996cf5f821bf4f2fa594ee06a assets/lapidary/blockstates/cracked_purpur_block.json
@@ -11,6 +11,7 @@ d407826d345c95b9330f890795a6096cfbd53caa assets/lapidary/blockstates/netherrack_
 282b23256d9f2508bbff1fe574997ba0bb053c33 assets/lapidary/blockstates/polished_andesite_bricks.json
 b30528721c9b7ef33e613f1a4c7eaa3a671a42f1 assets/lapidary/blockstates/polished_diorite_bricks.json
 3583b7e8deaf69903e7328d1d3f34226390a390c assets/lapidary/blockstates/polished_granite_bricks.json
+36d21ce0a1b094998371615a9c2c0d9058eb16f2 assets/lapidary/blockstates/stone_wall.json
 35397bfcbece4c50e04feccc9fde00af3dd13fe0 assets/lapidary/models/block/cracked_bricks.json
 72eaeae0ea54e796f39c70623d25d05b84081a32 assets/lapidary/models/block/cracked_end_stone_bricks.json
 159f250aea3f0ce37543c3d5def0de00a5539556 assets/lapidary/models/block/cracked_purpur_block.json
@@ -33,6 +34,9 @@ e6d466bad348d2d781317efa6117d5dc1d2fb6be assets/lapidary/models/block/netherrack
 40aceceab1a89fa95e9e6c5af9f6b7b9ad3edebb assets/lapidary/models/block/polished_andesite_bricks.json
 7a2d19df253b0e22c6c1e4f679829caef142eec5 assets/lapidary/models/block/polished_diorite_bricks.json
 e94bebd29182c3c99992ecc4817b78f0ae37a3dc assets/lapidary/models/block/polished_granite_bricks.json
+34928999ae2788eea7a9046adf628c07292c173b assets/lapidary/models/block/stone_wall_post.json
+1519a7670a4d4dc84774d0224d558017282c148f assets/lapidary/models/block/stone_wall_side.json
+16e6192019ed46f494a845f91fe8333ea5a3073f assets/lapidary/models/block/stone_wall_side_tall.json
 ba7b06ccade6250cda9f49cd077cb9ecebd8babf assets/lapidary/models/item/cracked_bricks.json
 9425e5d5bd97763de3d68baa4cd45cee8bc3ccdf assets/lapidary/models/item/cracked_end_stone_bricks.json
 8c989288925797fbcbf42db0de10f6e50eed1b05 assets/lapidary/models/item/cracked_purpur_block.json
@@ -45,3 +49,4 @@ bb4eb1066df742d2655ff45665483b5e8332342f assets/lapidary/models/item/netherrack_
 64a41d0f085979625f8afc2a95ea3ac137ee30bb assets/lapidary/models/item/polished_andesite_bricks.json
 ae829853969c3d1060a64d2a767f4e63af32100d assets/lapidary/models/item/polished_diorite_bricks.json
 e9afa47ac1755962d663e304c01a2397821a476a assets/lapidary/models/item/polished_granite_bricks.json
+cce1a5a2e52394840b1c742018f6f1b67868b6f0 assets/lapidary/models/item/stone_wall.json
