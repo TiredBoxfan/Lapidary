@@ -1,6 +1,12 @@
 {
   "values": [
     "lapidary:stone_wall",
+    "lapidary:polished_granite_wall",
+    "lapidary:polished_granite_brick_wall",
+    "lapidary:polished_diorite_wall",
+    "lapidary:polished_diorite_brick_wall",
+    "lapidary:polished_andesite_wall",
+    "lapidary:polished_andesite_brick_wall",
     "lapidary:netherrack_wall",
     "lapidary:end_stone_wall"
   ]

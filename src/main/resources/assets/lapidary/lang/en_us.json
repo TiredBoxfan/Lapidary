@@ -3,9 +3,23 @@
 
   "block.lapidary.stone_wall": "Stone Wall",
 
+  "block.lapidary.polished_granite_wall": "Polished Granite Wall",
   "block.lapidary.polished_granite_bricks": "Polished Granite Bricks",
+  "block.lapidary.polished_granite_brick_stairs": "Polished Granite Brick Stairs",
+  "block.lapidary.polished_granite_brick_slab": "Polished Granite Brick Slab",
+  "block.lapidary.polished_granite_brick_wall": "Polished Granite Brick Wall",
+
+  "block.lapidary.polished_diorite_wall": "Polished Diorite Wall",
   "block.lapidary.polished_diorite_bricks": "Polished Diorite Bricks",
+  "block.lapidary.polished_diorite_brick_stairs": "Polished Diorite Brick Stairs",
+  "block.lapidary.polished_diorite_brick_slab": "Polished Diorite Brick Slab",
+  "block.lapidary.polished_diorite_brick_wall": "Polished Diorite Brick Wall",
+
+  "block.lapidary.polished_andesite_wall": "Polished Andesite Wall",
   "block.lapidary.polished_andesite_bricks": "Polished Andesite Bricks",
+  "block.lapidary.polished_andesite_brick_stairs": "Polished Andesite Brick Stairs",
+  "block.lapidary.polished_andesite_brick_slab": "Polished Andesite Brick Slab",
+  "block.lapidary.polished_andesite_brick_wall": "Polished Andesite Brick Wall",
 
   "block.lapidary.cracked_bricks": "Cracked Bricks",
 

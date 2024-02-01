@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "lapidary:polished_granite_bricks"
+  },
+  "result": "lapidary:polished_granite_brick_slab"
+}

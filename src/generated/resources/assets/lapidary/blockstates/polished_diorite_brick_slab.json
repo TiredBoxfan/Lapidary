@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "lapidary:block/polished_diorite_brick_slab"
+    },
+    "type=double": {
+      "model": "lapidary:block/polished_diorite_bricks"
+    },
+    "type=top": {
+      "model": "lapidary:block/polished_diorite_brick_slab_top"
+    }
+  }
+}

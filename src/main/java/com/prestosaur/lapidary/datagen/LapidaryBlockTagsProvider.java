@@ -26,11 +26,23 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 LapidaryBlocks.STONE_WALL.get(),
 
+                LapidaryBlocks.POLISHED_GRANITE_WALL.get(),
                 LapidaryBlocks.POLISHED_GRANITE_BRICKS.get(),
+                LapidaryBlocks.POLISHED_GRANITE_BRICK_STAIRS.get(),
+                LapidaryBlocks.POLISHED_GRANITE_BRICK_SLAB.get(),
+                LapidaryBlocks.POLISHED_GRANITE_BRICK_WALL.get(),
 
+                LapidaryBlocks.POLISHED_DIORITE_WALL.get(),
                 LapidaryBlocks.POLISHED_DIORITE_BRICKS.get(),
+                LapidaryBlocks.POLISHED_DIORITE_BRICK_STAIRS.get(),
+                LapidaryBlocks.POLISHED_DIORITE_BRICK_SLAB.get(),
+                LapidaryBlocks.POLISHED_DIORITE_BRICK_WALL.get(),
 
+                LapidaryBlocks.POLISHED_ANDESITE_WALL.get(),
                 LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get(),
+                LapidaryBlocks.POLISHED_ANDESITE_BRICK_STAIRS.get(),
+                LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB.get(),
+                LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get(),
 
                 LapidaryBlocks.CRACKED_BRICKS.get(),
 
@@ -46,15 +58,27 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
                 LapidaryBlocks.CRACKED_PURPUR_BLOCK.get()
         );
         this.tag(BlockTags.SLABS).add(
+                LapidaryBlocks.POLISHED_GRANITE_BRICK_SLAB.get(),
+                LapidaryBlocks.POLISHED_DIORITE_BRICK_SLAB.get(),
+                LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB.get(),
                 LapidaryBlocks.NETHERRACK_SLAB.get(),
                 LapidaryBlocks.END_STONE_SLAB.get()
         );
         this.tag(BlockTags.STAIRS).add(
+                LapidaryBlocks.POLISHED_GRANITE_BRICK_STAIRS.get(),
+                LapidaryBlocks.POLISHED_DIORITE_BRICK_STAIRS.get(),
+                LapidaryBlocks.POLISHED_ANDESITE_BRICK_STAIRS.get(),
                 LapidaryBlocks.NETHERRACK_STAIRS.get(),
                 LapidaryBlocks.END_STONE_STAIRS.get()
         );
         this.tag(BlockTags.WALLS).add(
                 LapidaryBlocks.STONE_WALL.get(),
+                LapidaryBlocks.POLISHED_GRANITE_WALL.get(),
+                LapidaryBlocks.POLISHED_GRANITE_BRICK_WALL.get(),
+                LapidaryBlocks.POLISHED_DIORITE_WALL.get(),
+                LapidaryBlocks.POLISHED_DIORITE_BRICK_WALL.get(),
+                LapidaryBlocks.POLISHED_ANDESITE_WALL.get(),
+                LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get(),
                 LapidaryBlocks.NETHERRACK_WALL.get(),
                 LapidaryBlocks.END_STONE_WALL.get()
         );

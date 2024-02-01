@@ -26,11 +26,23 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider
     {
         dropOtherSilkTouch(LapidaryBlocks.STONE_WALL.get(), Blocks.COBBLESTONE_WALL);
 
+        dropSelf(LapidaryBlocks.POLISHED_GRANITE_WALL.get());
         dropSelf(LapidaryBlocks.POLISHED_GRANITE_BRICKS.get());
+        dropSelf(LapidaryBlocks.POLISHED_GRANITE_BRICK_STAIRS.get());
+        dropSlab(LapidaryBlocks.POLISHED_GRANITE_BRICK_SLAB.get());
+        dropSelf(LapidaryBlocks.POLISHED_GRANITE_BRICK_WALL.get());
 
+        dropSelf(LapidaryBlocks.POLISHED_DIORITE_WALL.get());
         dropSelf(LapidaryBlocks.POLISHED_DIORITE_BRICKS.get());
+        dropSelf(LapidaryBlocks.POLISHED_DIORITE_BRICK_STAIRS.get());
+        dropSlab(LapidaryBlocks.POLISHED_DIORITE_BRICK_SLAB.get());
+        dropSelf(LapidaryBlocks.POLISHED_DIORITE_BRICK_WALL.get());
 
+        dropSelf(LapidaryBlocks.POLISHED_ANDESITE_WALL.get());
         dropSelf(LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get());
+        dropSelf(LapidaryBlocks.POLISHED_ANDESITE_BRICK_STAIRS.get());
+        dropSlab(LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB.get());
+        dropSelf(LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get());
 
         dropSelf(LapidaryBlocks.CRACKED_BRICKS.get());
 

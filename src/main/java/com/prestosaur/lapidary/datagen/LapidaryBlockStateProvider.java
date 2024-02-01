@@ -28,21 +28,28 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
     {
         wallAllWithItem(LapidaryBlocks.STONE_WALL, new ResourceLocation("block/stone"));
 
+        wallAllWithItem(LapidaryBlocks.POLISHED_GRANITE_WALL, new ResourceLocation("block/polished_granite"));
         cubeAllWithItem(LapidaryBlocks.POLISHED_GRANITE_BRICKS);
+        triadAllWithItem(LapidaryBlocks.POLISHED_GRANITE_BRICK_STAIRS, LapidaryBlocks.POLISHED_GRANITE_BRICK_SLAB, LapidaryBlocks.POLISHED_GRANITE_BRICK_WALL,
+                new ResourceLocation(Lapidary.MODID, "block/polished_granite_bricks"));
 
+        wallAllWithItem(LapidaryBlocks.POLISHED_DIORITE_WALL, new ResourceLocation("block/polished_diorite"));
         cubeAllWithItem(LapidaryBlocks.POLISHED_DIORITE_BRICKS);
+        triadAllWithItem(LapidaryBlocks.POLISHED_DIORITE_BRICK_STAIRS, LapidaryBlocks.POLISHED_DIORITE_BRICK_SLAB, LapidaryBlocks.POLISHED_DIORITE_BRICK_WALL,
+                new ResourceLocation(Lapidary.MODID, "block/polished_diorite_bricks"));
 
+        wallAllWithItem(LapidaryBlocks.POLISHED_ANDESITE_WALL, new ResourceLocation("block/polished_andesite"));
         cubeAllWithItem(LapidaryBlocks.POLISHED_ANDESITE_BRICKS);
+        triadAllWithItem(LapidaryBlocks.POLISHED_ANDESITE_BRICK_STAIRS, LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB, LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL,
+                new ResourceLocation(Lapidary.MODID, "block/polished_andesite_bricks"));
 
         cubeAllWithItem(LapidaryBlocks.CRACKED_BRICKS);
 
-        stairAllWithItem(LapidaryBlocks.NETHERRACK_STAIRS, new ResourceLocation("block/netherrack"));
-        slabAllWithItem(LapidaryBlocks.NETHERRACK_SLAB, new ResourceLocation("block/netherrack"));
-        wallAllWithItem(LapidaryBlocks.NETHERRACK_WALL, new ResourceLocation("block/netherrack"));
+        triadAllWithItem(LapidaryBlocks.NETHERRACK_STAIRS, LapidaryBlocks.NETHERRACK_SLAB, LapidaryBlocks.NETHERRACK_WALL,
+                new ResourceLocation("block/netherrack"));
 
-        stairAllWithItem(LapidaryBlocks.END_STONE_STAIRS, new ResourceLocation("block/end_stone"));
-        slabAllWithItem(LapidaryBlocks.END_STONE_SLAB, new ResourceLocation("block/end_stone"));
-        wallAllWithItem(LapidaryBlocks.END_STONE_WALL, new ResourceLocation("block/end_stone"));
+        triadAllWithItem(LapidaryBlocks.END_STONE_STAIRS, LapidaryBlocks.END_STONE_SLAB, LapidaryBlocks.END_STONE_WALL,
+                new ResourceLocation("block/end_stone"));
         cubeAllWithItem(LapidaryBlocks.CRACKED_END_STONE_BRICKS);
 
         cubeAllWithItem(LapidaryBlocks.CRACKED_PURPUR_BLOCK);
@@ -87,6 +94,13 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
         wallBlock(wall.get(), texture);
         // Do Item Model.
         itemModels().wallInventory(wall.getId().getPath(), texture);
+    }
+
+    private void triadAllWithItem(RegistryObject<StairBlock> stair, RegistryObject<SlabBlock> slab, RegistryObject<WallBlock> wall, ResourceLocation texture)
+    {
+        stairAllWithItem(stair, texture);
+        slabAllWithItem(slab, texture);
+        wallAllWithItem(wall, texture);
     }
 }
 
