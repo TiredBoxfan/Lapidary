@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "lapidary:end_stone_stairs_stonecutting"
+        "recipe": "lapidary:end_stone_wall_from_end_stone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "lapidary:end_stone_stairs_stonecutting"
+      "lapidary:end_stone_wall_from_end_stone_stonecutting"
     ]
   },
   "sends_telemetry_event": false

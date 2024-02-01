@@ -26,6 +26,12 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
     @Override
     protected void registerStatesAndModels()
     {
+        cubeAllWithItem(LapidaryBlocks.POLISHED_GRANITE_BRICKS);
+
+        cubeAllWithItem(LapidaryBlocks.POLISHED_DIORITE_BRICKS);
+
+        cubeAllWithItem(LapidaryBlocks.POLISHED_ANDESITE_BRICKS);
+
         cubeAllWithItem(LapidaryBlocks.CRACKED_BRICKS);
 
         stairAllWithItem(LapidaryBlocks.NETHERRACK_STAIRS, new ResourceLocation("block/netherrack"));

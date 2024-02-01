@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_netherrack": {
+    "has_polished_diorite": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:netherrack"
+              "minecraft:polished_diorite"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "lapidary:netherrack_wall_stonecutting"
+        "recipe": "lapidary:polished_diorite_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_netherrack",
+      "has_polished_diorite",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "lapidary:netherrack_wall_stonecutting"
+      "lapidary:polished_diorite_bricks"
     ]
   },
   "sends_telemetry_event": false

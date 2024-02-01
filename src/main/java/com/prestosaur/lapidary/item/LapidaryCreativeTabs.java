@@ -22,6 +22,12 @@ public class LapidaryCreativeTabs
             .icon(() -> new ItemStack(LapidaryBlocks.CRACKED_BRICKS.get()))
             .title(Component.translatable("itemGroup." + Lapidary.MODID + ".building_blocks"))
             .displayItems((features, output) -> {
+                output.accept(LapidaryBlocks.POLISHED_GRANITE_BRICKS.get());
+
+                output.accept(LapidaryBlocks.POLISHED_DIORITE_BRICKS.get());
+
+                output.accept(LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get());
+
                 output.accept(LapidaryBlocks.CRACKED_BRICKS.get());
 
                 output.accept(LapidaryBlocks.NETHERRACK_STAIRS.get());
@@ -42,6 +48,12 @@ public class LapidaryCreativeTabs
         ResourceKey<CreativeModeTab> tab = event.getTabKey();
         if(tab == CreativeModeTabs.BUILDING_BLOCKS)
         {
+            putAfter(event, LapidaryBlocks.POLISHED_GRANITE_BRICKS.get(), Items.POLISHED_GRANITE);
+
+            putAfter(event, LapidaryBlocks.POLISHED_DIORITE_BRICKS.get(), Items.POLISHED_DIORITE);
+
+            putAfter(event, LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get(), Items.POLISHED_ANDESITE);
+
             putAfter(event, LapidaryBlocks.CRACKED_BRICKS.get(), Items.BRICKS);
 
             putAfter(event, LapidaryBlocks.NETHERRACK_STAIRS.get(), Items.NETHERRACK);

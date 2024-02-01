@@ -24,6 +24,12 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
     protected void addTags(HolderLookup.Provider provider)
     {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
+                LapidaryBlocks.POLISHED_GRANITE_BRICKS.get(),
+
+                LapidaryBlocks.POLISHED_DIORITE_BRICKS.get(),
+
+                LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get(),
+
                 LapidaryBlocks.CRACKED_BRICKS.get(),
 
                 LapidaryBlocks.NETHERRACK_STAIRS.get(),

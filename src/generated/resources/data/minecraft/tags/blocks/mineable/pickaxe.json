@@ -1,5 +1,8 @@
 {
   "values": [
+    "lapidary:polished_granite_bricks",
+    "lapidary:polished_diorite_bricks",
+    "lapidary:polished_andesite_bricks",
     "lapidary:cracked_bricks",
     "lapidary:netherrack_stairs",
     "lapidary:netherrack_slab",

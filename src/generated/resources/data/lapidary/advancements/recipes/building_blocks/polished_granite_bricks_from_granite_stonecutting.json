@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_end_stone": {
+    "has_granite": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:end_stone"
+              "minecraft:granite"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "lapidary:end_stone_wall_stonecutting"
+        "recipe": "lapidary:polished_granite_bricks_from_granite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_end_stone",
+      "has_granite",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "lapidary:end_stone_wall_stonecutting"
+      "lapidary:polished_granite_bricks_from_granite_stonecutting"
     ]
   },
   "sends_telemetry_event": false

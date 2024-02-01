@@ -18,6 +18,15 @@ public class LapidaryBlocks
 {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Lapidary.MODID);
 
+    public static final RegistryObject<Block> POLISHED_GRANITE_BRICKS = registerBlock("polished_granite_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_GRANITE)));
+
+    public static final RegistryObject<Block> POLISHED_DIORITE_BRICKS = registerBlock("polished_diorite_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_DIORITE)));
+
+    public static final RegistryObject<Block> POLISHED_ANDESITE_BRICKS = registerBlock("polished_andesite_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_ANDESITE)));
+
     public static final RegistryObject<Block> CRACKED_BRICKS = registerBlock("cracked_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
 
