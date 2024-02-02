@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-01T15:23:35.378106	Loot Tables
+// 1.20.1	2024-02-01T15:59:47.3027053	Loot Tables
 89c511ddcd79f347cc7c199a77e0b232c042e7b2 data/lapidary/loot_tables/blocks/cracked_bricks.json
 0241ab231fd13b755de94c5d02d1e91803698c58 data/lapidary/loot_tables/blocks/cracked_end_stone_bricks.json
 c18a5409fefdeb12c318cb97852c1fce0fe7f9ad data/lapidary/loot_tables/blocks/cracked_purpur_block.json
@@ -23,4 +23,5 @@ c70b0d9c4baaa1addea0903a31997ebe2ce905af data/lapidary/loot_tables/blocks/polish
 e7d6cdac58ec53ac3c08186d06f74b0191e3724b data/lapidary/loot_tables/blocks/polished_granite_brick_stairs.json
 e80aa9ee1d8a53a4880c8b2a49878754b82ef7d8 data/lapidary/loot_tables/blocks/polished_granite_brick_wall.json
 30de51b1da1e75ed5f1ed6d18fa8a5de668376a2 data/lapidary/loot_tables/blocks/polished_granite_wall.json
+dc208332cebe584a281c8e844b2e45bb8fb10501 data/lapidary/loot_tables/blocks/purpur_wall.json
 0451c3c0cf0edffae0779220ea3ad63fe9cc0994 data/lapidary/loot_tables/blocks/stone_wall.json

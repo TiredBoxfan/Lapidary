@@ -76,6 +76,8 @@ public class LapidaryBlocks
     public static final RegistryObject<Block> CRACKED_END_STONE_BRICKS = registerBlock("cracked_end_stone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.END_STONE_BRICKS)));
 
+    public static final RegistryObject<WallBlock> PURPUR_WALL = registerBlock("purpur_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_BLOCK)));
     public static final RegistryObject<Block> CRACKED_PURPUR_BLOCK = registerBlock("cracked_purpur_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.PURPUR_BLOCK)));
 

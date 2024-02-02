@@ -7,6 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -53,6 +54,7 @@ public class LapidaryCreativeTabs
                 output.accept(LapidaryBlocks.END_STONE_WALL.get());
                 output.accept(LapidaryBlocks.CRACKED_END_STONE_BRICKS.get());
 
+                output.accept(LapidaryBlocks.PURPUR_WALL.get());
                 output.accept(LapidaryBlocks.CRACKED_PURPUR_BLOCK.get());
             }).build());
 
@@ -96,6 +98,7 @@ public class LapidaryCreativeTabs
             putAfter(event, LapidaryBlocks.END_STONE_WALL.get(), LapidaryBlocks.END_STONE_SLAB.get());
             putAfter(event, LapidaryBlocks.CRACKED_END_STONE_BRICKS.get(), Items.END_STONE_BRICKS);
 
+            putAfter(event, LapidaryBlocks.PURPUR_WALL.get(), Blocks.PURPUR_SLAB);
             putAfter(event, LapidaryBlocks.CRACKED_PURPUR_BLOCK.get(), Items.PURPUR_BLOCK);
         }
     }

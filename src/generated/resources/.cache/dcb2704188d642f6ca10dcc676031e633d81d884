@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-01T15:34:15.5881431	Block States: lapidary
+// 1.20.1	2024-02-01T15:59:47.2977209	Block States: lapidary
 497c1171f8d2eba5324e05d689f1914e1c72589e assets/lapidary/blockstates/cracked_bricks.json
 aa5fed6ff7f0d891c89f5076284802374c81b708 assets/lapidary/blockstates/cracked_end_stone_bricks.json
 b6cbd08c37ad4d7996cf5f821bf4f2fa594ee06a assets/lapidary/blockstates/cracked_purpur_block.json
@@ -23,6 +23,7 @@ b30528721c9b7ef33e613f1a4c7eaa3a671a42f1 assets/lapidary/blockstates/polished_di
 177a46d69a4ccb481a554ca97c3743aea175db8d assets/lapidary/blockstates/polished_granite_brick_stairs.json
 2554761ca6a182a55151a7ebfb0283532de9530d assets/lapidary/blockstates/polished_granite_brick_wall.json
 514765694a155ccf0249a77aae85becd7da47e85 assets/lapidary/blockstates/polished_granite_wall.json
+70f469c769255c1698483a127925f4c1040cc1ed assets/lapidary/blockstates/purpur_wall.json
 36d21ce0a1b094998371615a9c2c0d9058eb16f2 assets/lapidary/blockstates/stone_wall.json
 35397bfcbece4c50e04feccc9fde00af3dd13fe0 assets/lapidary/models/block/cracked_bricks.json
 72eaeae0ea54e796f39c70623d25d05b84081a32 assets/lapidary/models/block/cracked_end_stone_bricks.json
@@ -79,6 +80,9 @@ dac6b6bb4af017bef7954d6cab19f8f9ba1f3303 assets/lapidary/models/block/polished_g
 dd3819992d0cb6d1c03814efe5418cb50ae49324 assets/lapidary/models/block/polished_granite_wall_post.json
 26c4aea1d7f5dbc414b66d1b078d65a86b670fe7 assets/lapidary/models/block/polished_granite_wall_side.json
 b46f393862f8112882509a82aab53955b9875636 assets/lapidary/models/block/polished_granite_wall_side_tall.json
+89359d01b2032ccdb8db74934fb4a37948c44f0d assets/lapidary/models/block/purpur_wall_post.json
+46e0177af589a595589b804083b4a7ec7b3a37c4 assets/lapidary/models/block/purpur_wall_side.json
+947bbf9af6008e84e3113dc6ffedf317d09b7aa0 assets/lapidary/models/block/purpur_wall_side_tall.json
 34928999ae2788eea7a9046adf628c07292c173b assets/lapidary/models/block/stone_wall_post.json
 1519a7670a4d4dc84774d0224d558017282c148f assets/lapidary/models/block/stone_wall_side.json
 16e6192019ed46f494a845f91fe8333ea5a3073f assets/lapidary/models/block/stone_wall_side_tall.json
@@ -106,4 +110,5 @@ e9afa47ac1755962d663e304c01a2397821a476a assets/lapidary/models/item/polished_gr
 28ccd8cf15eb04e71035af2dade29afc754f5448 assets/lapidary/models/item/polished_granite_brick_stairs.json
 85167dabb711085862a2e272c5b9778b76f1ca25 assets/lapidary/models/item/polished_granite_brick_wall.json
 35a048ac4a5650dd40d228e4bdcd565a563c3b5e assets/lapidary/models/item/polished_granite_wall.json
+e2ea261d292b0b04ad2058640d65a701e1007adb assets/lapidary/models/item/purpur_wall.json
 cce1a5a2e52394840b1c742018f6f1b67868b6f0 assets/lapidary/models/item/stone_wall.json

@@ -52,6 +52,7 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
                 new ResourceLocation("block/end_stone"));
         cubeAllWithItem(LapidaryBlocks.CRACKED_END_STONE_BRICKS);
 
+        wallAllWithItem(LapidaryBlocks.PURPUR_WALL, new ResourceLocation("block/purpur_block"));
         cubeAllWithItem(LapidaryBlocks.CRACKED_PURPUR_BLOCK);
     }
 

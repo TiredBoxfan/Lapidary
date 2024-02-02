@@ -55,6 +55,7 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
                 LapidaryBlocks.END_STONE_WALL.get(),
                 LapidaryBlocks.CRACKED_END_STONE_BRICKS.get(),
 
+                LapidaryBlocks.PURPUR_WALL.get(),
                 LapidaryBlocks.CRACKED_PURPUR_BLOCK.get()
         );
         this.tag(BlockTags.SLABS).add(
@@ -80,7 +81,8 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
                 LapidaryBlocks.POLISHED_ANDESITE_WALL.get(),
                 LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get(),
                 LapidaryBlocks.NETHERRACK_WALL.get(),
-                LapidaryBlocks.END_STONE_WALL.get()
+                LapidaryBlocks.END_STONE_WALL.get(),
+                LapidaryBlocks.PURPUR_WALL.get()
         );
         this.tag(BlockTags.INFINIBURN_OVERWORLD).add(
                 LapidaryBlocks.NETHERRACK_STAIRS.get(),
