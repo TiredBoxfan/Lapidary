@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "lapidary:block/mossy_mud_bricks"
+      "model": "lapidary:block/mossy_mud_bricks_north_west_mirrored"
     }
   }
 }
