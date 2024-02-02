@@ -46,6 +46,12 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider
 
         dropSelf(LapidaryBlocks.CRACKED_BRICKS.get());
 
+        dropSelf(LapidaryBlocks.MOSSY_MUD_BRICKS.get());
+        dropSelf(LapidaryBlocks.MOSSY_MUD_BRICK_STAIRS.get());
+        dropSlab(LapidaryBlocks.MOSSY_MUD_BRICK_SLAB.get());
+        dropSelf(LapidaryBlocks.MOSSY_MUD_BRICK_WALL.get());
+        dropSelf(LapidaryBlocks.CRACKED_MUD_BRICKS.get());
+
         dropSelf(LapidaryBlocks.NETHERRACK_STAIRS.get());
         dropSlab(LapidaryBlocks.NETHERRACK_SLAB.get());
         dropSelf(LapidaryBlocks.NETHERRACK_WALL.get());

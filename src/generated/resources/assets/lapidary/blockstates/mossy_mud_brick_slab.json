@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "lapidary:block/mossy_mud_brick_slab"
+    },
+    "type=double": {
+      "model": "lapidary:block/mossy_mud_bricks"
+    },
+    "type=top": {
+      "model": "lapidary:block/mossy_mud_brick_slab_top"
+    }
+  }
+}

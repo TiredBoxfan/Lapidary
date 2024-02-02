@@ -60,6 +60,18 @@ public class LapidaryBlocks
     public static final RegistryObject<Block> CRACKED_BRICKS = registerBlock("cracked_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
 
+    public static final RegistryObject<Block> MOSSY_MUD_BRICKS = registerBlock("mossy_mud_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.MUD_BRICKS)));
+    public static final RegistryObject<StairBlock> MOSSY_MUD_BRICK_STAIRS = registerBlock("mossy_mud_brick_stairs",
+            () -> new StairBlock(MOSSY_MUD_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(MOSSY_MUD_BRICKS.get())));
+    public static final RegistryObject<SlabBlock> MOSSY_MUD_BRICK_SLAB = registerBlock("mossy_mud_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(MOSSY_MUD_BRICKS.get())));
+    public static final RegistryObject<WallBlock> MOSSY_MUD_BRICK_WALL = registerBlock("mossy_mud_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(MOSSY_MUD_BRICKS.get())));
+    public static final RegistryObject<Block> CRACKED_MUD_BRICKS = registerBlock("cracked_mud_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.MUD_BRICKS)));
+
     public static final RegistryObject<StairBlock> NETHERRACK_STAIRS = registerBlock("netherrack_stairs",
             () -> new StairBlock(Blocks.NETHERRACK.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.NETHERRACK)));
     public static final RegistryObject<SlabBlock> NETHERRACK_SLAB = registerBlock("netherrack_slab",

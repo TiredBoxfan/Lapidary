@@ -3,10 +3,8 @@ package com.prestosaur.lapidary.datagen;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.SingleItemRecipeBuilder;
+import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.*;
@@ -41,6 +39,10 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
                 Blocks.POLISHED_ANDESITE, Blocks.ANDESITE);
 
         smeltingResultFromBase(consumer, LapidaryBlocks.CRACKED_BRICKS.get(), Blocks.BRICKS);
+
+        addCraftMossy(consumer, LapidaryBlocks.MOSSY_MUD_BRICKS, Blocks.MUD_BRICKS);
+        addCraftTriadAndStonecut(consumer, LapidaryBlocks.MOSSY_MUD_BRICK_STAIRS, LapidaryBlocks.MOSSY_MUD_BRICK_SLAB, LapidaryBlocks.MOSSY_MUD_BRICK_WALL, LapidaryBlocks.MOSSY_MUD_BRICKS.get());
+        smeltingResultFromBase(consumer, LapidaryBlocks.CRACKED_MUD_BRICKS.get(), Blocks.MUD_BRICKS);
 
         addCraftTriadAndStonecut(consumer, LapidaryBlocks.NETHERRACK_STAIRS, LapidaryBlocks.NETHERRACK_SLAB, LapidaryBlocks.NETHERRACK_WALL, Blocks.NETHERRACK);
 
@@ -136,5 +138,22 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
         addStonecutting(consumer, stair, 1, material);
         addStonecutting(consumer, slab, 2, material);
         addStonecutting(consumer, wall, 1, material);
+    }
+
+    private void addCraftMossy(Consumer<FinishedRecipe> consumer, RegistryObject<Block> result, ItemLike base)
+    {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, result.get())
+                .requires(base)
+                .requires(Items.VINE)
+                .unlockedBy(getHasName(base), has(base))
+                .group(result.getKey().location().getPath())
+                .save(consumer, result.getKey().location() + "_from_vine");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, result.get())
+                .requires(base)
+                .requires(Items.MOSS_BLOCK)
+                .unlockedBy(getHasName(base), has(base))
+                .group(result.getKey().location().getPath())
+                .save(consumer, result.getKey().location() + "_from_moss_block");
     }
 }

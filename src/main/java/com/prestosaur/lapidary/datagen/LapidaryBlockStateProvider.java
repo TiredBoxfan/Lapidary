@@ -45,6 +45,11 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
 
         cubeAllWithItem(LapidaryBlocks.CRACKED_BRICKS);
 
+        cubeAllWithItem(LapidaryBlocks.MOSSY_MUD_BRICKS);
+        triadAllWithItem(LapidaryBlocks.MOSSY_MUD_BRICK_STAIRS, LapidaryBlocks.MOSSY_MUD_BRICK_SLAB, LapidaryBlocks.MOSSY_MUD_BRICK_WALL,
+                new ResourceLocation(Lapidary.MODID, "block/mossy_mud_bricks"));
+        cubeAllWithItem(LapidaryBlocks.CRACKED_MUD_BRICKS);
+
         triadAllWithItem(LapidaryBlocks.NETHERRACK_STAIRS, LapidaryBlocks.NETHERRACK_SLAB, LapidaryBlocks.NETHERRACK_WALL,
                 new ResourceLocation("block/netherrack"));
 
