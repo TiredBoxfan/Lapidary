@@ -4,10 +4,7 @@ import com.prestosaur.lapidary.Lapidary;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.*;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -23,83 +20,94 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
     @Override
     protected void registerStatesAndModels()
     {
-        wallAllWithItem(LapidaryBlocks.STONE_WALL, new ResourceLocation("block/stone"));
+        wallAllWithItem(LapidaryBlocks.STONE_WALL.get(), new ResourceLocation("block/stone"));
 
-        wallAllWithItem(LapidaryBlocks.POLISHED_GRANITE_WALL, new ResourceLocation("block/polished_granite"));
-        cubeAllWithItem(LapidaryBlocks.POLISHED_GRANITE_BRICKS);
-        triadAllWithItem(LapidaryBlocks.POLISHED_GRANITE_BRICK_STAIRS, LapidaryBlocks.POLISHED_GRANITE_BRICK_SLAB, LapidaryBlocks.POLISHED_GRANITE_BRICK_WALL,
+        wallAllWithItem(LapidaryBlocks.POLISHED_GRANITE_WALL.get(), new ResourceLocation("block/polished_granite"));
+        cubeAllWithItem(LapidaryBlocks.POLISHED_GRANITE_BRICKS.get());
+        triadAllWithItem(LapidaryBlocks.POLISHED_GRANITE_BRICK_STAIRS.get(),
+                LapidaryBlocks.POLISHED_GRANITE_BRICK_SLAB.get(),
+                LapidaryBlocks.POLISHED_GRANITE_BRICK_WALL.get(),
                 new ResourceLocation(Lapidary.MODID, "block/polished_granite_bricks"));
 
-        wallAllWithItem(LapidaryBlocks.POLISHED_DIORITE_WALL, new ResourceLocation("block/polished_diorite"));
-        cubeAllWithItem(LapidaryBlocks.POLISHED_DIORITE_BRICKS);
-        triadAllWithItem(LapidaryBlocks.POLISHED_DIORITE_BRICK_STAIRS, LapidaryBlocks.POLISHED_DIORITE_BRICK_SLAB, LapidaryBlocks.POLISHED_DIORITE_BRICK_WALL,
+        wallAllWithItem(LapidaryBlocks.POLISHED_DIORITE_WALL.get(), new ResourceLocation("block/polished_diorite"));
+        cubeAllWithItem(LapidaryBlocks.POLISHED_DIORITE_BRICKS.get());
+        triadAllWithItem(LapidaryBlocks.POLISHED_DIORITE_BRICK_STAIRS.get(),
+                LapidaryBlocks.POLISHED_DIORITE_BRICK_SLAB.get(),
+                LapidaryBlocks.POLISHED_DIORITE_BRICK_WALL.get(),
                 new ResourceLocation(Lapidary.MODID, "block/polished_diorite_bricks"));
 
-        wallAllWithItem(LapidaryBlocks.POLISHED_ANDESITE_WALL, new ResourceLocation("block/polished_andesite"));
-        cubeAllWithItem(LapidaryBlocks.POLISHED_ANDESITE_BRICKS);
-        triadAllWithItem(LapidaryBlocks.POLISHED_ANDESITE_BRICK_STAIRS, LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB, LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL,
+        wallAllWithItem(LapidaryBlocks.POLISHED_ANDESITE_WALL.get(), new ResourceLocation("block/polished_andesite"));
+        cubeAllWithItem(LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get());
+        triadAllWithItem(LapidaryBlocks.POLISHED_ANDESITE_BRICK_STAIRS.get(),
+                LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB.get(),
+                LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get(),
                 new ResourceLocation(Lapidary.MODID, "block/polished_andesite_bricks"));
 
-        cubeAllWithItem(LapidaryBlocks.CRACKED_BRICKS);
+        cubeAllWithItem(LapidaryBlocks.CRACKED_BRICKS.get());
 
         cubeMirrorWithItem(LapidaryBlocks.MOSSY_MUD_BRICKS.get());
-        triadAllWithItem(LapidaryBlocks.MOSSY_MUD_BRICK_STAIRS, LapidaryBlocks.MOSSY_MUD_BRICK_SLAB, LapidaryBlocks.MOSSY_MUD_BRICK_WALL,
+        triadAllWithItem(LapidaryBlocks.MOSSY_MUD_BRICK_STAIRS.get(),
+                LapidaryBlocks.MOSSY_MUD_BRICK_SLAB.get(),
+                LapidaryBlocks.MOSSY_MUD_BRICK_WALL.get(),
                 new ResourceLocation(Lapidary.MODID, "block/mossy_mud_bricks"));
         cubeMirrorWithItem(LapidaryBlocks.CRACKED_MUD_BRICKS.get());
 
-        triadAllWithItem(LapidaryBlocks.NETHERRACK_STAIRS, LapidaryBlocks.NETHERRACK_SLAB, LapidaryBlocks.NETHERRACK_WALL,
+        triadAllWithItem(LapidaryBlocks.NETHERRACK_STAIRS.get(),
+                LapidaryBlocks.NETHERRACK_SLAB.get(),
+                LapidaryBlocks.NETHERRACK_WALL.get(),
                 new ResourceLocation("block/netherrack"));
 
-        triadAllWithItem(LapidaryBlocks.END_STONE_STAIRS, LapidaryBlocks.END_STONE_SLAB, LapidaryBlocks.END_STONE_WALL,
+        triadAllWithItem(LapidaryBlocks.END_STONE_STAIRS.get(),
+                LapidaryBlocks.END_STONE_SLAB.get(),
+                LapidaryBlocks.END_STONE_WALL.get(),
                 new ResourceLocation("block/end_stone"));
-        cubeAllWithItem(LapidaryBlocks.CRACKED_END_STONE_BRICKS);
+        cubeAllWithItem(LapidaryBlocks.CRACKED_END_STONE_BRICKS.get());
 
-        wallAllWithItem(LapidaryBlocks.PURPUR_WALL, new ResourceLocation("block/purpur_block"));
-        cubeAllWithItem(LapidaryBlocks.CRACKED_PURPUR_BLOCK);
+        wallAllWithItem(LapidaryBlocks.PURPUR_WALL.get(), new ResourceLocation("block/purpur_block"));
+        cubeAllWithItem(LapidaryBlocks.CRACKED_PURPUR_BLOCK.get());
     }
 
     // Creates a simple block and item with the same texture on each side.
-    private void cubeAllWithItem(RegistryObject<Block> block)
+    private void cubeAllWithItem(Block block)
     {
-        Block b = block.get();
-        simpleBlockWithItem(b, cubeAll(b));
+        simpleBlockWithItem(block, cubeAll(block));
     }
 
     // Creates an item from an existing block.
-    private <T extends Block> void simpleItemFromBlock(RegistryObject<T> block)
+    private <T extends Block> void simpleItemFromBlock(Block block)
     {
-        ResourceLocation id = block.getId();
+        ResourceLocation id = ForgeRegistries.BLOCKS.getKey(block);
         itemModels().getBuilder(id.getPath()).parent(models().getExistingFile(id));
     }
 
     // Creates a stair with an item where all sides are the same.
-    private void stairAllWithItem(RegistryObject<StairBlock> stair, ResourceLocation texture)
+    private void stairAllWithItem(StairBlock stair, ResourceLocation texture)
     {
         // Do Block Model.
-        stairsBlock(stair.get(), texture);
+        stairsBlock(stair, texture);
         // Do Item Model.
         simpleItemFromBlock(stair);
     }
 
     // Creates a slab with an item where all sides are the same.
-    private void slabAllWithItem(RegistryObject<SlabBlock> slab, ResourceLocation texture)
+    private void slabAllWithItem(SlabBlock slab, ResourceLocation texture)
     {
         // Do Block Model.
-        slabBlock(slab.get(), texture, texture);
+        slabBlock(slab, texture, texture);
         // Do Item Model.
         simpleItemFromBlock(slab);
     }
 
     // Creates a wall with an item where all sides are the same.
-    private void wallAllWithItem(RegistryObject<WallBlock> wall, ResourceLocation texture)
+    private void wallAllWithItem(WallBlock wall, ResourceLocation texture)
     {
         // Do Block Model.
-        wallBlock(wall.get(), texture);
+        wallBlock(wall, texture);
         // Do Item Model.
-        itemModels().wallInventory(wall.getId().getPath(), texture);
+        itemModels().wallInventory(ForgeRegistries.BLOCKS.getKey(wall).getPath(), texture);
     }
 
-    private void triadAllWithItem(RegistryObject<StairBlock> stair, RegistryObject<SlabBlock> slab, RegistryObject<WallBlock> wall, ResourceLocation texture)
+    private void triadAllWithItem(StairBlock stair, SlabBlock slab, WallBlock wall, ResourceLocation texture)
     {
         stairAllWithItem(stair, texture);
         slabAllWithItem(slab, texture);

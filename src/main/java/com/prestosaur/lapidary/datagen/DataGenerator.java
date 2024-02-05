@@ -25,6 +25,7 @@ public class DataGenerator
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
+        generator.addProvider(true, new VanillaBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(true, new LapidaryBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(true, new LapidaryBlockTagsProvider(packOutput, lookupProvider, Lapidary.MODID, existingFileHelper));
         generator.addProvider(true, new LapidaryRecipeProvider(packOutput));
