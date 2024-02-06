@@ -18,6 +18,9 @@ public class LapidaryBlocks
 {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Lapidary.MODID);
 
+    public static final RegistryObject<RotatedPillarBlock> PETRIFIED_LOG = registerBlock("petrified_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
     public static final RegistryObject<WallBlock> STONE_WALL = registerBlock("stone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
 

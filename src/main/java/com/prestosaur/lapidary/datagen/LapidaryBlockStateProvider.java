@@ -20,6 +20,9 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
     @Override
     protected void registerStatesAndModels()
     {
+        logBlock(LapidaryBlocks.PETRIFIED_LOG.get());
+        simpleItemFromBlock(LapidaryBlocks.PETRIFIED_LOG.get());
+
         wallAllWithItem(LapidaryBlocks.STONE_WALL.get(), new ResourceLocation("block/stone"));
 
         wallAllWithItem(LapidaryBlocks.POLISHED_GRANITE_WALL.get(), new ResourceLocation("block/polished_granite"));

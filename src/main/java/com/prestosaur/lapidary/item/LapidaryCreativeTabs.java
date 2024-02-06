@@ -23,6 +23,8 @@ public class LapidaryCreativeTabs
             .icon(() -> new ItemStack(LapidaryBlocks.CRACKED_BRICKS.get()))
             .title(Component.translatable("itemGroup." + Lapidary.MODID + ".building_blocks"))
             .displayItems((features, output) -> {
+                output.accept(LapidaryBlocks.PETRIFIED_LOG.get());
+
                 output.accept(LapidaryBlocks.STONE_WALL.get());
 
                 output.accept(LapidaryBlocks.POLISHED_GRANITE_WALL.get());
@@ -70,6 +72,9 @@ public class LapidaryCreativeTabs
         ResourceKey<CreativeModeTab> tab = event.getTabKey();
         if(tab == CreativeModeTabs.BUILDING_BLOCKS)
         {
+            putAfterChain(event, Items.WARPED_BUTTON,
+                    LapidaryBlocks.PETRIFIED_LOG.get());
+
             putAfter(event, LapidaryBlocks.STONE_WALL.get(), Items.STONE_SLAB);
 
             putAfterChain(event, Items.POLISHED_GRANITE_SLAB,

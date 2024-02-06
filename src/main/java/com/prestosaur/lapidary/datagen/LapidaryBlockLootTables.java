@@ -24,6 +24,8 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider
     @Override
     protected void generate()
     {
+        dropSelf(LapidaryBlocks.PETRIFIED_LOG.get());
+
         dropOtherSilkTouch(LapidaryBlocks.STONE_WALL.get(), Blocks.COBBLESTONE_WALL);
 
         dropSelf(LapidaryBlocks.POLISHED_GRANITE_WALL.get());

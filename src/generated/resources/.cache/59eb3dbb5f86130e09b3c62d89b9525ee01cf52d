@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-05T15:51:40.2565781	Loot Tables
+// 1.20.1	2024-02-05T22:12:56.8926713	Loot Tables
 89c511ddcd79f347cc7c199a77e0b232c042e7b2 data/lapidary/loot_tables/blocks/cracked_bricks.json
 0241ab231fd13b755de94c5d02d1e91803698c58 data/lapidary/loot_tables/blocks/cracked_end_stone_bricks.json
 30a3aaef415fc6ddafee99bc90614c494c325ece data/lapidary/loot_tables/blocks/cracked_mud_bricks.json
@@ -13,6 +13,7 @@ b87d64f00ad0bbdfb1429feafc58304b428b1449 data/lapidary/loot_tables/blocks/end_st
 9e33bb6c9cea76d0a96b088a56d26c9429566276 data/lapidary/loot_tables/blocks/netherrack_slab.json
 d7e866725d356135938d1e7ed9dbb308fde14eb2 data/lapidary/loot_tables/blocks/netherrack_stairs.json
 bbc84de2e51e307f6c6d6b8e986f687722521cf3 data/lapidary/loot_tables/blocks/netherrack_wall.json
+783c6c4c77d78ea82b02328b48a54caef7599279 data/lapidary/loot_tables/blocks/petrified_log.json
 b20a475859a5e58f2039efbc3516fd4baadfb487 data/lapidary/loot_tables/blocks/polished_andesite_bricks.json
 d907a57fde3b603541822e5ea69ee3d2bd47c790 data/lapidary/loot_tables/blocks/polished_andesite_brick_slab.json
 cfeebd9cf23464d62ad635071bc006b30a6c9634 data/lapidary/loot_tables/blocks/polished_andesite_brick_stairs.json
