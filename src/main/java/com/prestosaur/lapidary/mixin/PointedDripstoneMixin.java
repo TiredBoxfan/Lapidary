@@ -48,25 +48,61 @@ public abstract class PointedDripstoneMixin
             BlockPos tipPos = findTip(pState, pLevel, pPos, 11, false);
             if(tipPos == null)
                 return;
-            BlockPos targetPos = findPetrifiableBlockBelowStalactiteTip(pLevel, tipPos, BlockTags.LOGS);
+            BlockPos targetPos = findPetrifiableBlockBelowStalactiteTip(pLevel, tipPos);
             if(targetPos == null)
                 return;
             BlockState targetState = pLevel.getBlockState(targetPos);
             if(targetState == null)
                 return;
-            BlockState replace = LapidaryBlocks.PETRIFIED_LOG.get().defaultBlockState().setValue(BlockStateProperties.AXIS, targetState.getValue(BlockStateProperties.AXIS));
-            pLevel.setBlockAndUpdate(targetPos, replace);
-            Block.pushEntitiesUp((optional.get()).sourceState(), replace, pLevel, (optional.get()).pos());
-            pLevel.gameEvent(GameEvent.BLOCK_CHANGE, (optional.get()).pos(), GameEvent.Context.of(replace));
+
+            BlockState replaceState;
+            try
+            {
+                if(targetState.is(BlockTags.LOGS))
+                {
+                    replaceState = LapidaryBlocks.PETRIFIED_LOG.get().defaultBlockState()
+                            .setValue(BlockStateProperties.AXIS, targetState.getValue(BlockStateProperties.AXIS));
+                }
+                else if(targetState.is(BlockTags.PLANKS))
+                {
+                    replaceState = LapidaryBlocks.PETRIFIED_PLANKS.get().defaultBlockState();
+                }
+                else if(targetState.is(BlockTags.WOODEN_STAIRS))
+                {
+                    replaceState = LapidaryBlocks.PETRIFIED_STAIRS.get().defaultBlockState()
+                            .setValue(BlockStateProperties.HORIZONTAL_FACING, targetState.getValue(BlockStateProperties.HORIZONTAL_FACING))
+                            .setValue(BlockStateProperties.HALF, targetState.getValue(BlockStateProperties.HALF))
+                            .setValue(BlockStateProperties.STAIRS_SHAPE, targetState.getValue(BlockStateProperties.STAIRS_SHAPE))
+                            .setValue(BlockStateProperties.WATERLOGGED, targetState.getValue(BlockStateProperties.WATERLOGGED));
+                }
+                else if(targetState.is(BlockTags.WOODEN_SLABS))
+                {
+                    replaceState = Blocks.PETRIFIED_OAK_SLAB.defaultBlockState()
+                            .setValue(BlockStateProperties.SLAB_TYPE, targetState.getValue(BlockStateProperties.SLAB_TYPE))
+                            .setValue(BlockStateProperties.WATERLOGGED, targetState.getValue(BlockStateProperties.WATERLOGGED));
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch (Exception e)
+            {
+                return;
+            }
+
+            pLevel.setBlockAndUpdate(targetPos, replaceState);
+            Block.pushEntitiesUp((optional.get()).sourceState(), replaceState, pLevel, (optional.get()).pos());
+            pLevel.gameEvent(GameEvent.BLOCK_CHANGE, (optional.get()).pos(), GameEvent.Context.of(replaceState));
             pLevel.levelEvent(LevelEvent.DRIPSTONE_DRIP, tipPos, 0);
         }
     }
 
     @Nullable
-    private static BlockPos findPetrifiableBlockBelowStalactiteTip(Level level, BlockPos pos, TagKey<Block> tag)
+    private static BlockPos findPetrifiableBlockBelowStalactiteTip(Level level, BlockPos pos)
     {
         Predicate<BlockState> predicate = (s) -> {
-            return s.is(tag);
+            return s.is(BlockTags.LOGS) || s.is(BlockTags.PLANKS) || s.is(BlockTags.WOODEN_STAIRS) || s.is(BlockTags.WOODEN_SLABS);
         };
         BiPredicate<BlockPos, BlockState> bipredicate = (p, s) -> {
             return canDripThrough(level, p, s);
