@@ -33,11 +33,10 @@ import static net.minecraft.world.level.block.PointedDripstoneBlock.*;
 @Mixin(PointedDripstoneBlock.class)
 public abstract class PointedDripstoneMixin
 {
-    private static final float PETRIFICATION_CHANCE = 1F;//(float) 45 / 256;
+    private static final float PETRIFICATION_CHANCE = (float) 15 / 256;
 
     private void maybePetrify(BlockState pState, ServerLevel pLevel, BlockPos pPos, float pRandChance)
     {
-        System.out.println("Maybe Petrify");
         if(pRandChance < PETRIFICATION_CHANCE && isStalactiteStartPos(pState, pLevel, pPos))
         {
             var optional = getFluidAboveStalactite(pLevel, pPos, pState);
