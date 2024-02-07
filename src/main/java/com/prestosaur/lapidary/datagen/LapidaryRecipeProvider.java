@@ -24,6 +24,9 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer)
     {
+        addStonecutting(consumer, LapidaryBlocks.PETRIFIED_PLANKS, 1, LapidaryBlocks.PETRIFIED_LOG.get());
+        addCraftStairsAndStonecut(consumer, LapidaryBlocks.PETRIFIED_STAIRS, LapidaryBlocks.PETRIFIED_PLANKS.get(), LapidaryBlocks.PETRIFIED_LOG.get());
+
         addCraftWallAndStonecut(consumer, LapidaryBlocks.STONE_WALL, Blocks.STONE);
 
         addCraftWallAndStonecut(consumer, LapidaryBlocks. POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE, Blocks.GRANITE);

@@ -1,6 +1,7 @@
 package com.prestosaur.lapidary.datagen;
 
 import com.prestosaur.lapidary.Lapidary;
+import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
@@ -19,6 +20,10 @@ public class VanillaBlockStateProvider extends BlockStateProvider
 
     @Override
     protected void registerStatesAndModels() {
+        slabBlock((SlabBlock) Blocks.PETRIFIED_OAK_SLAB,
+                LapidaryBlocks.PETRIFIED_PLANKS.getId(),
+                blockTexture(LapidaryBlocks.PETRIFIED_PLANKS.get()));
+
         slabBlockSide((SlabBlock) Blocks.POLISHED_GRANITE_SLAB,
                 new ResourceLocation(Lapidary.MODID, "block/polished_granite_slab_side"),
                 blockTexture(Blocks.POLISHED_GRANITE));

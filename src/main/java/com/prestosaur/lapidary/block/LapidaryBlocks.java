@@ -20,6 +20,11 @@ public class LapidaryBlocks
 
     public static final RegistryObject<RotatedPillarBlock> PETRIFIED_LOG = registerBlock("petrified_log",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> PETRIFIED_PLANKS = registerBlock("petrified_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(PETRIFIED_LOG.get())));
+    public static final RegistryObject<StairBlock> PETRIFIED_STAIRS = registerBlock("petrified_stairs",
+            () -> new StairBlock(PETRIFIED_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(PETRIFIED_PLANKS.get())));
 
     public static final RegistryObject<WallBlock> STONE_WALL = registerBlock("stone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));

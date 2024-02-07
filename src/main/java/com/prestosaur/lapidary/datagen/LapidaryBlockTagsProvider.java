@@ -25,6 +25,8 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
     {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 LapidaryBlocks.PETRIFIED_LOG.get(),
+                LapidaryBlocks.PETRIFIED_PLANKS.get(),
+                LapidaryBlocks.PETRIFIED_STAIRS.get(),
 
                 LapidaryBlocks.STONE_WALL.get(),
 

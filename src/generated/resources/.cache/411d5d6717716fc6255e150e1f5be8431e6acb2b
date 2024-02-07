@@ -1,10 +1,13 @@
-// 1.20.1	2024-02-05T16:43:34.3607294	Block States: minecraft
+// 1.20.1	2024-02-06T17:13:37.0848257	Block States: minecraft
+4db2e634a3cb08554d593706b43abeb9640ba3cd assets/minecraft/blockstates/petrified_oak_slab.json
 f63868834d2a1f14be89c5a9db2b27e26efc1145 assets/minecraft/blockstates/polished_andesite_slab.json
 4bfa6e18a8c823eace342ab07e19e7fa9f89a4ac assets/minecraft/blockstates/polished_blackstone_slab.json
 470006ddeafd3e2dbcceeb0d615d630e8de5e0f7 assets/minecraft/blockstates/polished_deepslate_slab.json
 c96edca42ab4baef631eb6789f6c92c9d8cbac97 assets/minecraft/blockstates/polished_diorite_slab.json
 b13a05ea03adbc31b466abb02abf94f8d1391cda assets/minecraft/blockstates/polished_granite_slab.json
 00184f95105b15d2e9b55aa771b35faa8d1bf5d1 assets/minecraft/blockstates/quartz_slab.json
+ddbfc36dc29dafe297a0e7f80804f009b931076f assets/minecraft/models/block/petrified_oak_slab.json
+d8b6d1fd1285275e128811cbb74f0b69c2785237 assets/minecraft/models/block/petrified_oak_slab_top.json
 5dfd94dd099ec2e3ad564cf14c4d00736f119b61 assets/minecraft/models/block/polished_andesite_slab.json
 3ad6952dc179c5264048b15a2f48c503abe595c4 assets/minecraft/models/block/polished_andesite_slab_double.json
 e00f2800d41e67cec271488a8859318cf513b705 assets/minecraft/models/block/polished_andesite_slab_top.json

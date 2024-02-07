@@ -1,6 +1,10 @@
 {
   "itemGroup.lapidary.building_blocks": "Lapidary Building Blocks",
 
+  "block.lapidary.petrified_log": "Petrified Wood Log",
+  "block.lapidary.petrified_planks": "Petrified Wood Planks",
+  "block.lapidary.petrified_stairs": "Petrified Wood Stairs",
+
   "block.lapidary.stone_wall": "Stone Wall",
 
   "block.lapidary.polished_granite_wall": "Polished Granite Wall",

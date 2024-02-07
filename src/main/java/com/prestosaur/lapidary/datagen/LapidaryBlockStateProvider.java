@@ -22,6 +22,8 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
     {
         logBlock(LapidaryBlocks.PETRIFIED_LOG.get());
         simpleItemFromBlock(LapidaryBlocks.PETRIFIED_LOG.get());
+        cubeAllWithItem(LapidaryBlocks.PETRIFIED_PLANKS.get());
+        stairAllWithItem(LapidaryBlocks.PETRIFIED_STAIRS.get(), new ResourceLocation(Lapidary.MODID, "block/petrified_planks"));
 
         wallAllWithItem(LapidaryBlocks.STONE_WALL.get(), new ResourceLocation("block/stone"));
 

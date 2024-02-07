@@ -24,6 +24,8 @@ public class LapidaryCreativeTabs
             .title(Component.translatable("itemGroup." + Lapidary.MODID + ".building_blocks"))
             .displayItems((features, output) -> {
                 output.accept(LapidaryBlocks.PETRIFIED_LOG.get());
+                output.accept(LapidaryBlocks.PETRIFIED_PLANKS.get());
+                output.accept(LapidaryBlocks.PETRIFIED_STAIRS.get());
 
                 output.accept(LapidaryBlocks.STONE_WALL.get());
 
@@ -72,8 +74,11 @@ public class LapidaryCreativeTabs
         ResourceKey<CreativeModeTab> tab = event.getTabKey();
         if(tab == CreativeModeTabs.BUILDING_BLOCKS)
         {
-            putAfterChain(event, Items.WARPED_BUTTON,
-                    LapidaryBlocks.PETRIFIED_LOG.get());
+            putBefore(event, LapidaryBlocks.PETRIFIED_LOG.get(), Items.STONE);
+            putAfterChain(event, LapidaryBlocks.PETRIFIED_LOG.get(),
+                    LapidaryBlocks.PETRIFIED_PLANKS.get(),
+                    LapidaryBlocks.PETRIFIED_STAIRS.get(),
+                    Items.PETRIFIED_OAK_SLAB);
 
             putAfter(event, LapidaryBlocks.STONE_WALL.get(), Items.STONE_SLAB);
 
@@ -134,5 +139,10 @@ public class LapidaryCreativeTabs
             event.getEntries().putAfter(new ItemStack(last), new ItemStack(i), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             last = i;
         }
+    }
+
+    private static void putBefore(BuildCreativeModeTabContentsEvent event, ItemLike item, ItemLike before)
+    {
+        event.getEntries().putBefore(new ItemStack(before), new ItemStack(item), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
     }
 }
