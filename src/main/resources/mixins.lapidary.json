@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.prestosaur.lapidary.mixin",
+  "refmap": "$mixins.lapidary.refmap.json",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "PointedDripstoneMixin"
+  ],
+  "client": [
+  ],
+  "server": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
