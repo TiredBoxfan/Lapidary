@@ -24,6 +24,7 @@ public class LapidaryCreativeTabs
             .title(Component.translatable("itemGroup." + Lapidary.MODID + ".building_blocks"))
             .displayItems((features, output) -> {
                 output.accept(LapidaryBlocks.PETRIFIED_LOG.get());
+                output.accept(LapidaryBlocks.PETRIFIED_WOOD.get());
                 output.accept(LapidaryBlocks.PETRIFIED_PLANKS.get());
                 output.accept(LapidaryBlocks.PETRIFIED_STAIRS.get());
 
@@ -76,6 +77,7 @@ public class LapidaryCreativeTabs
         {
             putBefore(event, LapidaryBlocks.PETRIFIED_LOG.get(), Items.STONE);
             putAfterChain(event, LapidaryBlocks.PETRIFIED_LOG.get(),
+                    LapidaryBlocks.PETRIFIED_WOOD.get(),
                     LapidaryBlocks.PETRIFIED_PLANKS.get(),
                     LapidaryBlocks.PETRIFIED_STAIRS.get(),
                     Items.PETRIFIED_OAK_SLAB);

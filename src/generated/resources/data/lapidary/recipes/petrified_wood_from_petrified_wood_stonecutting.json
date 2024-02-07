@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "lapidary:petrified_wood"
+  },
+  "result": "lapidary:petrified_wood"
+}

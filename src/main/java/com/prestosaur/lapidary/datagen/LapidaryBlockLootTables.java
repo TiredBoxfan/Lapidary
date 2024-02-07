@@ -25,6 +25,7 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider
     protected void generate()
     {
         dropSelf(LapidaryBlocks.PETRIFIED_LOG.get());
+        dropSelf(LapidaryBlocks.PETRIFIED_WOOD.get());
         dropSelf(LapidaryBlocks.PETRIFIED_PLANKS.get());
         dropSelf(LapidaryBlocks.PETRIFIED_STAIRS.get());
 

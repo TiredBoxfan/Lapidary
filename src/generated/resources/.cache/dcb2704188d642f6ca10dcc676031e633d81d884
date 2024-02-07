@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-06T17:13:37.0748575	Block States: lapidary
+// 1.20.1	2024-02-07T05:02:59.8554532	Block States: lapidary
 497c1171f8d2eba5324e05d689f1914e1c72589e assets/lapidary/blockstates/cracked_bricks.json
 aa5fed6ff7f0d891c89f5076284802374c81b708 assets/lapidary/blockstates/cracked_end_stone_bricks.json
 781c8abfa2114b37319d43388968b8b1692ff628 assets/lapidary/blockstates/cracked_mud_bricks.json
@@ -16,6 +16,7 @@ d407826d345c95b9330f890795a6096cfbd53caa assets/lapidary/blockstates/netherrack_
 79d72526c01c26a79766384bd49cd590dca227d6 assets/lapidary/blockstates/petrified_log.json
 a14620c7ada78366511b0be96addd12c2a6d169e assets/lapidary/blockstates/petrified_planks.json
 28cabcb2a34f2a5a5183934b35e4f6c2afa3a0aa assets/lapidary/blockstates/petrified_stairs.json
+7d268498c9643e1911c56a620165a97b0729bdbf assets/lapidary/blockstates/petrified_wood.json
 282b23256d9f2508bbff1fe574997ba0bb053c33 assets/lapidary/blockstates/polished_andesite_bricks.json
 0bfa106164433fbd66f597ff44789d39bb045647 assets/lapidary/blockstates/polished_andesite_brick_slab.json
 c4b0c3272b0bc091648368f4042ca7b70e472ca2 assets/lapidary/blockstates/polished_andesite_brick_stairs.json
@@ -70,6 +71,8 @@ e6d466bad348d2d781317efa6117d5dc1d2fb6be assets/lapidary/models/block/netherrack
 e642ed841fcd8c1ed5382dd94a8a7e1f3bceca33 assets/lapidary/models/block/petrified_stairs.json
 27e3d80298d896b0747d0cce07839792e498fb8a assets/lapidary/models/block/petrified_stairs_inner.json
 83ccb6d9e0604cebc0bae36982d04fabe2ddf851 assets/lapidary/models/block/petrified_stairs_outer.json
+bbeb854cbb271dfafc0f260e9a11003276d3c48f assets/lapidary/models/block/petrified_wood.json
+a53ca629506ac88831db661e5234b5849195ff80 assets/lapidary/models/block/petrified_wood_horizontal.json
 40aceceab1a89fa95e9e6c5af9f6b7b9ad3edebb assets/lapidary/models/block/polished_andesite_bricks.json
 a7367226577b017ed21c14e88cfd66cf0d2f3af1 assets/lapidary/models/block/polished_andesite_brick_slab.json
 610363f5d9d21b69f2b567d638578e5daf9b25a5 assets/lapidary/models/block/polished_andesite_brick_slab_top.json
@@ -129,6 +132,7 @@ bb4eb1066df742d2655ff45665483b5e8332342f assets/lapidary/models/item/netherrack_
 bd4bfe2e11cece354ddc6cb38f92082fd63e6808 assets/lapidary/models/item/petrified_log.json
 a84bc0055b2590f5118fa402208217be2193f80a assets/lapidary/models/item/petrified_planks.json
 21d3098fa6a4ccc80dd44e139ec7b3e49c7ada3c assets/lapidary/models/item/petrified_stairs.json
+4bb4a125b03f9aea3dc46101024e763515383197 assets/lapidary/models/item/petrified_wood.json
 64a41d0f085979625f8afc2a95ea3ac137ee30bb assets/lapidary/models/item/polished_andesite_bricks.json
 9fb761545e45795f72b27a872faf5dc0c5592fa2 assets/lapidary/models/item/polished_andesite_brick_slab.json
 68ba6f6db3d8c0d7a3a83622f2a6af018121a202 assets/lapidary/models/item/polished_andesite_brick_stairs.json

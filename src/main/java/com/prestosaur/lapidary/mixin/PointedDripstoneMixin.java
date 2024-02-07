@@ -1,6 +1,7 @@
 package com.prestosaur.lapidary.mixin;
 
 import com.prestosaur.lapidary.block.LapidaryBlocks;
+import com.prestosaur.lapidary.tag.LapidaryTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -58,16 +59,17 @@ public abstract class PointedDripstoneMixin
             BlockState replaceState;
             try
             {
-                if(targetState.is(BlockTags.LOGS))
+                if(targetState.is(LapidaryTags.Blocks.BARK_BLOCKS))
+                {
+                    replaceState = LapidaryBlocks.PETRIFIED_WOOD.get().defaultBlockState()
+                            .setValue(BlockStateProperties.AXIS, targetState.getValue(BlockStateProperties.AXIS));
+                }
+                else if(targetState.is(BlockTags.LOGS))
                 {
                     replaceState = LapidaryBlocks.PETRIFIED_LOG.get().defaultBlockState()
                             .setValue(BlockStateProperties.AXIS, targetState.getValue(BlockStateProperties.AXIS));
                 }
-                else if(targetState.is(BlockTags.PLANKS))
-                {
-                    replaceState = LapidaryBlocks.PETRIFIED_PLANKS.get().defaultBlockState();
-                }
-                else if(targetState.is(BlockTags.WOODEN_STAIRS))
+                else if(targetState.is(BlockTags.STAIRS))
                 {
                     replaceState = LapidaryBlocks.PETRIFIED_STAIRS.get().defaultBlockState()
                             .setValue(BlockStateProperties.HORIZONTAL_FACING, targetState.getValue(BlockStateProperties.HORIZONTAL_FACING))
@@ -75,7 +77,7 @@ public abstract class PointedDripstoneMixin
                             .setValue(BlockStateProperties.STAIRS_SHAPE, targetState.getValue(BlockStateProperties.STAIRS_SHAPE))
                             .setValue(BlockStateProperties.WATERLOGGED, targetState.getValue(BlockStateProperties.WATERLOGGED));
                 }
-                else if(targetState.is(BlockTags.WOODEN_SLABS))
+                else if(targetState.is(BlockTags.SLABS))
                 {
                     replaceState = Blocks.PETRIFIED_OAK_SLAB.defaultBlockState()
                             .setValue(BlockStateProperties.SLAB_TYPE, targetState.getValue(BlockStateProperties.SLAB_TYPE))
@@ -83,7 +85,7 @@ public abstract class PointedDripstoneMixin
                 }
                 else
                 {
-                    return;
+                    replaceState = LapidaryBlocks.PETRIFIED_PLANKS.get().defaultBlockState();
                 }
             }
             catch (Exception e)
@@ -102,7 +104,7 @@ public abstract class PointedDripstoneMixin
     private static BlockPos findPetrifiableBlockBelowStalactiteTip(Level level, BlockPos pos)
     {
         Predicate<BlockState> predicate = (s) -> {
-            return s.is(BlockTags.LOGS) || s.is(BlockTags.PLANKS) || s.is(BlockTags.WOODEN_STAIRS) || s.is(BlockTags.WOODEN_SLABS);
+            return s.is(LapidaryTags.Blocks.PETRIFIABLE);
         };
         BiPredicate<BlockPos, BlockState> bipredicate = (p, s) -> {
             return canDripThrough(level, p, s);
