@@ -1,6 +1,7 @@
 package com.prestosaur.lapidary.mixin;
 
 import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.client.gui.components.DebugScreenOverlay;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.network.ServerGamePacketListenerImpl;
@@ -53,6 +54,8 @@ public abstract class AxeItemMixin extends Item
             info.setReturnValue(InteractionResult.PASS);
     }*/
 
+    BlockPos testPos;
+
     /**
      * @author Prestosaur
      * @reason Allowing Stripping Animation
@@ -65,6 +68,8 @@ public abstract class AxeItemMixin extends Item
         BlockPos blockpos = pContext.getClickedPos();
         BlockState blockstate = level.getBlockState(blockpos);
         Player player = pContext.getPlayer();
+
+        testPos = blockpos;
 
         if(pContext.getHand() == InteractionHand.MAIN_HAND && !player.getItemInHand(InteractionHand.OFF_HAND).isEmpty())
             return InteractionResult.PASS;
@@ -91,6 +96,9 @@ public abstract class AxeItemMixin extends Item
                 BlockPos blockpos = blockhitresult.getBlockPos();
                 BlockState blockstate = pLevel.getBlockState(blockpos);
                 Block block = blockstate.getBlock();
+
+                if (!blockpos.equals(testPos))
+                    return;
 
                 HumanoidArm humanoidarm = pLivingEntity.getUsedItemHand() == InteractionHand.MAIN_HAND ? player.getMainArm() : player.getMainArm().getOpposite();
 
