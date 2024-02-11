@@ -1,7 +1,6 @@
 package com.prestosaur.lapidary.mixin;
 
 import net.minecraft.advancements.CriteriaTriggers;
-import net.minecraft.client.gui.components.DebugScreenOverlay;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.network.ServerGamePacketListenerImpl;
@@ -25,24 +24,17 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraftforge.common.ToolActions;
-import org.checkerframework.checker.units.qual.A;
-import org.checkerframework.common.reflection.qual.Invoke;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
-import org.spongepowered.asm.mixin.gen.Invoker;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import javax.swing.text.html.Option;
 import java.util.Optional;
 
 @Mixin(AxeItem.class)
-public abstract class AxeItemMixin extends Item
+public abstract class AxeItemMixinOld extends Item
 {
-    private static final double MAX_RIGHT_DISTANCE = Math.sqrt(ServerGamePacketListenerImpl.MAX_INTERACTION_DISTANCE) - 1.0D;
+    private static final double MAX_SECONDARY_DISTANCE = Math.sqrt(ServerGamePacketListenerImpl.MAX_INTERACTION_DISTANCE) - 1.0D;
 
-    public AxeItemMixin(Properties pProperties) {
+    public AxeItemMixinOld(Properties pProperties) {
         super(pProperties);
     }
 
@@ -87,8 +79,6 @@ public abstract class AxeItemMixin extends Item
     {
         if (pRemainingUseDuration >= 0 && pLivingEntity instanceof Player player)
         {
-            if(pRemainingUseDuration != 1)
-                return;
 
             HitResult hitResult = calculateHitResult(pLivingEntity);
             if (hitResult instanceof BlockHitResult blockhitresult)
@@ -97,6 +87,11 @@ public abstract class AxeItemMixin extends Item
                 BlockState blockstate = pLevel.getBlockState(blockpos);
                 Block block = blockstate.getBlock();
 
+                System.out.println(blockstate.getDestroyProgress(player, pLevel, blockpos));
+
+                if(pRemainingUseDuration != 1)
+                    return;
+
                 if (!blockpos.equals(testPos))
                     return;
 
@@ -104,6 +99,7 @@ public abstract class AxeItemMixin extends Item
 
                 UseOnContext context = new UseOnContext(player, player.getUsedItemHand(), blockhitresult);
                 ItemStack itemstack = context.getItemInHand();
+
 
                 Optional<BlockState> optFinal = Optional.empty();
 
@@ -145,13 +141,13 @@ public abstract class AxeItemMixin extends Item
 
     private HitResult calculateHitResult(LivingEntity pEntity)
     {
-        return ProjectileUtil.getHitResultOnViewVector(pEntity, (p) -> !p.isSpectator() && p.isPickable(), MAX_RIGHT_DISTANCE);
+        return ProjectileUtil.getHitResultOnViewVector(pEntity, (p) -> !p.isSpectator() && p.isPickable(), MAX_SECONDARY_DISTANCE);
     }
 
     @Override
     public UseAnim getUseAnimation(ItemStack pStack)
     {
-        System.out.println("HERE");
+        //System.out.println("HERE");
         return UseAnim.BRUSH;
     }
 
