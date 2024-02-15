@@ -7,6 +7,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -102,6 +103,11 @@ public class LapidaryBlocks
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.PURPUR_BLOCK)));
     public static final RegistryObject<Block> CRACKED_PURPUR_BLOCK = registerBlock("cracked_purpur_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.PURPUR_BLOCK)));
+
+    public static final RegistryObject<Block> JADE = registerBlock("jade",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRANITE).mapColor(MapColor.COLOR_GREEN)));
+    public static final RegistryObject<Block> POLISHED_JADE = registerBlock("polished_jade",
+            () -> new Block(BlockBehaviour.Properties.copy(JADE.get())));
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block)
     {

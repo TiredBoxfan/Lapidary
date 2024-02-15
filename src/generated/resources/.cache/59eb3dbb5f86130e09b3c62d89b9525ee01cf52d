@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-07T04:59:20.7630266	Loot Tables
+// 1.20.1	2024-02-14T18:33:41.2941735	Loot Tables
 89c511ddcd79f347cc7c199a77e0b232c042e7b2 data/lapidary/loot_tables/blocks/cracked_bricks.json
 0241ab231fd13b755de94c5d02d1e91803698c58 data/lapidary/loot_tables/blocks/cracked_end_stone_bricks.json
 30a3aaef415fc6ddafee99bc90614c494c325ece data/lapidary/loot_tables/blocks/cracked_mud_bricks.json
@@ -6,6 +6,7 @@ c18a5409fefdeb12c318cb97852c1fce0fe7f9ad data/lapidary/loot_tables/blocks/cracke
 b87d64f00ad0bbdfb1429feafc58304b428b1449 data/lapidary/loot_tables/blocks/end_stone_slab.json
 1bd368262d805b058b579dc7312c901197eeb044 data/lapidary/loot_tables/blocks/end_stone_stairs.json
 53c62298147b72c72b3e7cbad980d5c4ac35ebef data/lapidary/loot_tables/blocks/end_stone_wall.json
+2944edd5730f5ebf208388891a74750d9a43856a data/lapidary/loot_tables/blocks/jade.json
 0c9c3b0af097ca1bd89cbf883527c87c793ce70f data/lapidary/loot_tables/blocks/mossy_mud_bricks.json
 1d820f3679b3142883a477d9a10e565f13fec061 data/lapidary/loot_tables/blocks/mossy_mud_brick_slab.json
 7197ef451de2266f0042aa232cd297fdf80c60c0 data/lapidary/loot_tables/blocks/mossy_mud_brick_stairs.json
@@ -32,5 +33,6 @@ c70b0d9c4baaa1addea0903a31997ebe2ce905af data/lapidary/loot_tables/blocks/polish
 e7d6cdac58ec53ac3c08186d06f74b0191e3724b data/lapidary/loot_tables/blocks/polished_granite_brick_stairs.json
 e80aa9ee1d8a53a4880c8b2a49878754b82ef7d8 data/lapidary/loot_tables/blocks/polished_granite_brick_wall.json
 30de51b1da1e75ed5f1ed6d18fa8a5de668376a2 data/lapidary/loot_tables/blocks/polished_granite_wall.json
+6bb323400d9c5e679d03f77c01efa5257fd1f91b data/lapidary/loot_tables/blocks/polished_jade.json
 dc208332cebe584a281c8e844b2e45bb8fb10501 data/lapidary/loot_tables/blocks/purpur_wall.json
 0451c3c0cf0edffae0779220ea3ad63fe9cc0994 data/lapidary/loot_tables/blocks/stone_wall.json

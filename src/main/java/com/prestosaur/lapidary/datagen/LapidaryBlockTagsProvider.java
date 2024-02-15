@@ -67,7 +67,10 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider
                 LapidaryBlocks.CRACKED_END_STONE_BRICKS.get(),
 
                 LapidaryBlocks.PURPUR_WALL.get(),
-                LapidaryBlocks.CRACKED_PURPUR_BLOCK.get()
+                LapidaryBlocks.CRACKED_PURPUR_BLOCK.get(),
+
+                LapidaryBlocks.JADE.get(),
+                LapidaryBlocks.POLISHED_JADE.get()
         );
         this.tag(BlockTags.STAIRS).add(
                 LapidaryBlocks.POLISHED_GRANITE_BRICK_STAIRS.get(),

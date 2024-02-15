@@ -48,6 +48,9 @@ public class LapidaryCreativeTabs
                 output.accept(LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB.get());
                 output.accept(LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get());
 
+                output.accept(LapidaryBlocks.JADE.get());
+                output.accept(LapidaryBlocks.POLISHED_JADE.get());
+
                 output.accept(LapidaryBlocks.CRACKED_BRICKS.get());
 
                 output.accept(LapidaryBlocks.MOSSY_MUD_BRICKS.get());
@@ -125,6 +128,10 @@ public class LapidaryCreativeTabs
 
             putAfter(event, LapidaryBlocks.PURPUR_WALL.get(), Blocks.PURPUR_SLAB);
             putAfter(event, LapidaryBlocks.CRACKED_PURPUR_BLOCK.get(), Items.PURPUR_BLOCK);
+
+            putAfterChain(event, Items.SMOOTH_QUARTZ_SLAB,
+                    LapidaryBlocks.JADE.get(),
+                    LapidaryBlocks.POLISHED_JADE.get());
         }
     }
 

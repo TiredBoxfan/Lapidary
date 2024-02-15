@@ -68,6 +68,9 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider
 
         dropSelf(LapidaryBlocks.PURPUR_WALL.get());
         dropSelf(LapidaryBlocks.CRACKED_PURPUR_BLOCK.get());
+
+        dropSelf(LapidaryBlocks.JADE.get());
+        dropSelf(LapidaryBlocks.POLISHED_JADE.get());
     }
 
     @Override

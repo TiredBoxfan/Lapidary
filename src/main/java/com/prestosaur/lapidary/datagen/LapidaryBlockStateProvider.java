@@ -74,6 +74,9 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
 
         wallAllWithItem(LapidaryBlocks.PURPUR_WALL.get(), new ResourceLocation("block/purpur_block"));
         cubeAllWithItem(LapidaryBlocks.CRACKED_PURPUR_BLOCK.get());
+
+        cubeAllWithItem(LapidaryBlocks.JADE.get());
+        cubeAllWithItem(LapidaryBlocks.POLISHED_JADE.get());
     }
 
     // Creates a simple block and item with the same texture on each side.
