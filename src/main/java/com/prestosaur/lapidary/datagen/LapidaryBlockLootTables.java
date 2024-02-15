@@ -2,9 +2,7 @@ package com.prestosaur.lapidary.datagen;
 
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -13,17 +11,14 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
 
-public class LapidaryBlockLootTables extends BlockLootSubProvider
-{
+public class LapidaryBlockLootTables extends BlockLootSubProvider {
 
-    public LapidaryBlockLootTables()
-    {
+    public LapidaryBlockLootTables() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
 
     @Override
-    protected void generate()
-    {
+    protected void generate() {
         dropSelf(LapidaryBlocks.PETRIFIED_LOG.get());
         dropSelf(LapidaryBlocks.PETRIFIED_WOOD.get());
         dropSelf(LapidaryBlocks.PETRIFIED_PLANKS.get());
@@ -74,18 +69,15 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider
     }
 
     @Override
-    protected Iterable<Block> getKnownBlocks()
-    {
+    protected Iterable<Block> getKnownBlocks() {
         return LapidaryBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
 
-    private void dropSlab(SlabBlock slab)
-    {
+    private void dropSlab(SlabBlock slab) {
         add(slab, createSlabItemTable(slab));
     }
 
-    private void dropOtherSilkTouch(Block block, ItemLike other)
-    {
+    private void dropOtherSilkTouch(Block block, ItemLike other) {
         this.add(block, this.createSingleItemTableWithSilkTouch(block, other));
     }
 }

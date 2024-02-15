@@ -5,7 +5,10 @@ import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -15,8 +18,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
 @Mod.EventBusSubscriber(modid = Lapidary.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class LapidaryCreativeTabs
-{
+public class LapidaryCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Lapidary.MODID);
 
     public static RegistryObject<CreativeModeTab> LAPIDARY_BUILDING_BLOCKS = CREATIVE_MODE_TABS.register("building_blocks", () -> CreativeModeTab.builder()
@@ -73,11 +75,9 @@ public class LapidaryCreativeTabs
             }).build());
 
     @SubscribeEvent
-    public static void buildCreativeTabs(BuildCreativeModeTabContentsEvent event)
-    {
+    public static void buildCreativeTabs(BuildCreativeModeTabContentsEvent event) {
         ResourceKey<CreativeModeTab> tab = event.getTabKey();
-        if(tab == CreativeModeTabs.BUILDING_BLOCKS)
-        {
+        if (tab == CreativeModeTabs.BUILDING_BLOCKS) {
             putBefore(event, LapidaryBlocks.PETRIFIED_LOG.get(), Items.STONE);
             putAfterChain(event, LapidaryBlocks.PETRIFIED_LOG.get(),
                     LapidaryBlocks.PETRIFIED_WOOD.get(),
@@ -135,23 +135,19 @@ public class LapidaryCreativeTabs
         }
     }
 
-    private static void putAfter(BuildCreativeModeTabContentsEvent event, ItemLike item, ItemLike after)
-    {
+    private static void putAfter(BuildCreativeModeTabContentsEvent event, ItemLike item, ItemLike after) {
         event.getEntries().putAfter(new ItemStack(after), new ItemStack(item), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
     }
 
-    private static void putAfterChain(BuildCreativeModeTabContentsEvent event, ItemLike origin, ItemLike ... items)
-    {
+    private static void putAfterChain(BuildCreativeModeTabContentsEvent event, ItemLike origin, ItemLike... items) {
         ItemLike last = origin;
-        for(ItemLike i : items)
-        {
+        for (ItemLike i : items) {
             event.getEntries().putAfter(new ItemStack(last), new ItemStack(i), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             last = i;
         }
     }
 
-    private static void putBefore(BuildCreativeModeTabContentsEvent event, ItemLike item, ItemLike before)
-    {
+    private static void putBefore(BuildCreativeModeTabContentsEvent event, ItemLike item, ItemLike before) {
         event.getEntries().putBefore(new ItemStack(before), new ItemStack(item), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
     }
 }

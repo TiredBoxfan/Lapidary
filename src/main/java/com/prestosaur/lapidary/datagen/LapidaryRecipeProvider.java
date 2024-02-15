@@ -1,7 +1,6 @@
 package com.prestosaur.lapidary.datagen;
 
 import com.prestosaur.lapidary.block.LapidaryBlocks;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
@@ -14,16 +13,13 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Consumer;
 
-public class LapidaryRecipeProvider extends RecipeProvider implements IConditionBuilder
-{
-    public LapidaryRecipeProvider(PackOutput pOutput)
-    {
+public class LapidaryRecipeProvider extends RecipeProvider implements IConditionBuilder {
+    public LapidaryRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
 
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> consumer)
-    {
+    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
         addStonecutting(consumer, LapidaryBlocks.PETRIFIED_PLANKS, 1, LapidaryBlocks.PETRIFIED_LOG.get());
         woodFromLogs(consumer, LapidaryBlocks.PETRIFIED_WOOD.get(), LapidaryBlocks.PETRIFIED_LOG.get());
         addStonecutting(consumer, LapidaryBlocks.PETRIFIED_WOOD, 1, LapidaryBlocks.PETRIFIED_WOOD.get());
@@ -31,15 +27,15 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
 
         addCraftWallAndStonecut(consumer, LapidaryBlocks.STONE_WALL, Blocks.STONE);
 
-        addCraftWallAndStonecut(consumer, LapidaryBlocks. POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE, Blocks.GRANITE);
+        addCraftWallAndStonecut(consumer, LapidaryBlocks.POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE, Blocks.GRANITE);
         addCraftBrickSetAndStonecut(consumer, LapidaryBlocks.POLISHED_GRANITE_BRICKS, LapidaryBlocks.POLISHED_GRANITE_BRICK_STAIRS, LapidaryBlocks.POLISHED_GRANITE_BRICK_SLAB, LapidaryBlocks.POLISHED_GRANITE_BRICK_WALL,
                 Blocks.POLISHED_GRANITE, Blocks.GRANITE);
 
-        addCraftWallAndStonecut(consumer, LapidaryBlocks. POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE, Blocks.DIORITE);
+        addCraftWallAndStonecut(consumer, LapidaryBlocks.POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE, Blocks.DIORITE);
         addCraftBrickSetAndStonecut(consumer, LapidaryBlocks.POLISHED_DIORITE_BRICKS, LapidaryBlocks.POLISHED_DIORITE_BRICK_STAIRS, LapidaryBlocks.POLISHED_DIORITE_BRICK_SLAB, LapidaryBlocks.POLISHED_DIORITE_BRICK_WALL,
                 Blocks.POLISHED_DIORITE, Blocks.DIORITE);
 
-        addCraftWallAndStonecut(consumer, LapidaryBlocks. POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE, Blocks.ANDESITE);
+        addCraftWallAndStonecut(consumer, LapidaryBlocks.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE, Blocks.ANDESITE);
         addCraftBrickSetAndStonecut(consumer, LapidaryBlocks.POLISHED_ANDESITE_BRICKS, LapidaryBlocks.POLISHED_ANDESITE_BRICK_STAIRS, LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB, LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL,
                 Blocks.POLISHED_ANDESITE, Blocks.ANDESITE);
 
@@ -58,31 +54,26 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
         smeltingResultFromBase(consumer, LapidaryBlocks.CRACKED_PURPUR_BLOCK.get(), Blocks.PURPUR_BLOCK);
     }
 
-    private <T extends Block> void addStonecutting(Consumer<FinishedRecipe> consumer, RegistryObject<T> result, int count, ItemLike material)
-    {
+    private <T extends Block> void addStonecutting(Consumer<FinishedRecipe> consumer, RegistryObject<T> result, int count, ItemLike material) {
         String path = ForgeRegistries.ITEMS.getKey(material.asItem()).getPath();
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(material), RecipeCategory.BUILDING_BLOCKS, result.get(), count)
                 .unlockedBy(getHasName(material), has(material))
-                .save(consumer, result.getKey().location() + "_from_" + path +"_stonecutting");
+                .save(consumer, result.getKey().location() + "_from_" + path + "_stonecutting");
     }
 
-    private <T extends Block> void addStonecutting(Consumer<FinishedRecipe> consumer, RegistryObject<T> result, int count, ItemLike ... materials)
-    {
-        for(ItemLike i : materials)
-        {
+    private <T extends Block> void addStonecutting(Consumer<FinishedRecipe> consumer, RegistryObject<T> result, int count, ItemLike... materials) {
+        for (ItemLike i : materials) {
             addStonecutting(consumer, result, count, i);
         }
     }
 
-    private void addCraftBricks(Consumer<FinishedRecipe> consumer, RegistryObject<Block> result, ItemLike material)
-    {
+    private void addCraftBricks(Consumer<FinishedRecipe> consumer, RegistryObject<Block> result, ItemLike material) {
         polishedBuilder(RecipeCategory.BUILDING_BLOCKS, result.get(), Ingredient.of(material))
                 .unlockedBy(getHasName(material), has(material))
                 .save(consumer, result.getKey().location());
     }
 
-    private void addCraftBricksAndStonecut(Consumer<FinishedRecipe> consumer, RegistryObject<Block> result, ItemLike material, ItemLike ... alts)
-    {
+    private void addCraftBricksAndStonecut(Consumer<FinishedRecipe> consumer, RegistryObject<Block> result, ItemLike material, ItemLike... alts) {
         addCraftBricks(consumer, result, material);
         addStonecutting(consumer, result, 1, material);
         addStonecutting(consumer, result, 1, alts);
@@ -94,8 +85,7 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
                 .save(consumer, result.getKey().location());
     }
 
-    private void addCraftStairsAndStonecut(Consumer<FinishedRecipe> consumer, RegistryObject<StairBlock> result, ItemLike material, ItemLike ... alts)
-    {
+    private void addCraftStairsAndStonecut(Consumer<FinishedRecipe> consumer, RegistryObject<StairBlock> result, ItemLike material, ItemLike... alts) {
         addCraftStairs(consumer, result, material);
         addStonecutting(consumer, result, 1, material);
         addStonecutting(consumer, result, 1, alts);
@@ -107,8 +97,7 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
                 .save(consumer, result.getKey().location());
     }
 
-    private void addCraftSlabAndStonecut(Consumer<FinishedRecipe> consumer, RegistryObject<SlabBlock> result, ItemLike material, ItemLike ... alts)
-    {
+    private void addCraftSlabAndStonecut(Consumer<FinishedRecipe> consumer, RegistryObject<SlabBlock> result, ItemLike material, ItemLike... alts) {
         addCraftSlab(consumer, result, material);
         addStonecutting(consumer, result, 2, material);
         addStonecutting(consumer, result, 2, alts);
@@ -120,22 +109,19 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
                 .save(consumer, result.getKey().location());
     }
 
-    private void addCraftWallAndStonecut(Consumer<FinishedRecipe> consumer, RegistryObject<WallBlock> result, ItemLike material, ItemLike ... alts)
-    {
+    private void addCraftWallAndStonecut(Consumer<FinishedRecipe> consumer, RegistryObject<WallBlock> result, ItemLike material, ItemLike... alts) {
         addCraftWall(consumer, result, material);
         addStonecutting(consumer, result, 1, material);
         addStonecutting(consumer, result, 1, alts);
     }
 
-    private void addCraftTriadAndStonecut(Consumer<FinishedRecipe> consumer, RegistryObject<StairBlock> stair, RegistryObject<SlabBlock> slab, RegistryObject<WallBlock> wall, ItemLike material, ItemLike ... alts)
-    {
+    private void addCraftTriadAndStonecut(Consumer<FinishedRecipe> consumer, RegistryObject<StairBlock> stair, RegistryObject<SlabBlock> slab, RegistryObject<WallBlock> wall, ItemLike material, ItemLike... alts) {
         addCraftStairsAndStonecut(consumer, stair, material, alts);
         addCraftSlabAndStonecut(consumer, slab, material, alts);
         addCraftWallAndStonecut(consumer, wall, material, alts);
     }
 
-    private void addCraftBrickSetAndStonecut(Consumer<FinishedRecipe> consumer, RegistryObject<Block> block, RegistryObject<StairBlock> stair, RegistryObject<SlabBlock> slab, RegistryObject<WallBlock> wall, ItemLike material, ItemLike ... alts)
-    {
+    private void addCraftBrickSetAndStonecut(Consumer<FinishedRecipe> consumer, RegistryObject<Block> block, RegistryObject<StairBlock> stair, RegistryObject<SlabBlock> slab, RegistryObject<WallBlock> wall, ItemLike material, ItemLike... alts) {
         addCraftBricksAndStonecut(consumer, block, material, alts);
         // Allow the triad to be created from the block.
         addCraftTriadAndStonecut(consumer, stair, slab, wall, block.get(), alts);
@@ -145,8 +131,7 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
         addStonecutting(consumer, wall, 1, material);
     }
 
-    private void addCraftMossy(Consumer<FinishedRecipe> consumer, RegistryObject<Block> result, ItemLike base)
-    {
+    private void addCraftMossy(Consumer<FinishedRecipe> consumer, RegistryObject<Block> result, ItemLike base) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, result.get())
                 .requires(base)
                 .requires(Items.VINE)

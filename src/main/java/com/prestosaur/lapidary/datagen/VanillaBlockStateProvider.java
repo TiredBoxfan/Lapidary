@@ -11,8 +11,7 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class VanillaBlockStateProvider extends BlockStateProvider
-{
+public class VanillaBlockStateProvider extends BlockStateProvider {
 
     public VanillaBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, "minecraft", exFileHelper);
@@ -49,8 +48,7 @@ public class VanillaBlockStateProvider extends BlockStateProvider
                 new ResourceLocation("block/quartz_block_top"));
     }
 
-    private void slabBlockSide(SlabBlock slab, ResourceLocation sideTexture, ResourceLocation endTexture)
-    {
+    private void slabBlockSide(SlabBlock slab, ResourceLocation sideTexture, ResourceLocation endTexture) {
         String name = ForgeRegistries.BLOCKS.getKey(slab).getPath();
         ModelFile bottomslab = models().slab(name, sideTexture, endTexture, endTexture);
         ModelFile topslab = models().slabTop(name + "_top", sideTexture, endTexture, endTexture);

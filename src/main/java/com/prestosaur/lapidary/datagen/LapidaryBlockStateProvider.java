@@ -4,22 +4,23 @@ import com.prestosaur.lapidary.Lapidary;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.*;
-import net.minecraftforge.client.model.generators.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
+import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.client.model.generators.ModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 
-public class LapidaryBlockStateProvider extends BlockStateProvider
-{
-    public LapidaryBlockStateProvider(PackOutput packOutput, ExistingFileHelper existingFileHelper)
-    {
+public class LapidaryBlockStateProvider extends BlockStateProvider {
+    public LapidaryBlockStateProvider(PackOutput packOutput, ExistingFileHelper existingFileHelper) {
         super(packOutput, Lapidary.MODID, existingFileHelper);
     }
 
     @Override
-    protected void registerStatesAndModels()
-    {
+    protected void registerStatesAndModels() {
         logBlock(LapidaryBlocks.PETRIFIED_LOG.get());
         simpleItemFromBlock(LapidaryBlocks.PETRIFIED_LOG.get());
         axisBlock(LapidaryBlocks.PETRIFIED_WOOD.get(),
@@ -80,21 +81,18 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
     }
 
     // Creates a simple block and item with the same texture on each side.
-    private void cubeAllWithItem(Block block)
-    {
+    private void cubeAllWithItem(Block block) {
         simpleBlockWithItem(block, cubeAll(block));
     }
 
     // Creates an item from an existing block.
-    private <T extends Block> void simpleItemFromBlock(Block block)
-    {
+    private <T extends Block> void simpleItemFromBlock(Block block) {
         ResourceLocation id = ForgeRegistries.BLOCKS.getKey(block);
         itemModels().getBuilder(id.getPath()).parent(models().getExistingFile(id));
     }
 
     // Creates a stair with an item where all sides are the same.
-    private void stairAllWithItem(StairBlock stair, ResourceLocation texture)
-    {
+    private void stairAllWithItem(StairBlock stair, ResourceLocation texture) {
         // Do Block Model.
         stairsBlock(stair, texture);
         // Do Item Model.
@@ -102,8 +100,7 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
     }
 
     // Creates a slab with an item where all sides are the same.
-    private void slabAllWithItem(SlabBlock slab, ResourceLocation texture)
-    {
+    private void slabAllWithItem(SlabBlock slab, ResourceLocation texture) {
         // Do Block Model.
         slabBlock(slab, texture, texture);
         // Do Item Model.
@@ -111,23 +108,20 @@ public class LapidaryBlockStateProvider extends BlockStateProvider
     }
 
     // Creates a wall with an item where all sides are the same.
-    private void wallAllWithItem(WallBlock wall, ResourceLocation texture)
-    {
+    private void wallAllWithItem(WallBlock wall, ResourceLocation texture) {
         // Do Block Model.
         wallBlock(wall, texture);
         // Do Item Model.
         itemModels().wallInventory(ForgeRegistries.BLOCKS.getKey(wall).getPath(), texture);
     }
 
-    private void triadAllWithItem(StairBlock stair, SlabBlock slab, WallBlock wall, ResourceLocation texture)
-    {
+    private void triadAllWithItem(StairBlock stair, SlabBlock slab, WallBlock wall, ResourceLocation texture) {
         stairAllWithItem(stair, texture);
         slabAllWithItem(slab, texture);
         wallAllWithItem(wall, texture);
     }
 
-    private void cubeMirrorWithItem(Block block)
-    {
+    private void cubeMirrorWithItem(Block block) {
         String name = ForgeRegistries.BLOCKS.getKey(block).getPath();
         ModelFile allModel = cubeAll(block);
         ModelFile mirrorModel = models().singleTexture(name + "_north_west_mirrored", new ResourceLocation(ModelProvider.BLOCK_FOLDER + "/cube_north_west_mirrored_all"), "all", blockTexture(block));

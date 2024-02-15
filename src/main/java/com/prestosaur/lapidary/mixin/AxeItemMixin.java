@@ -15,7 +15,7 @@ public class AxeItemMixin {
     @Inject(method = "useOn", at = @At("HEAD"), cancellable = true)
     public void useOnMixin(UseOnContext pContext, CallbackInfoReturnable<InteractionResult> info) {
         Player player = pContext.getPlayer();
-        if(pContext.getHand() == InteractionHand.MAIN_HAND && !player.getItemInHand(InteractionHand.OFF_HAND).isEmpty())
+        if (pContext.getHand() == InteractionHand.MAIN_HAND && !player.getItemInHand(InteractionHand.OFF_HAND).isEmpty())
             info.setReturnValue(InteractionResult.PASS);
     }
 }

@@ -129,11 +129,11 @@ public abstract class AxeItemMixinFancy extends Item {
         if (optStrip.isPresent()) {
             level.playSound(player, blockpos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
             lapidary$doSecondaryActionComplete(pContext, optStrip.get());
-        } else if(optScrape.isPresent()) {
+        } else if (optScrape.isPresent()) {
             level.playSound(player, blockpos, SoundEvents.AXE_SCRAPE, SoundSource.BLOCKS, 1.0F, 1.0F);
             level.levelEvent(player, 3005, blockpos, 0);
             lapidary$doSecondaryActionComplete(pContext, optStrip.get());
-        } else if(optWaxOff.isPresent()) {
+        } else if (optWaxOff.isPresent()) {
             level.playSound(player, blockpos, SoundEvents.AXE_WAX_OFF, SoundSource.BLOCKS, 1.0F, 1.0F);
             level.levelEvent(player, 3004, blockpos, 0);
             lapidary$doSecondaryActionComplete(pContext, optStrip.get());
@@ -142,15 +142,14 @@ public abstract class AxeItemMixinFancy extends Item {
 
     // Should only be called when an optional in doSecondaryAction() is present.
     @Unique
-    private void lapidary$doSecondaryActionComplete(UseOnContext pContext, BlockState blockstate)
-    {
+    private void lapidary$doSecondaryActionComplete(UseOnContext pContext, BlockState blockstate) {
         // Re-collect information.
         Player player = pContext.getPlayer();
         Level level = pContext.getLevel();
         BlockPos blockpos = pContext.getClickedPos();
         ItemStack itemstack = pContext.getItemInHand();
 
-        if(player instanceof ServerPlayer serverPlayer)
+        if (player instanceof ServerPlayer serverPlayer)
             CriteriaTriggers.ITEM_USED_ON_BLOCK.trigger(serverPlayer, blockpos, itemstack);
 
         level.setBlock(blockpos, blockstate, 11);
