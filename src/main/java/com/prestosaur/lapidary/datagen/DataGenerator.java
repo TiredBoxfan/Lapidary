@@ -23,12 +23,13 @@ public class DataGenerator {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        generator.addProvider(true, new LapidaryBlockStateProvider(packOutput, existingFileHelper));
-        generator.addProvider(true, new VanillaBlockStateProvider(packOutput, existingFileHelper));
-        generator.addProvider(true, new LapidaryBlockTagsProvider(packOutput, lookupProvider, Lapidary.MODID, existingFileHelper));
-        generator.addProvider(true, new LapidaryRecipeProvider(packOutput));
+        generator.addProvider(event.includeServer(), new LapidaryBlockStateProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeServer(), new VanillaBlockStateProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeServer(), new LapidaryBlockTagsProvider(packOutput, lookupProvider, Lapidary.MODID, existingFileHelper));
+        generator.addProvider(event.includeServer(), new LapidaryRecipeProvider(packOutput));
+        generator.addProvider(event.includeServer(), new LapidaryWorldGenProvider(packOutput, lookupProvider));
 
-        generator.addProvider(true, new LootTableProvider(
+        generator.addProvider(event.includeServer(), new LootTableProvider(
                 packOutput,
                 Set.of(),
                 List.of(new LootTableProvider.SubProviderEntry(

@@ -1,0 +1,6 @@
+// 1.20.1	2024-02-16T14:58:35.7004992	Registries
+d265910568b306eb507f754d949429ddd7414cb0 data/lapidary/forge/biome_modifier/add_ore_peridotite_lower.json
+1e326182f80d61db32094d4c6492e2835bc1fc3d data/lapidary/forge/biome_modifier/add_ore_peridotite_upper.json
+21ca10fc5838c0a75265355dea82fca65088066d data/lapidary/worldgen/configured_feature/ore_peridotite.json
+e580eb814f24ada353ce4eb4eaec6c4c9dbfb315 data/lapidary/worldgen/placed_feature/ore_peridotite_lower.json
+01fd5c76c31d7412b1fb4771ddb0ab11b450765b data/lapidary/worldgen/placed_feature/ore_peridotite_upper.json
