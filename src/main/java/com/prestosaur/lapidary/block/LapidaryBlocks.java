@@ -54,6 +54,10 @@ public class LapidaryBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRANITE).mapColor(MapColor.COLOR_GREEN)));
     public static final BlockTriad PERIDOTITE_TRIAD = new BlockTriad(
             PERIDOTITE, "peridotite");
+    public static final RegistryObject<Block> POLISHED_PERIDOTITE = registerBlock("polished_peridotite",
+            () -> new Block(BlockBehaviour.Properties.copy(LapidaryBlocks.PERIDOTITE.get())));
+    public static final BlockTriad POLISHED_PERIDOTITE_TRIAD = new BlockTriad(
+            POLISHED_PERIDOTITE, "polished_peridotite");
 
     public static final RegistryObject<Block> CRACKED_BRICKS = registerBlock("cracked_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));

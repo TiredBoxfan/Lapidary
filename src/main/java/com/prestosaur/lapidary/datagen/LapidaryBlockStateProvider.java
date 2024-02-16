@@ -50,6 +50,8 @@ public class LapidaryBlockStateProvider extends BlockStateProvider {
 
         cubeAllWithItem(LapidaryBlocks.PERIDOTITE.get());
         triadAllWithItem(LapidaryBlocks.PERIDOTITE_TRIAD, blockTexture(LapidaryBlocks.PERIDOTITE.get()));
+        cubeAllWithItem(LapidaryBlocks.POLISHED_PERIDOTITE.get());
+        triadAllWithItem(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD, blockTexture(LapidaryBlocks.POLISHED_PERIDOTITE.get()));
 
         cubeAllWithItem(LapidaryBlocks.CRACKED_BRICKS.get());
 

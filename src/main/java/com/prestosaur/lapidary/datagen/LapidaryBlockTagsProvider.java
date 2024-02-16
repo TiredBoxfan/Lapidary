@@ -27,6 +27,7 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider {
                 LapidaryBlocks.POLISHED_GRANITE_BRICK_TRIAD,
                 LapidaryBlocks.POLISHED_DIORITE_BRICK_TRIAD,
                 LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD,
+                LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD,
                 LapidaryBlocks.PERIDOTITE_TRIAD,
                 LapidaryBlocks.NETHERRACK_TRIAD,
                 LapidaryBlocks.NETHERRACK_TRIAD,
@@ -37,6 +38,7 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider {
                 LapidaryBlocks.POLISHED_GRANITE_BRICK_TRIAD,
                 LapidaryBlocks.POLISHED_DIORITE_BRICK_TRIAD,
                 LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD,
+                LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD,
                 LapidaryBlocks.PERIDOTITE_TRIAD,
                 LapidaryBlocks.NETHERRACK_TRIAD,
                 LapidaryBlocks.NETHERRACK_TRIAD,
@@ -61,6 +63,7 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider {
                 LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get(),
 
                 LapidaryBlocks.PERIDOTITE.get(),
+                LapidaryBlocks.POLISHED_PERIDOTITE.get(),
 
                 LapidaryBlocks.CRACKED_BRICKS.get(),
 

@@ -43,6 +43,7 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
         twoByTwoChecker(consumer, RecipeCategory.BUILDING_BLOCKS, LapidaryBlocks.PERIDOTITE.get(),
                 Items.QUARTZ, Items.COBBLED_DEEPSLATE);
         addCraftTriadAndStonecut(consumer, LapidaryBlocks.PERIDOTITE_TRIAD, LapidaryBlocks.PERIDOTITE.get());
+        addCraftBrickSetAndStonecut(consumer, LapidaryBlocks.POLISHED_PERIDOTITE, LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD, LapidaryBlocks.PERIDOTITE.get());
 
         smeltingResultFromBase(consumer, LapidaryBlocks.CRACKED_BRICKS.get(), Blocks.BRICKS);
 

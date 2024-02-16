@@ -55,6 +55,10 @@ public class LapidaryCreativeTabs {
                 output.accept(LapidaryBlocks.PERIDOTITE_TRIAD.STAIR.get());
                 output.accept(LapidaryBlocks.PERIDOTITE_TRIAD.SLAB.get());
                 output.accept(LapidaryBlocks.PERIDOTITE_TRIAD.WALL.get());
+                output.accept(LapidaryBlocks.POLISHED_PERIDOTITE.get());
+                output.accept(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD.STAIR.get());
+                output.accept(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD.SLAB.get());
+                output.accept(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD.WALL.get());
 
                 output.accept(LapidaryBlocks.CRACKED_BRICKS.get());
 
@@ -108,8 +112,11 @@ public class LapidaryCreativeTabs {
                     LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get());
             putTriadAfter(event, LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD, LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get());
 
-            putAfter(event, LapidaryBlocks.PERIDOTITE.get(), LapidaryBlocks.POLISHED_GRANITE_BRICK_TRIAD.WALL.get());
+            putAfterChain(event, LapidaryBlocks.POLISHED_GRANITE_BRICK_TRIAD.WALL.get(),
+                    LapidaryBlocks.PERIDOTITE.get(),
+                    LapidaryBlocks.POLISHED_PERIDOTITE.get());
             putTriadAfter(event, LapidaryBlocks.PERIDOTITE_TRIAD, LapidaryBlocks.PERIDOTITE.get());
+            putTriadAfter(event, LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD, LapidaryBlocks.POLISHED_PERIDOTITE.get());
 
             putAfter(event, LapidaryBlocks.CRACKED_BRICKS.get(), Items.BRICKS);
 
