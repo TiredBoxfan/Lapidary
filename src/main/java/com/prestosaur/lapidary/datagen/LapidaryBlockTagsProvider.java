@@ -8,8 +8,11 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.common.data.ForgeBlockTagsProvider;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -84,6 +87,40 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider {
                 LapidaryBlocks.POLISHED_DIORITE_WALL.get(),
                 LapidaryBlocks.POLISHED_ANDESITE_WALL.get(),
                 LapidaryBlocks.PURPUR_WALL.get()
+        );
+        this.tag(Tags.Blocks.STONE).add(
+                LapidaryBlocks.PERIDOTITE.get(),
+                LapidaryBlocks.POLISHED_PERIDOTITE.get()
+        );
+        this.tag(BlockTags.BASE_STONE_OVERWORLD).add(
+                LapidaryBlocks.PERIDOTITE.get()
+        );
+        this.tag(BlockTags.OVERWORLD_CARVER_REPLACEABLES).add(
+                LapidaryBlocks.PERIDOTITE.get()
+        );
+        this.tag(BlockTags.NETHER_CARVER_REPLACEABLES).add(
+                LapidaryBlocks.PERIDOTITE.get()
+        );
+        this.tag(BlockTags.STONE_ORE_REPLACEABLES).add(
+                LapidaryBlocks.PERIDOTITE.get()
+        );
+        this.tag(BlockTags.DRIPSTONE_REPLACEABLE).add(
+                LapidaryBlocks.PERIDOTITE.get()
+        );
+        this.tag(BlockTags.MOSS_REPLACEABLE).add(
+                LapidaryBlocks.PERIDOTITE.get()
+        );
+        this.tag(BlockTags.LUSH_GROUND_REPLACEABLE).add(
+                LapidaryBlocks.PERIDOTITE.get()
+        );
+        this.tag(BlockTags.AZALEA_ROOT_REPLACEABLE).add(
+                LapidaryBlocks.PERIDOTITE.get()
+        );
+        this.tag(BlockTags.SCULK_REPLACEABLE_WORLD_GEN).add(
+                LapidaryBlocks.PERIDOTITE.get()
+        );
+        this.tag(BlockTags.SCULK_REPLACEABLE).add(
+                LapidaryBlocks.PERIDOTITE.get()
         );
         this.tag(BlockTags.INFINIBURN_OVERWORLD).add(
                 LapidaryBlocks.NETHERRACK_TRIAD.STAIR.get(),
