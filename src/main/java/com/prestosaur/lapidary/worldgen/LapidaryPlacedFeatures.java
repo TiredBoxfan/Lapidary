@@ -26,8 +26,8 @@ public class LapidaryPlacedFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, ORE_PERIDOTITE, configuredFeatures.getOrThrow(LapidaryConfiguredFeatures.ORE_PERIDOTITE),
-                OrePlacements.commonOrePlacement(2,
-                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(0), VerticalAnchor.absolute(0))));
+                OrePlacements.commonOrePlacement(1,
+                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-32), VerticalAnchor.aboveBottom(32))));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {
