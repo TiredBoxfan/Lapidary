@@ -1,21 +1,13 @@
 package com.prestosaur.lapidary.datagen;
 
 import com.prestosaur.lapidary.Lapidary;
-import com.prestosaur.lapidary.block.BlockTriad;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
+import com.prestosaur.lapidary.datagen.util.ExtendedBlockStateProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.WallBlock;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.client.model.generators.ModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
 
-public class LapidaryBlockStateProvider extends BlockStateProvider {
+public class LapidaryBlockStateProvider extends ExtendedBlockStateProvider {
     public LapidaryBlockStateProvider(PackOutput packOutput, ExistingFileHelper existingFileHelper) {
         super(packOutput, Lapidary.MODID, existingFileHelper);
     }
@@ -51,7 +43,13 @@ public class LapidaryBlockStateProvider extends BlockStateProvider {
         cubeAllWithItem(LapidaryBlocks.PERIDOTITE.get());
         triadAllWithItem(LapidaryBlocks.PERIDOTITE_TRIAD, blockTexture(LapidaryBlocks.PERIDOTITE.get()));
         cubeAllWithItem(LapidaryBlocks.POLISHED_PERIDOTITE.get());
-        triadAllWithItem(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD, blockTexture(LapidaryBlocks.POLISHED_PERIDOTITE.get()));
+        //triadAllWithItem(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD, blockTexture(LapidaryBlocks.POLISHED_PERIDOTITE.get()));
+        stairAllWithItem(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD.STAIR.get(), blockTexture(LapidaryBlocks.POLISHED_PERIDOTITE.get()));
+        slabBlockSide(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD.SLAB.get(),
+                new ResourceLocation(Lapidary.MODID, "block/polished_peridotite_slab_side"),
+                blockTexture(LapidaryBlocks.POLISHED_PERIDOTITE.get()));
+        simpleItemFromBlock(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD.SLAB.get());
+        wallAllWithItem(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD.WALL.get(), blockTexture(LapidaryBlocks.POLISHED_PERIDOTITE.get()));
 
         cubeAllWithItem(LapidaryBlocks.CRACKED_BRICKS.get());
 
@@ -74,59 +72,6 @@ public class LapidaryBlockStateProvider extends BlockStateProvider {
         cubeAllWithItem(LapidaryBlocks.POLISHED_JADE.get());
     }
 
-    // Creates a simple block and item with the same texture on each side.
-    private void cubeAllWithItem(Block block) {
-        simpleBlockWithItem(block, cubeAll(block));
-    }
 
-    // Creates an item from an existing block.
-    private <T extends Block> void simpleItemFromBlock(Block block) {
-        ResourceLocation id = ForgeRegistries.BLOCKS.getKey(block);
-        itemModels().getBuilder(id.getPath()).parent(models().getExistingFile(id));
-    }
-
-    // Creates a stair with an item where all sides are the same.
-    private void stairAllWithItem(StairBlock stair, ResourceLocation texture) {
-        // Do Block Model.
-        stairsBlock(stair, texture);
-        // Do Item Model.
-        simpleItemFromBlock(stair);
-    }
-
-    // Creates a slab with an item where all sides are the same.
-    private void slabAllWithItem(SlabBlock slab, ResourceLocation texture) {
-        // Do Block Model.
-        slabBlock(slab, texture, texture);
-        // Do Item Model.
-        simpleItemFromBlock(slab);
-    }
-
-    // Creates a wall with an item where all sides are the same.
-    private void wallAllWithItem(WallBlock wall, ResourceLocation texture) {
-        // Do Block Model.
-        wallBlock(wall, texture);
-        // Do Item Model.
-        itemModels().wallInventory(ForgeRegistries.BLOCKS.getKey(wall).getPath(), texture);
-    }
-
-    private void triadAllWithItem(StairBlock stair, SlabBlock slab, WallBlock wall, ResourceLocation texture) {
-        stairAllWithItem(stair, texture);
-        slabAllWithItem(slab, texture);
-        wallAllWithItem(wall, texture);
-    }
-
-    private void triadAllWithItem(BlockTriad triad, ResourceLocation texture) {
-        stairAllWithItem(triad.STAIR.get(), texture);
-        slabAllWithItem(triad.SLAB.get(), texture);
-        wallAllWithItem(triad.WALL.get(), texture);
-    }
-
-    private void cubeMirrorWithItem(Block block) {
-        String name = ForgeRegistries.BLOCKS.getKey(block).getPath();
-        ModelFile allModel = cubeAll(block);
-        ModelFile mirrorModel = models().singleTexture(name + "_north_west_mirrored", new ResourceLocation(ModelProvider.BLOCK_FOLDER + "/cube_north_west_mirrored_all"), "all", blockTexture(block));
-        simpleBlock(block, mirrorModel);
-        simpleBlockItem(block, allModel);
-    }
 }
 
