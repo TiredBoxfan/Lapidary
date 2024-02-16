@@ -40,6 +40,8 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
         addCraftBrickSetAndStonecut(consumer, LapidaryBlocks.POLISHED_ANDESITE_BRICKS, LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD,
                 Blocks.POLISHED_ANDESITE, Blocks.ANDESITE);
 
+        twoByTwoChecker(consumer, RecipeCategory.BUILDING_BLOCKS, LapidaryBlocks.PERIDOTITE.get(),
+                Items.QUARTZ, Items.COBBLED_DEEPSLATE);
         addCraftTriadAndStonecut(consumer, LapidaryBlocks.PERIDOTITE_TRIAD, LapidaryBlocks.PERIDOTITE.get());
 
         smeltingResultFromBase(consumer, LapidaryBlocks.CRACKED_BRICKS.get(), Blocks.BRICKS);
@@ -164,5 +166,15 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
                 .unlockedBy(getHasName(base), has(base))
                 .group(result.getKey().location().getPath())
                 .save(consumer, result.getKey().location() + "_from_moss_block");
+    }
+
+    private void twoByTwoChecker(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeCategory pCategory, ItemLike pResult, ItemLike pUnlockIngredient, ItemLike pOtherIngredient) {
+        ShapedRecipeBuilder.shaped(pCategory, pResult, 2)
+                .define('A', pUnlockIngredient)
+                .define('B', pOtherIngredient)
+                .pattern("BA")
+                .pattern("AB")
+                .unlockedBy(getHasName(Items.QUARTZ), has(Items.QUARTZ))
+                .save(pFinishedRecipeConsumer);
     }
 }

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "lapidary:polished_andesite_bricks"
-  },
-  "result": "lapidary:polished_andesite_bricks_wall"
-}

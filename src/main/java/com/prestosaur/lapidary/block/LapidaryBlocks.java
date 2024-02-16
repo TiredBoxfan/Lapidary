@@ -48,7 +48,7 @@ public class LapidaryBlocks {
     public static final RegistryObject<Block> POLISHED_ANDESITE_BRICKS = registerBlock("polished_andesite_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_ANDESITE)));
     public static final BlockTriad POLISHED_ANDESITE_BRICK_TRIAD = new BlockTriad(
-            LapidaryBlocks.POLISHED_ANDESITE_BRICKS, "polished_andesite_bricks");
+            LapidaryBlocks.POLISHED_ANDESITE_BRICKS, "polished_andesite_brick");
 
     public static final RegistryObject<Block> PERIDOTITE = registerBlock("peridotite",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRANITE).mapColor(MapColor.COLOR_GREEN)));

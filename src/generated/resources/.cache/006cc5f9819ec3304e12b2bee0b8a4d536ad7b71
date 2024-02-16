@@ -1,9 +1,9 @@
-// 1.20.1	2024-02-15T23:41:41.3137086	Tags for minecraft:block mod id lapidary
+// 1.20.1	2024-02-16T00:12:23.7250152	Tags for minecraft:block mod id lapidary
 fe93ffd978f114288298cd9756f5ad6ffeb8ac05 data/minecraft/tags/blocks/dragon_immune.json
 144578591f71464debdc17daa56316bcb22b094d data/minecraft/tags/blocks/infiniburn_end.json
 144578591f71464debdc17daa56316bcb22b094d data/minecraft/tags/blocks/infiniburn_nether.json
 144578591f71464debdc17daa56316bcb22b094d data/minecraft/tags/blocks/infiniburn_overworld.json
-830354e0894a1cf2ce7563356a20a55a8638f736 data/minecraft/tags/blocks/mineable/pickaxe.json
-ac402593d2db106d658c5f03066bc81c7f27d4bf data/minecraft/tags/blocks/slabs.json
-a6065c9e1ee4f0f5f641af10f3faa8319e7dec04 data/minecraft/tags/blocks/stairs.json
-34ec0c80e61197e90abf86135e00854f0896555a data/minecraft/tags/blocks/walls.json
+621e21120e47afa4fd6b6ff373c6a57e587d83fc data/minecraft/tags/blocks/mineable/pickaxe.json
+32c5ab2671336c1901f29e25752dcedf40c03d77 data/minecraft/tags/blocks/slabs.json
+faaf1ef6311ca05d84897a21936dca05c4506c61 data/minecraft/tags/blocks/stairs.json
+627ca1ec9ca9fb3c89360da73e73dce447d6b5c8 data/minecraft/tags/blocks/walls.json
