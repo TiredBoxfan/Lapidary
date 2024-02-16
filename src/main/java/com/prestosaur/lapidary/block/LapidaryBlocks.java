@@ -67,6 +67,7 @@ public class LapidaryBlocks {
 
     public static final RegistryObject<Block> PERIDOTITE = registerBlock("peridotite",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRANITE).mapColor(MapColor.COLOR_GREEN)));
+    public static final BlockTriad PERIDOTITE_TRIAD = new BlockTriad(() -> PERIDOTITE.get(), "peridotite");
 
     public static final RegistryObject<Block> CRACKED_BRICKS = registerBlock("cracked_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
@@ -113,7 +114,7 @@ public class LapidaryBlocks {
         return LapidaryItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
+    public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;

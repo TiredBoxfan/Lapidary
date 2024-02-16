@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "lapidary:block/peridotite_slab"
+    },
+    "type=double": {
+      "model": "lapidary:block/peridotite"
+    },
+    "type=top": {
+      "model": "lapidary:block/peridotite_slab_top"
+    }
+  }
+}

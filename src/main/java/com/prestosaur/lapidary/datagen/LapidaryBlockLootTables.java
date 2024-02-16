@@ -1,5 +1,6 @@
 package com.prestosaur.lapidary.datagen;
 
+import com.prestosaur.lapidary.block.BlockTriad;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
@@ -45,6 +46,7 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider {
         dropSelf(LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get());
 
         dropSelf(LapidaryBlocks.PERIDOTITE.get());
+        triadDrops(LapidaryBlocks.PERIDOTITE_TRIAD);
 
         dropSelf(LapidaryBlocks.CRACKED_BRICKS.get());
 
@@ -81,5 +83,11 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider {
 
     private void dropOtherSilkTouch(Block block, ItemLike other) {
         this.add(block, this.createSingleItemTableWithSilkTouch(block, other));
+    }
+
+    private void triadDrops(BlockTriad triad) {
+        dropSelf(triad.STAIR.get());
+        dropSlab(triad.SLAB.get());
+        dropSelf(triad.WALL.get());
     }
 }

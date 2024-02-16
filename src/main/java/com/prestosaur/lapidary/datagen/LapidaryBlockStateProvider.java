@@ -1,6 +1,7 @@
 package com.prestosaur.lapidary.datagen;
 
 import com.prestosaur.lapidary.Lapidary;
+import com.prestosaur.lapidary.block.BlockTriad;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -54,6 +55,7 @@ public class LapidaryBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(Lapidary.MODID, "block/polished_andesite_bricks"));
 
         cubeAllWithItem(LapidaryBlocks.PERIDOTITE.get());
+        triadAllWithItem(LapidaryBlocks.PERIDOTITE_TRIAD, blockTexture(LapidaryBlocks.PERIDOTITE.get()));
 
         cubeAllWithItem(LapidaryBlocks.CRACKED_BRICKS.get());
 
@@ -121,6 +123,12 @@ public class LapidaryBlockStateProvider extends BlockStateProvider {
         stairAllWithItem(stair, texture);
         slabAllWithItem(slab, texture);
         wallAllWithItem(wall, texture);
+    }
+
+    private void triadAllWithItem(BlockTriad triad, ResourceLocation texture) {
+        stairAllWithItem(triad.STAIR.get(), texture);
+        slabAllWithItem(triad.SLAB.get(), texture);
+        wallAllWithItem(triad.WALL.get(), texture);
     }
 
     private void cubeMirrorWithItem(Block block) {

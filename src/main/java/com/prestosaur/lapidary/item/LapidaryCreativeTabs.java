@@ -74,6 +74,10 @@ public class LapidaryCreativeTabs {
 
                 output.accept(LapidaryBlocks.JADE.get());
                 output.accept(LapidaryBlocks.POLISHED_JADE.get());
+
+                output.accept(LapidaryBlocks.PERIDOTITE_TRIAD.STAIR.get());
+                output.accept(LapidaryBlocks.PERIDOTITE_TRIAD.SLAB.get());
+                output.accept(LapidaryBlocks.PERIDOTITE_TRIAD.WALL.get());
             }).build());
 
     @SubscribeEvent
