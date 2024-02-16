@@ -13,20 +13,15 @@ import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class LapidaryBiomeModifiers {
-    public static final ResourceKey<BiomeModifier> ADD_ORE_PERIDOTITE_UPPER = registerKey("add_ore_peridotite_upper");
-    public static final ResourceKey<BiomeModifier> ADD_ORE_PERIDOTITE_LOWER = registerKey("add_ore_peridotite_lower");
+    public static final ResourceKey<BiomeModifier> ADD_ORE_PERIDOTITE = registerKey("add_ore_peridotite");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
 
-        context.register(ADD_ORE_PERIDOTITE_UPPER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_ORE_PERIDOTITE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(LapidaryPlacedFeatures.ORE_PERIDOTITE_UPPER)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-        context.register(ADD_ORE_PERIDOTITE_LOWER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(LapidaryPlacedFeatures.ORE_PERIDOTITE_LOWER)),
+                HolderSet.direct(placedFeatures.getOrThrow(LapidaryPlacedFeatures.ORE_PERIDOTITE)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
     }
 

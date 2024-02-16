@@ -101,7 +101,7 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.NETHER_CARVER_REPLACEABLES).add(
                 LapidaryBlocks.PERIDOTITE.get()
         );
-        this.tag(BlockTags.STONE_ORE_REPLACEABLES).add(
+        this.tag(BlockTags.DEEPSLATE_ORE_REPLACEABLES).add(
                 LapidaryBlocks.PERIDOTITE.get()
         );
         this.tag(BlockTags.DRIPSTONE_REPLACEABLE).add(

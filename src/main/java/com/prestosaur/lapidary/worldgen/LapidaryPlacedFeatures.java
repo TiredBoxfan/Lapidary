@@ -20,18 +20,14 @@ import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import java.util.List;
 
 public class LapidaryPlacedFeatures {
-    public static  final ResourceKey<PlacedFeature> ORE_PERIDOTITE_UPPER = registerKey("ore_peridotite_upper");
-    public static  final ResourceKey<PlacedFeature> ORE_PERIDOTITE_LOWER = registerKey("ore_peridotite_lower");
+    public static  final ResourceKey<PlacedFeature> ORE_PERIDOTITE = registerKey("ore_peridotite");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        register(context, ORE_PERIDOTITE_UPPER, configuredFeatures.getOrThrow(LapidaryConfiguredFeatures.ORE_PERIDOTITE),
-                OrePlacements.rareOrePlacement(6,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(64), VerticalAnchor.absolute(128))));
-        register(context, ORE_PERIDOTITE_LOWER, configuredFeatures.getOrThrow(LapidaryConfiguredFeatures.ORE_PERIDOTITE),
+        register(context, ORE_PERIDOTITE, configuredFeatures.getOrThrow(LapidaryConfiguredFeatures.ORE_PERIDOTITE),
                 OrePlacements.commonOrePlacement(2,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(60))));
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(0), VerticalAnchor.absolute(0))));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

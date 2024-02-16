@@ -18,9 +18,9 @@ public class LapidaryConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_PERIDOTITE = registerKey("ore_peridotite");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
-        RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceable = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
-        register(context, ORE_PERIDOTITE, Feature.ORE, new OreConfiguration(stoneReplaceable, LapidaryBlocks.PERIDOTITE.get().defaultBlockState(), 64));
+        register(context, ORE_PERIDOTITE, Feature.ORE, new OreConfiguration(deepslateReplaceable, LapidaryBlocks.PERIDOTITE.get().defaultBlockState(), 64));
     }
 
     private static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

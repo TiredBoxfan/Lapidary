@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "lapidary:ore_peridotite_lower",
+  "features": "lapidary:ore_peridotite",
   "step": "underground_ores"
 }
