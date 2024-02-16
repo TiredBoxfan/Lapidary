@@ -6,6 +6,7 @@
     "minecraft:end_stone_brick_wall",
     "lapidary:end_stone_stairs",
     "lapidary:end_stone_slab",
+    "lapidary:end_stone_wall",
     "lapidary:cracked_end_stone_bricks"
   ]
 }

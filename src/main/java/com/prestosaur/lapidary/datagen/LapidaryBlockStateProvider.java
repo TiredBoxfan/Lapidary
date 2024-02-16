@@ -54,20 +54,14 @@ public class LapidaryBlockStateProvider extends BlockStateProvider {
         cubeAllWithItem(LapidaryBlocks.CRACKED_BRICKS.get());
 
         cubeMirrorWithItem(LapidaryBlocks.MOSSY_MUD_BRICKS.get());
-        triadAllWithItem(LapidaryBlocks.MOSSY_MUD_BRICK_STAIRS.get(),
-                LapidaryBlocks.MOSSY_MUD_BRICK_SLAB.get(),
-                LapidaryBlocks.MOSSY_MUD_BRICK_WALL.get(),
+        triadAllWithItem(LapidaryBlocks.MOSSY_MUD_BRICK_TRIAD,
                 new ResourceLocation(Lapidary.MODID, "block/mossy_mud_bricks"));
         cubeMirrorWithItem(LapidaryBlocks.CRACKED_MUD_BRICKS.get());
 
-        triadAllWithItem(LapidaryBlocks.NETHERRACK_STAIRS.get(),
-                LapidaryBlocks.NETHERRACK_SLAB.get(),
-                LapidaryBlocks.NETHERRACK_WALL.get(),
+        triadAllWithItem(LapidaryBlocks.NETHERRACK_TRIAD,
                 new ResourceLocation("block/netherrack"));
 
-        triadAllWithItem(LapidaryBlocks.END_STONE_STAIRS.get(),
-                LapidaryBlocks.END_STONE_SLAB.get(),
-                LapidaryBlocks.END_STONE_WALL.get(),
+        triadAllWithItem(LapidaryBlocks.END_STONE_TRIAD,
                 new ResourceLocation("block/end_stone"));
         cubeAllWithItem(LapidaryBlocks.CRACKED_END_STONE_BRICKS.get());
 

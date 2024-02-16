@@ -45,12 +45,12 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
         smeltingResultFromBase(consumer, LapidaryBlocks.CRACKED_BRICKS.get(), Blocks.BRICKS);
 
         addCraftMossy(consumer, LapidaryBlocks.MOSSY_MUD_BRICKS, Blocks.MUD_BRICKS);
-        addCraftTriadAndStonecut(consumer, LapidaryBlocks.MOSSY_MUD_BRICK_STAIRS, LapidaryBlocks.MOSSY_MUD_BRICK_SLAB, LapidaryBlocks.MOSSY_MUD_BRICK_WALL, LapidaryBlocks.MOSSY_MUD_BRICKS.get());
+        addCraftTriadAndStonecut(consumer, LapidaryBlocks.MOSSY_MUD_BRICK_TRIAD, LapidaryBlocks.MOSSY_MUD_BRICKS.get());
         smeltingResultFromBase(consumer, LapidaryBlocks.CRACKED_MUD_BRICKS.get(), Blocks.MUD_BRICKS);
 
-        addCraftTriadAndStonecut(consumer, LapidaryBlocks.NETHERRACK_STAIRS, LapidaryBlocks.NETHERRACK_SLAB, LapidaryBlocks.NETHERRACK_WALL, Blocks.NETHERRACK);
+        addCraftTriadAndStonecut(consumer, LapidaryBlocks.NETHERRACK_TRIAD, Blocks.NETHERRACK);
 
-        addCraftTriadAndStonecut(consumer, LapidaryBlocks.END_STONE_STAIRS, LapidaryBlocks.END_STONE_SLAB, LapidaryBlocks.END_STONE_WALL, Blocks.END_STONE);
+        addCraftTriadAndStonecut(consumer, LapidaryBlocks.END_STONE_TRIAD, Blocks.END_STONE);
         smeltingResultFromBase(consumer, LapidaryBlocks.CRACKED_END_STONE_BRICKS.get(), Blocks.END_STONE_BRICKS);
 
         addCraftWallAndStonecut(consumer, LapidaryBlocks.PURPUR_WALL, Blocks.PURPUR_BLOCK);

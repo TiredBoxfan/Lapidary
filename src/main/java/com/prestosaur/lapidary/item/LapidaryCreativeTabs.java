@@ -59,19 +59,19 @@ public class LapidaryCreativeTabs {
                 output.accept(LapidaryBlocks.CRACKED_BRICKS.get());
 
                 output.accept(LapidaryBlocks.MOSSY_MUD_BRICKS.get());
-                output.accept(LapidaryBlocks.MOSSY_MUD_BRICK_STAIRS.get());
-                output.accept(LapidaryBlocks.MOSSY_MUD_BRICK_SLAB.get());
-                output.accept(LapidaryBlocks.MOSSY_MUD_BRICK_WALL.get());
+                output.accept(LapidaryBlocks.MOSSY_MUD_BRICK_TRIAD.STAIR.get());
+                output.accept(LapidaryBlocks.MOSSY_MUD_BRICK_TRIAD.SLAB.get());
+                output.accept(LapidaryBlocks.MOSSY_MUD_BRICK_TRIAD.WALL.get());
                 output.accept(LapidaryBlocks.CRACKED_MUD_BRICKS.get());
 
-                output.accept(LapidaryBlocks.NETHERRACK_STAIRS.get());
-                output.accept(LapidaryBlocks.NETHERRACK_SLAB.get());
-                output.accept(LapidaryBlocks.NETHERRACK_WALL.get());
+                output.accept(LapidaryBlocks.NETHERRACK_TRIAD.STAIR.get());
+                output.accept(LapidaryBlocks.NETHERRACK_TRIAD.SLAB.get());
+                output.accept(LapidaryBlocks.NETHERRACK_TRIAD.WALL.get());
 
                 output.accept(LapidaryBlocks.CRACKED_END_STONE_BRICKS.get());
-                output.accept(LapidaryBlocks.END_STONE_STAIRS.get());
-                output.accept(LapidaryBlocks.END_STONE_SLAB.get());
-                output.accept(LapidaryBlocks.END_STONE_WALL.get());
+                output.accept(LapidaryBlocks.END_STONE_TRIAD.STAIR.get());
+                output.accept(LapidaryBlocks.END_STONE_TRIAD.SLAB.get());
+                output.accept(LapidaryBlocks.END_STONE_TRIAD.WALL.get());
 
                 output.accept(LapidaryBlocks.PURPUR_WALL.get());
                 output.accept(LapidaryBlocks.CRACKED_PURPUR_BLOCK.get());
@@ -115,18 +115,12 @@ public class LapidaryCreativeTabs {
 
             putAfter(event, LapidaryBlocks.CRACKED_MUD_BRICKS.get(), Items.MUD_BRICKS);
             putAfterChain(event, Items.MUD_BRICK_WALL,
-                    LapidaryBlocks.MOSSY_MUD_BRICKS.get(),
-                    LapidaryBlocks.MOSSY_MUD_BRICK_STAIRS.get(),
-                    LapidaryBlocks.MOSSY_MUD_BRICK_SLAB.get(),
-                    LapidaryBlocks.MOSSY_MUD_BRICK_WALL.get());
+                    LapidaryBlocks.MOSSY_MUD_BRICKS.get());
+            putTriadAfter(event, LapidaryBlocks.MOSSY_MUD_BRICK_TRIAD, LapidaryBlocks.MOSSY_MUD_BRICKS.get());
 
-            putAfter(event, LapidaryBlocks.NETHERRACK_STAIRS.get(), Items.NETHERRACK);
-            putAfter(event, LapidaryBlocks.NETHERRACK_SLAB.get(), LapidaryBlocks.NETHERRACK_STAIRS.get());
-            putAfter(event, LapidaryBlocks.NETHERRACK_WALL.get(), LapidaryBlocks.NETHERRACK_SLAB.get());
+            putTriadAfter(event, LapidaryBlocks.NETHERRACK_TRIAD, Items.NETHERRACK);
 
-            putAfter(event, LapidaryBlocks.END_STONE_STAIRS.get(), Items.END_STONE);
-            putAfter(event, LapidaryBlocks.END_STONE_SLAB.get(), LapidaryBlocks.END_STONE_STAIRS.get());
-            putAfter(event, LapidaryBlocks.END_STONE_WALL.get(), LapidaryBlocks.END_STONE_SLAB.get());
+            putTriadAfter(event, LapidaryBlocks.END_STONE_TRIAD, Items.END_STONE);
             putAfter(event, LapidaryBlocks.CRACKED_END_STONE_BRICKS.get(), Items.END_STONE_BRICKS);
 
             putAfter(event, LapidaryBlocks.PURPUR_WALL.get(), Blocks.PURPUR_SLAB);
