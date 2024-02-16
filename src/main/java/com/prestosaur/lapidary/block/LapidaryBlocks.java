@@ -65,6 +65,9 @@ public class LapidaryBlocks {
     public static final RegistryObject<WallBlock> POLISHED_ANDESITE_BRICK_WALL = registerBlock("polished_andesite_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(POLISHED_ANDESITE_BRICKS.get())));
 
+    public static final RegistryObject<Block> PERIDOTITE = registerBlock("peridotite",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRANITE).mapColor(MapColor.COLOR_GREEN)));
+
     public static final RegistryObject<Block> CRACKED_BRICKS = registerBlock("cracked_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
 

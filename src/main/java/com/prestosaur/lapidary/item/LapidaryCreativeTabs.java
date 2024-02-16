@@ -50,8 +50,7 @@ public class LapidaryCreativeTabs {
                 output.accept(LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB.get());
                 output.accept(LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get());
 
-                output.accept(LapidaryBlocks.JADE.get());
-                output.accept(LapidaryBlocks.POLISHED_JADE.get());
+                output.accept(LapidaryBlocks.PERIDOTITE.get());
 
                 output.accept(LapidaryBlocks.CRACKED_BRICKS.get());
 
@@ -72,6 +71,9 @@ public class LapidaryCreativeTabs {
 
                 output.accept(LapidaryBlocks.PURPUR_WALL.get());
                 output.accept(LapidaryBlocks.CRACKED_PURPUR_BLOCK.get());
+
+                output.accept(LapidaryBlocks.JADE.get());
+                output.accept(LapidaryBlocks.POLISHED_JADE.get());
             }).build());
 
     @SubscribeEvent
@@ -107,6 +109,9 @@ public class LapidaryCreativeTabs {
                     LapidaryBlocks.POLISHED_ANDESITE_BRICK_STAIRS.get(),
                     LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB.get(),
                     LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get());
+
+            putAfterChain(event, LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get(),
+                    LapidaryBlocks.PERIDOTITE.get());
 
             putAfter(event, LapidaryBlocks.CRACKED_BRICKS.get(), Items.BRICKS);
 

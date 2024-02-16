@@ -53,6 +53,8 @@ public class LapidaryBlockStateProvider extends BlockStateProvider {
                 LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get(),
                 new ResourceLocation(Lapidary.MODID, "block/polished_andesite_bricks"));
 
+        cubeAllWithItem(LapidaryBlocks.PERIDOTITE.get());
+
         cubeAllWithItem(LapidaryBlocks.CRACKED_BRICKS.get());
 
         cubeMirrorWithItem(LapidaryBlocks.MOSSY_MUD_BRICKS.get());

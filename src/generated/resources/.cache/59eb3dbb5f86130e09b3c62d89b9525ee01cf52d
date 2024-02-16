@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-14T18:33:41.2941735	Loot Tables
+// 1.20.1	2024-02-15T18:25:08.0516694	Loot Tables
 89c511ddcd79f347cc7c199a77e0b232c042e7b2 data/lapidary/loot_tables/blocks/cracked_bricks.json
 0241ab231fd13b755de94c5d02d1e91803698c58 data/lapidary/loot_tables/blocks/cracked_end_stone_bricks.json
 30a3aaef415fc6ddafee99bc90614c494c325ece data/lapidary/loot_tables/blocks/cracked_mud_bricks.json
@@ -14,6 +14,7 @@ b87d64f00ad0bbdfb1429feafc58304b428b1449 data/lapidary/loot_tables/blocks/end_st
 9e33bb6c9cea76d0a96b088a56d26c9429566276 data/lapidary/loot_tables/blocks/netherrack_slab.json
 d7e866725d356135938d1e7ed9dbb308fde14eb2 data/lapidary/loot_tables/blocks/netherrack_stairs.json
 bbc84de2e51e307f6c6d6b8e986f687722521cf3 data/lapidary/loot_tables/blocks/netherrack_wall.json
+8c44a4f7d435d8d27441a25db779c27e50ca89d4 data/lapidary/loot_tables/blocks/peridotite.json
 783c6c4c77d78ea82b02328b48a54caef7599279 data/lapidary/loot_tables/blocks/petrified_log.json
 21d744e5e7fe26bf4e68e8e62f33cd87928eaf86 data/lapidary/loot_tables/blocks/petrified_planks.json
 c8034e6b048222c177afa873bfbf0601a2601d21 data/lapidary/loot_tables/blocks/petrified_stairs.json

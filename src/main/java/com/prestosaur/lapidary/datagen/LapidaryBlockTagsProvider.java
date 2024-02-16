@@ -45,6 +45,8 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider {
                 LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB.get(),
                 LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get(),
 
+                LapidaryBlocks.PERIDOTITE.get(),
+
                 LapidaryBlocks.CRACKED_BRICKS.get(),
 
                 LapidaryBlocks.MOSSY_MUD_BRICKS.get(),

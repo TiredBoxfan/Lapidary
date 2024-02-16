@@ -44,6 +44,8 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider {
         dropSlab(LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB.get());
         dropSelf(LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get());
 
+        dropSelf(LapidaryBlocks.PERIDOTITE.get());
+
         dropSelf(LapidaryBlocks.CRACKED_BRICKS.get());
 
         dropSelf(LapidaryBlocks.MOSSY_MUD_BRICKS.get());

@@ -20,7 +20,7 @@
     "lapidary:polished_andesite_brick_stairs",
     "lapidary:polished_andesite_brick_slab",
     "lapidary:polished_andesite_brick_wall",
-    "lapidary:jade",
+    "lapidary:peridotite",
     "lapidary:cracked_bricks",
     "lapidary:mossy_mud_bricks",
     "lapidary:mossy_mud_brick_stairs",
@@ -35,6 +35,8 @@
     "lapidary:end_stone_wall",
     "lapidary:cracked_end_stone_bricks",
     "lapidary:purpur_wall",
-    "lapidary:cracked_purpur_block"
+    "lapidary:cracked_purpur_block",
+    "lapidary:jade",
+    "lapidary:polished_jade"
   ]
 }
