@@ -35,21 +35,21 @@ public class LapidaryCreativeTabs {
 
                 output.accept(LapidaryBlocks.POLISHED_GRANITE_WALL.get());
                 output.accept(LapidaryBlocks.POLISHED_GRANITE_BRICKS.get());
-                output.accept(LapidaryBlocks.POLISHED_GRANITE_BRICK_STAIRS.get());
-                output.accept(LapidaryBlocks.POLISHED_GRANITE_BRICK_SLAB.get());
-                output.accept(LapidaryBlocks.POLISHED_GRANITE_BRICK_WALL.get());
+                output.accept(LapidaryBlocks.POLISHED_GRANITE_BRICK_TRIAD.STAIR.get());
+                output.accept(LapidaryBlocks.POLISHED_GRANITE_BRICK_TRIAD.SLAB.get());
+                output.accept(LapidaryBlocks.POLISHED_GRANITE_BRICK_TRIAD.WALL.get());
 
                 output.accept(LapidaryBlocks.POLISHED_DIORITE_WALL.get());
                 output.accept(LapidaryBlocks.POLISHED_DIORITE_BRICKS.get());
-                output.accept(LapidaryBlocks.POLISHED_DIORITE_BRICK_STAIRS.get());
-                output.accept(LapidaryBlocks.POLISHED_DIORITE_BRICK_SLAB.get());
-                output.accept(LapidaryBlocks.POLISHED_DIORITE_BRICK_WALL.get());
+                output.accept(LapidaryBlocks.POLISHED_DIORITE_BRICK_TRIAD.STAIR.get());
+                output.accept(LapidaryBlocks.POLISHED_DIORITE_BRICK_TRIAD.SLAB.get());
+                output.accept(LapidaryBlocks.POLISHED_DIORITE_BRICK_TRIAD.WALL.get());
 
                 output.accept(LapidaryBlocks.POLISHED_ANDESITE_WALL.get());
                 output.accept(LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get());
-                output.accept(LapidaryBlocks.POLISHED_ANDESITE_BRICK_STAIRS.get());
-                output.accept(LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB.get());
-                output.accept(LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get());
+                output.accept(LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD.STAIR.get());
+                output.accept(LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD.SLAB.get());
+                output.accept(LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD.WALL.get());
 
                 output.accept(LapidaryBlocks.PERIDOTITE.get());
                 output.accept(LapidaryBlocks.PERIDOTITE_TRIAD.STAIR.get());
@@ -95,26 +95,20 @@ public class LapidaryCreativeTabs {
 
             putAfterChain(event, Items.POLISHED_GRANITE_SLAB,
                     LapidaryBlocks.POLISHED_GRANITE_WALL.get(),
-                    LapidaryBlocks.POLISHED_GRANITE_BRICKS.get(),
-                    LapidaryBlocks.POLISHED_GRANITE_BRICK_STAIRS.get(),
-                    LapidaryBlocks.POLISHED_GRANITE_BRICK_SLAB.get(),
-                    LapidaryBlocks.POLISHED_GRANITE_BRICK_WALL.get());
+                    LapidaryBlocks.POLISHED_GRANITE_BRICKS.get());
+            putTriadAfter(event, LapidaryBlocks.POLISHED_GRANITE_BRICK_TRIAD, LapidaryBlocks.POLISHED_GRANITE_BRICKS.get());
 
             putAfterChain(event, Items.POLISHED_DIORITE_SLAB,
                     LapidaryBlocks.POLISHED_DIORITE_WALL.get(),
-                    LapidaryBlocks.POLISHED_DIORITE_BRICKS.get(),
-                    LapidaryBlocks.POLISHED_DIORITE_BRICK_STAIRS.get(),
-                    LapidaryBlocks.POLISHED_DIORITE_BRICK_SLAB.get(),
-                    LapidaryBlocks.POLISHED_DIORITE_BRICK_WALL.get());
+                    LapidaryBlocks.POLISHED_DIORITE_BRICKS.get());
+            putTriadAfter(event, LapidaryBlocks.POLISHED_DIORITE_BRICK_TRIAD, LapidaryBlocks.POLISHED_DIORITE_BRICKS.get());
 
             putAfterChain(event, Items.POLISHED_ANDESITE_SLAB,
                     LapidaryBlocks.POLISHED_ANDESITE_WALL.get(),
-                    LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get(),
-                    LapidaryBlocks.POLISHED_ANDESITE_BRICK_STAIRS.get(),
-                    LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB.get(),
-                    LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get());
+                    LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get());
+            putTriadAfter(event, LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD, LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get());
 
-            putAfter(event, LapidaryBlocks.PERIDOTITE.get(), LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get());
+            putAfter(event, LapidaryBlocks.PERIDOTITE.get(), LapidaryBlocks.POLISHED_GRANITE_BRICK_TRIAD.WALL.get());
             putTriadAfter(event, LapidaryBlocks.PERIDOTITE_TRIAD, LapidaryBlocks.PERIDOTITE.get());
 
             putAfter(event, LapidaryBlocks.CRACKED_BRICKS.get(), Items.BRICKS);

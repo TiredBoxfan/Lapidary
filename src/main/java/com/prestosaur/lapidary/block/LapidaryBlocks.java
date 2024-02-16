@@ -23,7 +23,7 @@ public class LapidaryBlocks {
     public static final RegistryObject<Block> PETRIFIED_PLANKS = registerBlock("petrified_planks",
             () -> new Block(BlockBehaviour.Properties.copy(PETRIFIED_LOG.get())));
     public static final RegistryObject<StairBlock> PETRIFIED_STAIRS = registerBlock("petrified_stairs",
-            () -> new StairBlock(PETRIFIED_PLANKS.get().defaultBlockState(),
+            () -> new StairBlock(() -> PETRIFIED_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.copy(PETRIFIED_PLANKS.get())));
 
     public static final RegistryObject<WallBlock> STONE_WALL = registerBlock("stone_wall",
@@ -33,41 +33,27 @@ public class LapidaryBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.POLISHED_GRANITE)));
     public static final RegistryObject<Block> POLISHED_GRANITE_BRICKS = registerBlock("polished_granite_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_GRANITE)));
-    public static final RegistryObject<StairBlock> POLISHED_GRANITE_BRICK_STAIRS = registerBlock("polished_granite_brick_stairs",
-            () -> new StairBlock(POLISHED_GRANITE_BRICKS.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(POLISHED_GRANITE_BRICKS.get())));
-    public static final RegistryObject<SlabBlock> POLISHED_GRANITE_BRICK_SLAB = registerBlock("polished_granite_brick_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(POLISHED_GRANITE_BRICKS.get())));
-    public static final RegistryObject<WallBlock> POLISHED_GRANITE_BRICK_WALL = registerBlock("polished_granite_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(POLISHED_GRANITE_BRICKS.get())));
+    public static final BlockTriad POLISHED_GRANITE_BRICK_TRIAD = new BlockTriad(
+            LapidaryBlocks.POLISHED_GRANITE_BRICKS, "polished_granite_brick");
 
     public static final RegistryObject<WallBlock> POLISHED_DIORITE_WALL = registerBlock("polished_diorite_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.POLISHED_DIORITE)));
     public static final RegistryObject<Block> POLISHED_DIORITE_BRICKS = registerBlock("polished_diorite_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_DIORITE)));
-    public static final RegistryObject<StairBlock> POLISHED_DIORITE_BRICK_STAIRS = registerBlock("polished_diorite_brick_stairs",
-            () -> new StairBlock(POLISHED_DIORITE_BRICKS.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(POLISHED_DIORITE_BRICKS.get())));
-    public static final RegistryObject<SlabBlock> POLISHED_DIORITE_BRICK_SLAB = registerBlock("polished_diorite_brick_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(POLISHED_DIORITE_BRICKS.get())));
-    public static final RegistryObject<WallBlock> POLISHED_DIORITE_BRICK_WALL = registerBlock("polished_diorite_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(POLISHED_DIORITE_BRICKS.get())));
+    public static final BlockTriad POLISHED_DIORITE_BRICK_TRIAD = new BlockTriad(
+            LapidaryBlocks.POLISHED_DIORITE_BRICKS, "polished_diorite_brick");
 
     public static final RegistryObject<WallBlock> POLISHED_ANDESITE_WALL = registerBlock("polished_andesite_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.POLISHED_ANDESITE)));
     public static final RegistryObject<Block> POLISHED_ANDESITE_BRICKS = registerBlock("polished_andesite_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_ANDESITE)));
-    public static final RegistryObject<StairBlock> POLISHED_ANDESITE_BRICK_STAIRS = registerBlock("polished_andesite_brick_stairs",
-            () -> new StairBlock(POLISHED_ANDESITE_BRICKS.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(POLISHED_ANDESITE_BRICKS.get())));
-    public static final RegistryObject<SlabBlock> POLISHED_ANDESITE_BRICK_SLAB = registerBlock("polished_andesite_brick_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(POLISHED_ANDESITE_BRICKS.get())));
-    public static final RegistryObject<WallBlock> POLISHED_ANDESITE_BRICK_WALL = registerBlock("polished_andesite_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(POLISHED_ANDESITE_BRICKS.get())));
+    public static final BlockTriad POLISHED_ANDESITE_BRICK_TRIAD = new BlockTriad(
+            LapidaryBlocks.POLISHED_ANDESITE_BRICKS, "polished_andesite_bricks");
 
     public static final RegistryObject<Block> PERIDOTITE = registerBlock("peridotite",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRANITE).mapColor(MapColor.COLOR_GREEN)));
-    public static final BlockTriad PERIDOTITE_TRIAD = new BlockTriad(() -> PERIDOTITE.get(), "peridotite");
+    public static final BlockTriad PERIDOTITE_TRIAD = new BlockTriad(
+            PERIDOTITE, "peridotite");
 
     public static final RegistryObject<Block> CRACKED_BRICKS = registerBlock("cracked_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));

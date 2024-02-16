@@ -35,23 +35,17 @@ public class LapidaryBlockStateProvider extends BlockStateProvider {
 
         wallAllWithItem(LapidaryBlocks.POLISHED_GRANITE_WALL.get(), new ResourceLocation("block/polished_granite"));
         cubeAllWithItem(LapidaryBlocks.POLISHED_GRANITE_BRICKS.get());
-        triadAllWithItem(LapidaryBlocks.POLISHED_GRANITE_BRICK_STAIRS.get(),
-                LapidaryBlocks.POLISHED_GRANITE_BRICK_SLAB.get(),
-                LapidaryBlocks.POLISHED_GRANITE_BRICK_WALL.get(),
+        triadAllWithItem(LapidaryBlocks.POLISHED_GRANITE_BRICK_TRIAD,
                 new ResourceLocation(Lapidary.MODID, "block/polished_granite_bricks"));
 
         wallAllWithItem(LapidaryBlocks.POLISHED_DIORITE_WALL.get(), new ResourceLocation("block/polished_diorite"));
         cubeAllWithItem(LapidaryBlocks.POLISHED_DIORITE_BRICKS.get());
-        triadAllWithItem(LapidaryBlocks.POLISHED_DIORITE_BRICK_STAIRS.get(),
-                LapidaryBlocks.POLISHED_DIORITE_BRICK_SLAB.get(),
-                LapidaryBlocks.POLISHED_DIORITE_BRICK_WALL.get(),
+        triadAllWithItem(LapidaryBlocks.POLISHED_DIORITE_BRICK_TRIAD,
                 new ResourceLocation(Lapidary.MODID, "block/polished_diorite_bricks"));
 
         wallAllWithItem(LapidaryBlocks.POLISHED_ANDESITE_WALL.get(), new ResourceLocation("block/polished_andesite"));
         cubeAllWithItem(LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get());
-        triadAllWithItem(LapidaryBlocks.POLISHED_ANDESITE_BRICK_STAIRS.get(),
-                LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB.get(),
-                LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get(),
+        triadAllWithItem(LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD,
                 new ResourceLocation(Lapidary.MODID, "block/polished_andesite_bricks"));
 
         cubeAllWithItem(LapidaryBlocks.PERIDOTITE.get());

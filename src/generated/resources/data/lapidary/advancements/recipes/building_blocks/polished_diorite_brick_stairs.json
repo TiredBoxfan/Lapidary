@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_polished_diorite_bricks": {
+    "has_polished_diorite": {
       "conditions": {
         "items": [
           {
             "items": [
-              "lapidary:polished_diorite_bricks"
+              "minecraft:polished_diorite"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_polished_diorite_bricks",
+      "has_polished_diorite",
       "has_the_recipe"
     ]
   ],

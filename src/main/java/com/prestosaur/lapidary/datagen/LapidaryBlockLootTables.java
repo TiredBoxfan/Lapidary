@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
 
@@ -29,21 +30,15 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider {
 
         dropSelf(LapidaryBlocks.POLISHED_GRANITE_WALL.get());
         dropSelf(LapidaryBlocks.POLISHED_GRANITE_BRICKS.get());
-        dropSelf(LapidaryBlocks.POLISHED_GRANITE_BRICK_STAIRS.get());
-        dropSlab(LapidaryBlocks.POLISHED_GRANITE_BRICK_SLAB.get());
-        dropSelf(LapidaryBlocks.POLISHED_GRANITE_BRICK_WALL.get());
+        triadDrops(LapidaryBlocks.POLISHED_GRANITE_BRICK_TRIAD);
 
         dropSelf(LapidaryBlocks.POLISHED_DIORITE_WALL.get());
         dropSelf(LapidaryBlocks.POLISHED_DIORITE_BRICKS.get());
-        dropSelf(LapidaryBlocks.POLISHED_DIORITE_BRICK_STAIRS.get());
-        dropSlab(LapidaryBlocks.POLISHED_DIORITE_BRICK_SLAB.get());
-        dropSelf(LapidaryBlocks.POLISHED_DIORITE_BRICK_WALL.get());
+        triadDrops(LapidaryBlocks.POLISHED_DIORITE_BRICK_TRIAD);
 
         dropSelf(LapidaryBlocks.POLISHED_ANDESITE_WALL.get());
         dropSelf(LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get());
-        dropSelf(LapidaryBlocks.POLISHED_ANDESITE_BRICK_STAIRS.get());
-        dropSlab(LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB.get());
-        dropSelf(LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get());
+        triadDrops(LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD);
 
         dropSelf(LapidaryBlocks.PERIDOTITE.get());
         triadDrops(LapidaryBlocks.PERIDOTITE_TRIAD);
@@ -73,7 +68,7 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider {
     }
 
     @Override
-    protected Iterable<Block> getKnownBlocks() {
+    protected @NotNull Iterable<Block> getKnownBlocks() {
         return LapidaryBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
 

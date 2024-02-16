@@ -3,15 +3,17 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "minecraft:polished_granite"
+      "item": "minecraft:polished_andesite"
     }
   },
   "pattern": [
+    "#  ",
+    "## ",
     "###"
   ],
   "result": {
-    "count": 6,
-    "item": "lapidary:polished_granite_brick_slab"
+    "count": 4,
+    "item": "lapidary:polished_andesite_bricks_stairs"
   },
   "show_notification": true
 }
