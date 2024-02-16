@@ -1,6 +1,7 @@
 package com.prestosaur.lapidary.item;
 
 import com.prestosaur.lapidary.Lapidary;
+import com.prestosaur.lapidary.block.BlockTriad;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -51,6 +52,9 @@ public class LapidaryCreativeTabs {
                 output.accept(LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get());
 
                 output.accept(LapidaryBlocks.PERIDOTITE.get());
+                output.accept(LapidaryBlocks.PERIDOTITE_TRIAD.STAIR.get());
+                output.accept(LapidaryBlocks.PERIDOTITE_TRIAD.SLAB.get());
+                output.accept(LapidaryBlocks.PERIDOTITE_TRIAD.WALL.get());
 
                 output.accept(LapidaryBlocks.CRACKED_BRICKS.get());
 
@@ -74,10 +78,6 @@ public class LapidaryCreativeTabs {
 
                 output.accept(LapidaryBlocks.JADE.get());
                 output.accept(LapidaryBlocks.POLISHED_JADE.get());
-
-                output.accept(LapidaryBlocks.PERIDOTITE_TRIAD.STAIR.get());
-                output.accept(LapidaryBlocks.PERIDOTITE_TRIAD.SLAB.get());
-                output.accept(LapidaryBlocks.PERIDOTITE_TRIAD.WALL.get());
             }).build());
 
     @SubscribeEvent
@@ -114,8 +114,8 @@ public class LapidaryCreativeTabs {
                     LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB.get(),
                     LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get());
 
-            putAfterChain(event, LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get(),
-                    LapidaryBlocks.PERIDOTITE.get());
+            putAfter(event, LapidaryBlocks.PERIDOTITE.get(), LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL.get());
+            putTriadAfter(event, LapidaryBlocks.PERIDOTITE_TRIAD, LapidaryBlocks.PERIDOTITE.get());
 
             putAfter(event, LapidaryBlocks.CRACKED_BRICKS.get(), Items.BRICKS);
 
@@ -158,5 +158,9 @@ public class LapidaryCreativeTabs {
 
     private static void putBefore(BuildCreativeModeTabContentsEvent event, ItemLike item, ItemLike before) {
         event.getEntries().putBefore(new ItemStack(before), new ItemStack(item), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+    }
+
+    private static void putTriadAfter(BuildCreativeModeTabContentsEvent event, BlockTriad triad, ItemLike start) {
+        putAfterChain(event, start, triad.STAIR.get(), triad.SLAB.get(), triad.WALL.get());
     }
 }

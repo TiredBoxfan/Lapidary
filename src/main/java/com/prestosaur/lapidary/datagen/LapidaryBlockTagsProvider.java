@@ -1,12 +1,16 @@
 package com.prestosaur.lapidary.datagen;
 
+import com.prestosaur.lapidary.block.BlockTriad;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -18,7 +22,11 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider provider) {
+    protected void addTags(HolderLookup.@NotNull Provider provider) {
+        addTriadKindTags(LapidaryBlocks.PERIDOTITE_TRIAD);
+
+        addTriadTag(BlockTags.MINEABLE_WITH_PICKAXE, LapidaryBlocks.PERIDOTITE_TRIAD);
+
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 LapidaryBlocks.PETRIFIED_LOG.get(),
                 LapidaryBlocks.PETRIFIED_WOOD.get(),
@@ -120,5 +128,21 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider {
                 LapidaryBlocks.END_STONE_SLAB.get(),
                 LapidaryBlocks.CRACKED_END_STONE_BRICKS.get()
         );
+    }
+
+    private void addTriadKindTags(BlockTriad ... triads) {
+        for (BlockTriad triad : triads) {
+            this.tag(BlockTags.STAIRS).add(triad.STAIR.get());
+            this.tag(BlockTags.SLABS).add(triad.SLAB.get());
+            this.tag(BlockTags.WALLS).add(triad.WALL.get());
+        }
+    }
+
+    private void addTriadTag(TagKey<Block> blockTag, BlockTriad ... triads) {
+        for (BlockTriad triad : triads) {
+            this.tag(blockTag).add(triad.STAIR.get());
+            this.tag(blockTag).add(triad.SLAB.get());
+            this.tag(blockTag).add(triad.WALL.get());
+        }
     }
 }

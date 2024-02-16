@@ -1,5 +1,6 @@
 package com.prestosaur.lapidary.datagen;
 
+import com.prestosaur.lapidary.block.BlockTriad;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -38,6 +39,8 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
         addCraftWallAndStonecut(consumer, LapidaryBlocks.POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE, Blocks.ANDESITE);
         addCraftBrickSetAndStonecut(consumer, LapidaryBlocks.POLISHED_ANDESITE_BRICKS, LapidaryBlocks.POLISHED_ANDESITE_BRICK_STAIRS, LapidaryBlocks.POLISHED_ANDESITE_BRICK_SLAB, LapidaryBlocks.POLISHED_ANDESITE_BRICK_WALL,
                 Blocks.POLISHED_ANDESITE, Blocks.ANDESITE);
+
+        addCraftTriadAndStonecut(consumer, LapidaryBlocks.PERIDOTITE_TRIAD, LapidaryBlocks.PERIDOTITE.get());
 
         smeltingResultFromBase(consumer, LapidaryBlocks.CRACKED_BRICKS.get(), Blocks.BRICKS);
 
@@ -119,6 +122,12 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
         addCraftStairsAndStonecut(consumer, stair, material, alts);
         addCraftSlabAndStonecut(consumer, slab, material, alts);
         addCraftWallAndStonecut(consumer, wall, material, alts);
+    }
+
+    public void addCraftTriadAndStonecut(Consumer<FinishedRecipe> consumer, BlockTriad triad, ItemLike material, ItemLike ... alts) {
+        addCraftStairsAndStonecut(consumer, triad.STAIR, material, alts);
+        addCraftSlabAndStonecut(consumer, triad.SLAB, material, alts);
+        addCraftWallAndStonecut(consumer, triad.WALL, material, alts);
     }
 
     private void addCraftBrickSetAndStonecut(Consumer<FinishedRecipe> consumer, RegistryObject<Block> block, RegistryObject<StairBlock> stair, RegistryObject<SlabBlock> slab, RegistryObject<WallBlock> wall, ItemLike material, ItemLike... alts) {
