@@ -2,6 +2,7 @@ package com.prestosaur.lapidary;
 
 import com.mojang.logging.LogUtils;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
+import com.prestosaur.lapidary.enchantment.LapidaryEnchantments;
 import com.prestosaur.lapidary.item.LapidaryCreativeTabs;
 import com.prestosaur.lapidary.item.LapidaryItems;
 import net.minecraft.client.Minecraft;
@@ -34,6 +35,7 @@ public class Lapidary {
         LapidaryItems.ITEMS.register(modEventBus);
         LapidaryCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         LapidaryBlocks.BLOCKS.register(modEventBus);
+        LapidaryEnchantments.ENCHANTMENTS.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -48,13 +50,6 @@ public class Lapidary {
     private void commonSetup(final FMLCommonSetupEvent event) {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
-
-        if (Config.logDirtBlock)
-            LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
-
-        LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
-
-        Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
