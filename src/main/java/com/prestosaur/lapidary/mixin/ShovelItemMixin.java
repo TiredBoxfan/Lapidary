@@ -1,6 +1,7 @@
 package com.prestosaur.lapidary.mixin;
 
 import com.prestosaur.lapidary.Config;
+import com.prestosaur.lapidary.accessors.PlayerSculptAccessor;
 import com.prestosaur.lapidary.enchantment.LapidaryEnchantments;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
@@ -16,7 +17,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -27,20 +27,6 @@ import static net.minecraftforge.common.ForgeMod.BLOCK_REACH;
 
 @Mixin(ShovelItem.class)
 public abstract class ShovelItemMixin extends Item {
-
-    // TODO: What is the correct way? ItemProperties?
-    // TODO: Check blockstate instead?
-    @Nullable
-    @Unique
-    BlockPos lapidary$lastTargetPos;
-    //BlockState lapidary$lastTargetBlockState;
-
-    /*@Unique
-    int lapidary$targetX = 0;
-    @Unique
-    int lapidary$targetY = 0;
-    @Unique
-    int lapidary$targetZ = 0;*/
 
     public ShovelItemMixin(Properties pProperties) {
         super(pProperties);
@@ -67,45 +53,37 @@ public abstract class ShovelItemMixin extends Item {
         Player player = pContext.getPlayer();
         BlockPos blockpos = pContext.getClickedPos();
 
+        // Cancel if there is no player.
         if (player == null) {
             info.setReturnValue(InteractionResult.PASS);
             return;
         }
 
-        //System.out.println("New Use: " + player.isUsingItem() + " " + lapidary$isTargetedBlock(blockpos));
-
+        // If the item is in the main hand and there is an off-hand item, give that off-hand item priority.
         if (pContext.getHand() == InteractionHand.MAIN_HAND && !player.getItemInHand(InteractionHand.OFF_HAND).isEmpty()) {
             info.setReturnValue(InteractionResult.PASS);
-            System.out.println("Hand Full");
             return;
         }
 
+        // Get flags.
         boolean hasSculptEnchant = EnchantmentHelper.getEnchantmentLevel(LapidaryEnchantments.SCULPT.get(), player) >= 1;
-        boolean sameBlock = lapidary$isTargetedBlock(blockpos);
+        boolean sameBlock = lapidary$isTargetedBlock(player, blockpos);
         boolean usingTool = player.isUsingItem();
         boolean useTick = player.getUseItemRemainingTicks() == 1;
 
-        System.out.println(player.getUseItemRemainingTicks() + "!");
-
+        // Determine if a state is either new or old.
         if (!hasSculptEnchant && (!sameBlock || !usingTool)) {
-        //if (EnchantmentHelper.getEnchantmentLevel(LapidaryEnchantments.SCULPT.get(), player) <= 0 && (player.getUseItemRemainingTicks() >= 1 || !player.isUsingItem()) || !lapidary$isTargetedBlock(blockpos)) {
-            //player.releaseUsingItem();
-            System.out.println("Start Use.");
+            // Stop using any item.
             player.stopUsingItem();
 
+            // Disable sculpting all together for silk touch.
             if ((EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, player) >= 1 && Config.disableSilkTouchSculpt)) {
                 info.setReturnValue(InteractionResult.PASS);
                 return;
             }
 
-            System.out.println("Not cancelled.");
-
-            lapidary$lastTargetPos = blockpos;
-            //lapidary$lastTargetBlockState = pContext.getLevel().getBlockState(blockpos);
-            //lapidary$lastTargetBlockState = pContext.getLevel().getBlockState(blockpos);
-            //lapidary$targetX = blockpos.getX();
-            //lapidary$targetY = blockpos.getY();
-            //lapidary$targetZ = blockpos.getZ();
+            // Set position and start to use.
+            ((PlayerSculptAccessor)player).setLastSculptLocation(blockpos);
             player.startUsingItem(pContext.getHand());
 
             info.setReturnValue(InteractionResult.CONSUME);
@@ -123,31 +101,28 @@ public abstract class ShovelItemMixin extends Item {
             if (hitResult instanceof BlockHitResult blockHitResult) {
                 // Ensure the same block is being targeted.
                 BlockPos blockpos = blockHitResult.getBlockPos();
-                //if (blockpos.equals(lapidary$lastTargetPos)) {
-                //if (pLevel.getBlockState(blockpos).equals(lapidary$lastTargetBlockState)) {
-                if (lapidary$isTargetedBlock(blockpos)) {
-                    if (pRemainingUseDuration == 1) {
+                if (lapidary$isTargetedBlock(player, blockpos)) {
+                    if (pRemainingUseDuration == 1) { // Only use when exactly 1 remaining use ticks are left.
                         useOn(new UseOnContext(player, player.getUsedItemHand(), blockHitResult));
-                        System.out.println("Complete.");
                         pLivingEntity.releaseUsingItem();
                     }
                 } else {
+                    // Release due to a different block being targeted.
                     pLivingEntity.releaseUsingItem();
-                    System.out.println("Stop: Different Block");
                 }
             } else {
+                // Release because no block is being targeted.
                 pLivingEntity.releaseUsingItem();
-                System.out.println("Stop: No Block");
             }
         } else {
+            // Release because action is not done by a player.
             pLivingEntity.releaseUsingItem();
-            System.out.println("Stop: Not Player");
         }
     }
 
     @Unique
-    protected boolean lapidary$isTargetedBlock(BlockPos blockpos) {
-        //return blockpos.getX() == lapidary$targetX && blockpos.getY() == lapidary$targetY && blockpos.getZ() == lapidary$targetZ;
-        return blockpos != null && lapidary$lastTargetPos != null && blockpos.getX() == lapidary$lastTargetPos.getX() && blockpos.getY() == lapidary$lastTargetPos.getY() && blockpos.getZ() == lapidary$lastTargetPos.getZ();
+    protected boolean lapidary$isTargetedBlock(Player player, BlockPos blockpos) {
+        BlockPos target = ((PlayerSculptAccessor)player).getLastSculptLocation();
+        return blockpos != null && target != null && blockpos.getX() == target.getX() && blockpos.getY() == target.getY() && blockpos.getZ() == target.getZ();
     }
 }

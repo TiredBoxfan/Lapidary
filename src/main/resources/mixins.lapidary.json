@@ -6,8 +6,9 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "AxeItemMixin",
-    "ShovelItemMixin",
-    "PointedDripstoneMixin"
+    "PlayerMixin",
+    "PointedDripstoneMixin",
+    "ShovelItemMixin"
   ],
   "client": [
   ],
