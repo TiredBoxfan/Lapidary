@@ -87,14 +87,13 @@ public abstract class ShovelItemMixin extends Item {
             player.startUsingItem(pContext.getHand());
 
             info.setReturnValue(InteractionResult.CONSUME);
-        } else if (!useTick) {
+        } else if (!useTick) { // Do not fall to Vanilla method unless useTick is true.
             info.setReturnValue(InteractionResult.CONSUME_PARTIAL);
         }
     }
 
     @Override
     public void onUseTick(@NotNull Level pLevel, @NotNull LivingEntity pLivingEntity, @NotNull ItemStack pStack, int pRemainingUseDuration) {
-        System.out.println(pRemainingUseDuration);
         if (pLivingEntity instanceof Player player && pRemainingUseDuration >= 0) {
             // Get the targeted block information, if any.
             HitResult hitResult = lapidary$calculateHitResult(pLivingEntity);
