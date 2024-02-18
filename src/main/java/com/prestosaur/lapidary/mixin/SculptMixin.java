@@ -1,59 +1,33 @@
 package com.prestosaur.lapidary.mixin;
 
+import com.prestosaur.lapidary.Config;
+import com.prestosaur.lapidary.accessors.PlayerSculptAccessor;
+import com.prestosaur.lapidary.enchantment.LapidaryEnchantments;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.ProjectileUtil;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult;
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(ShovelItem.class)
-public abstract class ShovelItemMixin extends SculptMixin {
+import static net.minecraftforge.common.ForgeMod.BLOCK_REACH;
 
-    public ShovelItemMixin(Properties pProperties) {
+@Mixin(DiggerItem.class)
+public abstract class SculptMixin extends Item {
+
+    public SculptMixin(Properties pProperties) {
         super(pProperties);
-    }
-
-    @Override
-    public @NotNull UseAnim getUseAnimation(@NotNull ItemStack pStack) {
-        return UseAnim.BRUSH;
-    }
-
-    @Override
-    public int getUseDuration(@NotNull ItemStack pStack) {
-        return 120; // TODO: Determine ideal value.
-    }
-
-    @Inject(method = "useOn", at = @At("HEAD"), cancellable = true)
-    public void useOnMixin(UseOnContext pContext, CallbackInfoReturnable<InteractionResult> info) {
-        lapidary$useOnSculpt(pContext, info);
-    }
-
-    /*@Override
-    public void onUseTick(@NotNull Level pLevel, @NotNull LivingEntity pLivingEntity, @NotNull ItemStack pStack, int pRemainingUseDuration) {
-        lapidary$onUseTickSculpt(pLevel, pLivingEntity, pStack, pRemainingUseDuration);
-    }*/
-}
-
-/*@Mixin(ShovelItem.class)
-public abstract class ShovelItemMixin extends Item {
-
-    public ShovelItemMixin(Properties pProperties) {
-        super(pProperties);
-    }
-
-    @Override
-    public @NotNull UseAnim getUseAnimation(@NotNull ItemStack pStack) {
-        return UseAnim.BRUSH;
-    }
-
-    @Override
-    public int getUseDuration(@NotNull ItemStack pStack) {
-        return 120; // TODO: Determine ideal value.
     }
 
     // Referenced from BrushItem.
@@ -62,8 +36,14 @@ public abstract class ShovelItemMixin extends Item {
         return ProjectileUtil.getHitResultOnViewVector(pEntity, (p) -> !p.isSpectator() && p.isPickable(), pEntity instanceof Player player ? player.getBlockReach() : BLOCK_REACH.get().getDefaultValue());
     }
 
-    @Inject(method = "useOn", at = @At("HEAD"), cancellable = true)
-    public void useOnMixin(UseOnContext pContext, CallbackInfoReturnable<InteractionResult> info) {
+    @Unique
+    protected boolean lapidary$isTargetedBlock(Player player, BlockPos blockpos) {
+        BlockPos target = ((PlayerSculptAccessor)player).getLastSculptLocation();
+        return blockpos != null && target != null && blockpos.getX() == target.getX() && blockpos.getY() == target.getY() && blockpos.getZ() == target.getZ();
+    }
+
+    @Unique
+    public void lapidary$useOnSculpt(UseOnContext pContext, CallbackInfoReturnable<InteractionResult> info) {
         Player player = pContext.getPlayer();
         BlockPos blockpos = pContext.getClickedPos();
 
@@ -106,8 +86,10 @@ public abstract class ShovelItemMixin extends Item {
         }
     }
 
-    @Override
+    //@Unique
+    //public void lapidary$onUseTickSculpt(@NotNull Level pLevel, @NotNull LivingEntity pLivingEntity, @NotNull ItemStack pStack, int pRemainingUseDuration) {
     public void onUseTick(@NotNull Level pLevel, @NotNull LivingEntity pLivingEntity, @NotNull ItemStack pStack, int pRemainingUseDuration) {
+        System.out.println("onUseTick");
         if (pLivingEntity instanceof Player player && pRemainingUseDuration >= 0) {
             // Get the targeted block information, if any.
             HitResult hitResult = lapidary$calculateHitResult(pLivingEntity);
@@ -132,11 +114,4 @@ public abstract class ShovelItemMixin extends Item {
             pLivingEntity.releaseUsingItem();
         }
     }
-
-    @Unique
-    protected boolean lapidary$isTargetedBlock(Player player, BlockPos blockpos) {
-        BlockPos target = ((PlayerSculptAccessor)player).getLastSculptLocation();
-        return blockpos != null && target != null && blockpos.getX() == target.getX() && blockpos.getY() == target.getY() && blockpos.getZ() == target.getZ();
-    }
 }
-*/

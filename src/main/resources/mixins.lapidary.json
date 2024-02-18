@@ -8,6 +8,7 @@
     "AxeItemMixin",
     "PlayerMixin",
     "PointedDripstoneMixin",
+    "SculptMixin",
     "ShovelItemMixin"
   ],
   "client": [
