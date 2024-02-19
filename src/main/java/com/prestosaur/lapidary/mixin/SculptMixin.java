@@ -30,6 +30,11 @@ public abstract class SculptMixin extends Item {
         super(pProperties);
     }
 
+    @Override
+    public int getUseDuration(@NotNull ItemStack pStack) {
+        return Config.sculptTime;
+    }
+
     // Referenced from BrushItem.
     @Unique
     private HitResult lapidary$calculateHitResult(LivingEntity pEntity) {
@@ -61,28 +66,30 @@ public abstract class SculptMixin extends Item {
 
         // Get flags.
         boolean hasSculptEnchant = EnchantmentHelper.getEnchantmentLevel(LapidaryEnchantments.SCULPT.get(), player) >= 1;
-        boolean sameBlock = lapidary$isTargetedBlock(player, blockpos);
-        boolean usingTool = player.isUsingItem();
-        boolean useTick = player.getUseItemRemainingTicks() == 1;
+        if (!hasSculptEnchant) {
+            boolean sameBlock = lapidary$isTargetedBlock(player, blockpos);
+            boolean usingTool = player.isUsingItem();
+            boolean useTick = player.getUseItemRemainingTicks() == 1;
 
-        // Determine if a state is either new or old.
-        if (!hasSculptEnchant && (!sameBlock || !usingTool)) {
-            // Stop using any item.
-            player.stopUsingItem();
+            // Determine if a state is either new or old.
+            if (!sameBlock || !usingTool) {
+                // Stop using any item.
+                player.stopUsingItem();
 
-            // Disable sculpting all together for silk touch.
-            if ((EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, player) >= 1 && Config.disableSilkTouchSculpt)) {
-                info.setReturnValue(InteractionResult.PASS);
-                return;
+                // Disable sculpting all together for silk touch.
+                if ((EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, player) >= 1 && Config.disableSilkTouchSculpt)) {
+                    info.setReturnValue(InteractionResult.PASS);
+                    return;
+                }
+
+                // Set position and start to use.
+                ((PlayerSculptAccessor) player).setLastSculptLocation(blockpos);
+                player.startUsingItem(pContext.getHand());
+
+                info.setReturnValue(InteractionResult.CONSUME);
+            } else if (!useTick) { // Do not fall to Vanilla method unless useTick is true.
+                info.setReturnValue(InteractionResult.CONSUME_PARTIAL);
             }
-
-            // Set position and start to use.
-            ((PlayerSculptAccessor)player).setLastSculptLocation(blockpos);
-            player.startUsingItem(pContext.getHand());
-
-            info.setReturnValue(InteractionResult.CONSUME);
-        } else if (!useTick) { // Do not fall to Vanilla method unless useTick is true.
-            info.setReturnValue(InteractionResult.CONSUME_PARTIAL);
         }
     }
 

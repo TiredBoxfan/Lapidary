@@ -22,12 +22,18 @@ public class Config {
             .comment("Whether to disable right-click sculpting when a tool has silk touch.")
             .define("disableSilkTouchSculpt", true);
 
+    private static final ForgeConfigSpec.IntValue SCULPT_TIME = BUILDER
+            .comment("How long a right-click with a tool needs to last without the Sculpting enchantment.")
+            .defineInRange("sculptTime", 16, 0, Integer.MAX_VALUE);
+
     static final ForgeConfigSpec SPEC = BUILDER.build();
 
     public static boolean disableSilkTouchSculpt;
+    public static int sculptTime;
 
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event) {
         disableSilkTouchSculpt = DISABLE_SILK_TOUCH_SCULPT.get();
+        sculptTime = SCULPT_TIME.get();
     }
 }
