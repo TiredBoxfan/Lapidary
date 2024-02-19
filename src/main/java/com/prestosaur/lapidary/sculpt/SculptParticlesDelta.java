@@ -1,8 +1,9 @@
-package com.prestosaur.lapidary.util;
+package com.prestosaur.lapidary.sculpt;
 
 import net.minecraft.core.Direction;
 import net.minecraft.world.phys.Vec3;
 
+// Borrowed from BrushItem.
 public record SculptParticlesDelta(double xd, double yd, double zd) {
     private static final double ALONG_SIDE_DELTA = 1.0D;
     private static final double OUT_FROM_SIDE_DELTA = 0.1D;

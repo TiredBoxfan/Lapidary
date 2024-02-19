@@ -3,7 +3,7 @@ package com.prestosaur.lapidary.mixin;
 import com.prestosaur.lapidary.Config;
 import com.prestosaur.lapidary.accessors.PlayerSculptAccessor;
 import com.prestosaur.lapidary.enchantment.LapidaryEnchantments;
-import com.prestosaur.lapidary.util.SculptParticlesDelta;
+import com.prestosaur.lapidary.sculpt.SculptParticlesDelta;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.BlockParticleOption;
