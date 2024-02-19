@@ -9,7 +9,10 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.DiggerItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -31,6 +34,11 @@ public abstract class SculptMixin extends Item {
     }
 
     @Override
+    public @NotNull UseAnim getUseAnimation(@NotNull ItemStack pStack) {
+        return UseAnim.BRUSH;
+    }
+
+    @Override
     public int getUseDuration(@NotNull ItemStack pStack) {
         return Config.sculptTime;
     }
@@ -43,7 +51,7 @@ public abstract class SculptMixin extends Item {
 
     @Unique
     protected boolean lapidary$isTargetedBlock(Player player, BlockPos blockpos) {
-        BlockPos target = ((PlayerSculptAccessor)player).getLastSculptLocation();
+        BlockPos target = ((PlayerSculptAccessor) player).getLastSculptLocation();
         return blockpos != null && target != null && blockpos.getX() == target.getX() && blockpos.getY() == target.getY() && blockpos.getZ() == target.getZ();
     }
 
@@ -59,7 +67,7 @@ public abstract class SculptMixin extends Item {
         }
 
         // If the item is in the main hand and there is an off-hand item, give that off-hand item priority.
-        if (pContext.getHand() == InteractionHand.MAIN_HAND && !player.getItemInHand(InteractionHand.OFF_HAND).isEmpty()) {
+        if (pContext.getHand() == InteractionHand.MAIN_HAND && !player.getItemInHand(InteractionHand.OFF_HAND).isEmpty() && !(player.getItemInHand(InteractionHand.OFF_HAND).getItem() instanceof DiggerItem)) {
             info.setReturnValue(InteractionResult.PASS);
             return;
         }
