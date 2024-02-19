@@ -16,6 +16,8 @@ public abstract class AxeItemMixin extends SculptMixin {
 
     @Inject(method = "useOn", at = @At("HEAD"), cancellable = true)
     public void useOnMixin(UseOnContext pContext, CallbackInfoReturnable<InteractionResult> info) {
-        lapidary$useOnSculpt(pContext, info);
+        var result = lapidary$useOnSculpt(pContext);
+        if (result != null)
+            info.setReturnValue(result);
     }
 }

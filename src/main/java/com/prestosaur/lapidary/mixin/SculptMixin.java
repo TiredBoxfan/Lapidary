@@ -24,6 +24,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -60,20 +61,19 @@ public abstract class SculptMixin extends Item {
     }
 
     @Unique
-    public void lapidary$useOnSculpt(UseOnContext pContext, CallbackInfoReturnable<InteractionResult> info) {
+    @Nullable
+    public InteractionResult lapidary$useOnSculpt(UseOnContext pContext) {
         Player player = pContext.getPlayer();
         BlockPos blockpos = pContext.getClickedPos();
 
         // Cancel if there is no player.
         if (player == null) {
-            info.setReturnValue(InteractionResult.PASS);
-            return;
+            return InteractionResult.PASS;
         }
 
         // If the item is in the main hand and there is an off-hand item, give that off-hand item priority.
         if (pContext.getHand() == InteractionHand.MAIN_HAND && !player.getItemInHand(InteractionHand.OFF_HAND).isEmpty() && !(player.getItemInHand(InteractionHand.OFF_HAND).getItem() instanceof DiggerItem)) {
-            info.setReturnValue(InteractionResult.PASS);
-            return;
+            return InteractionResult.PASS;
         }
 
         // Get flags.
@@ -90,19 +90,19 @@ public abstract class SculptMixin extends Item {
 
                 // Disable sculpting all together for silk touch.
                 if ((EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, player) >= 1 && Config.disableSilkTouchSculpt)) {
-                    info.setReturnValue(InteractionResult.PASS);
-                    return;
+                    return InteractionResult.PASS;
                 }
 
                 // Set position and start to use.
                 ((PlayerSculptAccessor) player).setLastSculptLocation(blockpos);
                 player.startUsingItem(pContext.getHand());
 
-                info.setReturnValue(InteractionResult.CONSUME);
+                return InteractionResult.CONSUME;
             } else if (!useTick) { // Do not fall to Vanilla method unless useTick is true.
-                info.setReturnValue(InteractionResult.CONSUME_PARTIAL);
+                return InteractionResult.CONSUME_PARTIAL;
             }
         }
+        return null;
     }
 
     //@Unique
