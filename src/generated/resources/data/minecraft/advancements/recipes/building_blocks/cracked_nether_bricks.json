@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_bricks": {
+    "has_cracked_nether_bricks": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:bricks"
+              "minecraft:cracked_nether_bricks"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "lapidary:cracked_bricks"
+        "recipe": "minecraft:cracked_nether_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_bricks",
+      "has_cracked_nether_bricks",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "lapidary:cracked_bricks"
+      "minecraft:cracked_nether_bricks"
     ]
   },
   "sends_telemetry_event": false

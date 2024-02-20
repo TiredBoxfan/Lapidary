@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_end_stone_bricks": {
+    "has_cracked_stone_bricks": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:end_stone_bricks"
+              "minecraft:cracked_stone_bricks"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "lapidary:cracked_end_stone_bricks"
+        "recipe": "minecraft:cracked_stone_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_end_stone_bricks",
+      "has_cracked_stone_bricks",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "lapidary:cracked_end_stone_bricks"
+      "minecraft:cracked_stone_bricks"
     ]
   },
   "sends_telemetry_event": false

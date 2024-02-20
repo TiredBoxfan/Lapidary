@@ -4,7 +4,7 @@
   "cookingtime": 200,
   "experience": 0.1,
   "ingredient": {
-    "item": "minecraft:purpur_block"
+    "item": "lapidary:cracked_bricks"
   },
-  "result": "lapidary:cracked_purpur_block"
+  "result": "minecraft:bricks"
 }

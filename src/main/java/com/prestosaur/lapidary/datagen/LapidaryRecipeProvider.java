@@ -4,6 +4,8 @@ import com.prestosaur.lapidary.block.BlockTriad;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -21,6 +23,17 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+
+        // Modify Vanilla
+
+        reverseVanillaSmelt(consumer, Items.CRACKED_STONE_BRICKS, Items.STONE_BRICKS);
+        reverseVanillaSmelt(consumer, Items.CRACKED_DEEPSLATE_BRICKS, Items.DEEPSLATE_BRICKS);
+        reverseVanillaSmelt(consumer, Items.CRACKED_DEEPSLATE_TILES, Items.DEEPSLATE_TILES);
+        reverseVanillaSmelt(consumer, Items.CRACKED_NETHER_BRICKS, Items.NETHER_BRICKS);
+        reverseVanillaSmelt(consumer, Items.CRACKED_POLISHED_BLACKSTONE_BRICKS, Items.POLISHED_BLACKSTONE_BRICKS);
+
+        // Lapidary
+
         addStonecutting(consumer, LapidaryBlocks.PETRIFIED_PLANKS, 1, LapidaryBlocks.PETRIFIED_LOG.get());
         woodFromLogs(consumer, LapidaryBlocks.PETRIFIED_WOOD.get(), LapidaryBlocks.PETRIFIED_LOG.get());
         addStonecutting(consumer, LapidaryBlocks.PETRIFIED_WOOD, 1, LapidaryBlocks.PETRIFIED_WOOD.get());
@@ -45,19 +58,25 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
         addCraftTriadAndStonecut(consumer, LapidaryBlocks.PERIDOTITE_TRIAD, LapidaryBlocks.PERIDOTITE.get());
         addCraftBrickSetAndStonecut(consumer, LapidaryBlocks.POLISHED_PERIDOTITE, LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD, LapidaryBlocks.PERIDOTITE.get());
 
-        smeltingResultFromBase(consumer, LapidaryBlocks.CRACKED_BRICKS.get(), Blocks.BRICKS);
+        smeltingResultFromBase(consumer, Blocks.BRICKS, LapidaryBlocks.CRACKED_BRICKS.get());
 
         addCraftMossy(consumer, LapidaryBlocks.MOSSY_MUD_BRICKS, Blocks.MUD_BRICKS);
         addCraftTriadAndStonecut(consumer, LapidaryBlocks.MOSSY_MUD_BRICK_TRIAD, LapidaryBlocks.MOSSY_MUD_BRICKS.get());
-        smeltingResultFromBase(consumer, LapidaryBlocks.CRACKED_MUD_BRICKS.get(), Blocks.MUD_BRICKS);
+        smeltingResultFromBase(consumer, Blocks.MUD_BRICKS, LapidaryBlocks.CRACKED_MUD_BRICKS.get());
 
         addCraftTriadAndStonecut(consumer, LapidaryBlocks.NETHERRACK_TRIAD, Blocks.NETHERRACK);
 
         addCraftTriadAndStonecut(consumer, LapidaryBlocks.END_STONE_TRIAD, Blocks.END_STONE);
-        smeltingResultFromBase(consumer, LapidaryBlocks.CRACKED_END_STONE_BRICKS.get(), Blocks.END_STONE_BRICKS);
+        smeltingResultFromBase(consumer, Blocks.END_STONE_BRICKS, LapidaryBlocks.CRACKED_END_STONE_BRICKS.get());
 
         addCraftWallAndStonecut(consumer, LapidaryBlocks.PURPUR_WALL, Blocks.PURPUR_BLOCK);
-        smeltingResultFromBase(consumer, LapidaryBlocks.CRACKED_PURPUR_BLOCK.get(), Blocks.PURPUR_BLOCK);
+        smeltingResultFromBase(consumer, Blocks.PURPUR_BLOCK, LapidaryBlocks.CRACKED_PURPUR_BLOCK.get());
+    }
+
+    private void reverseVanillaSmelt(Consumer<FinishedRecipe> consumer, ItemLike input, ItemLike output) {
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(input), RecipeCategory.BUILDING_BLOCKS, output, 0.1F, 200)
+                .unlockedBy(getHasName(input), has(input))
+                .save(consumer, new ResourceLocation(getItemName(input)));
     }
 
     private <T extends Block> void addStonecutting(Consumer<FinishedRecipe> consumer, RegistryObject<T> result, int count, ItemLike material) {

@@ -4,7 +4,7 @@
   "cookingtime": 200,
   "experience": 0.1,
   "ingredient": {
-    "item": "minecraft:bricks"
+    "item": "minecraft:cracked_polished_blackstone_bricks"
   },
-  "result": "lapidary:cracked_bricks"
+  "result": "minecraft:polished_blackstone_bricks"
 }
