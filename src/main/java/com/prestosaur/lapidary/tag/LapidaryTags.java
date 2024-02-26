@@ -10,6 +10,7 @@ public class LapidaryTags {
     public static class Blocks {
         public static final TagKey<Block> BARK_BLOCKS = tag("bark_blocks");
         public static final TagKey<Block> PETRIFIABLE = tag("petrifiable");
+        public static final TagKey<Block> COPPER_BLOCKS = tag("copper_blocks");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(Lapidary.MODID, name));

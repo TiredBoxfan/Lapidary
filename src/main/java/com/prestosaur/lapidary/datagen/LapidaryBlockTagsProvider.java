@@ -180,6 +180,43 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider {
                 Blocks.BAMBOO_MOSAIC_STAIRS,
                 Blocks.BAMBOO_MOSAIC_SLAB
         );
+        this.tag(LapidaryTags.Blocks.COPPER_BLOCKS).add(
+                Blocks.COPPER_BLOCK,
+                Blocks.WAXED_COPPER_BLOCK,
+                Blocks.CUT_COPPER,
+                Blocks.WAXED_CUT_COPPER,
+                Blocks.CUT_COPPER_STAIRS,
+                Blocks.WAXED_CUT_COPPER_STAIRS,
+                Blocks.CUT_COPPER_SLAB,
+                Blocks.WAXED_CUT_COPPER_SLAB,
+
+                Blocks.EXPOSED_COPPER,
+                Blocks.WAXED_EXPOSED_COPPER,
+                Blocks.EXPOSED_CUT_COPPER,
+                Blocks.WAXED_EXPOSED_CUT_COPPER,
+                Blocks.EXPOSED_CUT_COPPER_STAIRS,
+                Blocks.WAXED_EXPOSED_CUT_COPPER_STAIRS,
+                Blocks.EXPOSED_CUT_COPPER_SLAB,
+                Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB,
+
+                Blocks.WEATHERED_COPPER,
+                Blocks.WAXED_WEATHERED_COPPER,
+                Blocks.WEATHERED_CUT_COPPER,
+                Blocks.WAXED_WEATHERED_CUT_COPPER,
+                Blocks.WEATHERED_CUT_COPPER_STAIRS,
+                Blocks.WAXED_WEATHERED_CUT_COPPER_STAIRS,
+                Blocks.WEATHERED_CUT_COPPER_SLAB,
+                Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB,
+
+                Blocks.OXIDIZED_COPPER,
+                Blocks.WAXED_OXIDIZED_COPPER,
+                Blocks.OXIDIZED_CUT_COPPER,
+                Blocks.WAXED_OXIDIZED_CUT_COPPER,
+                Blocks.OXIDIZED_CUT_COPPER_STAIRS,
+                Blocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS,
+                Blocks.OXIDIZED_CUT_COPPER_SLAB,
+                Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB
+        );
     }
 
     private void addTriadKindTags(BlockTriad ... triads) {
