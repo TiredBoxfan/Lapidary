@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "lapidary:block/polished_peridotite_bricks"
+  }
+}

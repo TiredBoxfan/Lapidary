@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-16T00:20:01.8232832	Loot Tables
+// 1.20.1	2024-02-26T13:19:18.9955425	Loot Tables
 89c511ddcd79f347cc7c199a77e0b232c042e7b2 data/lapidary/loot_tables/blocks/cracked_bricks.json
 0241ab231fd13b755de94c5d02d1e91803698c58 data/lapidary/loot_tables/blocks/cracked_end_stone_bricks.json
 30a3aaef415fc6ddafee99bc90614c494c325ece data/lapidary/loot_tables/blocks/cracked_mud_bricks.json
@@ -39,6 +39,10 @@ e80aa9ee1d8a53a4880c8b2a49878754b82ef7d8 data/lapidary/loot_tables/blocks/polish
 30de51b1da1e75ed5f1ed6d18fa8a5de668376a2 data/lapidary/loot_tables/blocks/polished_granite_wall.json
 6bb323400d9c5e679d03f77c01efa5257fd1f91b data/lapidary/loot_tables/blocks/polished_jade.json
 3f8bc08b45a27a4fe57260d82f5c035ff43f6a32 data/lapidary/loot_tables/blocks/polished_peridotite.json
+6255c8793e7c83653299b4a99065c6b853458ff3 data/lapidary/loot_tables/blocks/polished_peridotite_bricks.json
+64658c1328c34e9401a8b8c46e3288e1b396bc94 data/lapidary/loot_tables/blocks/polished_peridotite_brick_slab.json
+d09fb7b6f4c9d7842ef7e2ed09a08034ef501cae data/lapidary/loot_tables/blocks/polished_peridotite_brick_stairs.json
+68b76dc79241822b18a171c5b275e40651e7798e data/lapidary/loot_tables/blocks/polished_peridotite_brick_wall.json
 8a4b99984fd7c8bf325489a5c20a68b6231f035d data/lapidary/loot_tables/blocks/polished_peridotite_slab.json
 f42ff7759630f0309cd25f88d50d224cfe9ae6fa data/lapidary/loot_tables/blocks/polished_peridotite_stairs.json
 436cbc4296664c34cff0581da3124b5822e4773a data/lapidary/loot_tables/blocks/polished_peridotite_wall.json

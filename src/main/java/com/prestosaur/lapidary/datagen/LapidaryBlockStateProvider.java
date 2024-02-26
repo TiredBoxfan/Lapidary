@@ -43,13 +43,14 @@ public class LapidaryBlockStateProvider extends ExtendedBlockStateProvider {
         cubeAllWithItem(LapidaryBlocks.PERIDOTITE.get());
         triadAllWithItem(LapidaryBlocks.PERIDOTITE_TRIAD, blockTexture(LapidaryBlocks.PERIDOTITE.get()));
         cubeAllWithItem(LapidaryBlocks.POLISHED_PERIDOTITE.get());
-        //triadAllWithItem(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD, blockTexture(LapidaryBlocks.POLISHED_PERIDOTITE.get()));
         stairAllWithItem(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD.STAIR.get(), blockTexture(LapidaryBlocks.POLISHED_PERIDOTITE.get()));
         slabBlockSide(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD.SLAB.get(),
                 new ResourceLocation(Lapidary.MODID, "block/polished_peridotite_slab_side"),
                 blockTexture(LapidaryBlocks.POLISHED_PERIDOTITE.get()));
         simpleItemFromBlock(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD.SLAB.get());
         wallAllWithItem(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD.WALL.get(), blockTexture(LapidaryBlocks.POLISHED_PERIDOTITE.get()));
+        cubeAllWithItem(LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS.get());
+        triadAllWithItem(LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS_TRIAD, blockTexture(LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS.get()));
 
         cubeAllWithItem(LapidaryBlocks.CRACKED_BRICKS.get());
 

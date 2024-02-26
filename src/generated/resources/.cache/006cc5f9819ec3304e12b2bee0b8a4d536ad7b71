@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-16T15:13:15.3501666	Tags for minecraft:block mod id lapidary
+// 1.20.1	2024-02-26T13:19:18.9935438	Tags for minecraft:block mod id lapidary
 5a5f64ab892d17fda12365b036f7e894302706f3 data/forge/tags/blocks/stone.json
 8faadbcb0d1f45aa5b53867de2df3b2e6f00d40a data/minecraft/tags/blocks/azalea_root_replaceable.json
 8faadbcb0d1f45aa5b53867de2df3b2e6f00d40a data/minecraft/tags/blocks/base_stone_overworld.json
@@ -9,12 +9,12 @@ fe93ffd978f114288298cd9756f5ad6ffeb8ac05 data/minecraft/tags/blocks/dragon_immun
 144578591f71464debdc17daa56316bcb22b094d data/minecraft/tags/blocks/infiniburn_nether.json
 144578591f71464debdc17daa56316bcb22b094d data/minecraft/tags/blocks/infiniburn_overworld.json
 8faadbcb0d1f45aa5b53867de2df3b2e6f00d40a data/minecraft/tags/blocks/lush_ground_replaceable.json
-5073124e9cb6e4c80b00fb076e56e33ee36bbc65 data/minecraft/tags/blocks/mineable/pickaxe.json
+2bee3ad81aadc8b99af8b0b1b73840ffae17e876 data/minecraft/tags/blocks/mineable/pickaxe.json
 8faadbcb0d1f45aa5b53867de2df3b2e6f00d40a data/minecraft/tags/blocks/moss_replaceable.json
 8faadbcb0d1f45aa5b53867de2df3b2e6f00d40a data/minecraft/tags/blocks/nether_carver_replaceables.json
 8faadbcb0d1f45aa5b53867de2df3b2e6f00d40a data/minecraft/tags/blocks/overworld_carver_replaceables.json
 8faadbcb0d1f45aa5b53867de2df3b2e6f00d40a data/minecraft/tags/blocks/sculk_replaceable.json
 8faadbcb0d1f45aa5b53867de2df3b2e6f00d40a data/minecraft/tags/blocks/sculk_replaceable_world_gen.json
-8ed174c645073424784d0531e1573e153e9d5771 data/minecraft/tags/blocks/slabs.json
-46c3da982e5a3071563a061fb66a0616c54040fc data/minecraft/tags/blocks/stairs.json
-c53f3e005cd6579e235ae4880db7014395c605d7 data/minecraft/tags/blocks/walls.json
+6a51bac729127637f930a3d73d8671d8d9e7e957 data/minecraft/tags/blocks/slabs.json
+6b6a2ad0db5eb0e758c2040e4b7140a3145c1ef7 data/minecraft/tags/blocks/stairs.json
+96628e735a7c14f770211e5287112d642986f4ad data/minecraft/tags/blocks/walls.json

@@ -58,6 +58,10 @@ public class LapidaryBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(LapidaryBlocks.PERIDOTITE.get())));
     public static final BlockTriad POLISHED_PERIDOTITE_TRIAD = new BlockTriad(
             POLISHED_PERIDOTITE, "polished_peridotite");
+    public static final RegistryObject<Block> POLISHED_PERIDOTITE_BRICKS = registerBlock("polished_peridotite_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(LapidaryBlocks.POLISHED_PERIDOTITE.get())));
+    public static final BlockTriad POLISHED_PERIDOTITE_BRICKS_TRIAD = new BlockTriad(
+            POLISHED_PERIDOTITE_BRICKS, "polished_peridotite_brick");
 
     public static final RegistryObject<Block> CRACKED_BRICKS = registerBlock("cracked_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));

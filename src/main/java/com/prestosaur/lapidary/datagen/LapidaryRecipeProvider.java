@@ -57,6 +57,7 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
                 Items.QUARTZ, Items.COBBLED_DEEPSLATE);
         addCraftTriadAndStonecut(consumer, LapidaryBlocks.PERIDOTITE_TRIAD, LapidaryBlocks.PERIDOTITE.get());
         addCraftBrickSetAndStonecut(consumer, LapidaryBlocks.POLISHED_PERIDOTITE, LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD, LapidaryBlocks.PERIDOTITE.get());
+        addCraftBrickSetAndStonecut(consumer, LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS, LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS_TRIAD, LapidaryBlocks.POLISHED_PERIDOTITE.get(), LapidaryBlocks.PERIDOTITE.get());
 
         smeltingResultFromBase(consumer, Blocks.BRICKS, LapidaryBlocks.CRACKED_BRICKS.get());
 
