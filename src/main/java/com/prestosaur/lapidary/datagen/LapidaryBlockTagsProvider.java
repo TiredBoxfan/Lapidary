@@ -2,6 +2,7 @@ package com.prestosaur.lapidary.datagen;
 
 import com.prestosaur.lapidary.block.BlockTriad;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
+import com.prestosaur.lapidary.tag.LapidaryTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -146,6 +147,38 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider {
                 LapidaryBlocks.END_STONE_TRIAD.SLAB.get(),
                 LapidaryBlocks.END_STONE_TRIAD.WALL.get(),
                 LapidaryBlocks.CRACKED_END_STONE_BRICKS.get()
+        );
+        this.tag(LapidaryTags.Blocks.BARK_BLOCKS).add(
+                Blocks.OAK_WOOD,
+                Blocks.STRIPPED_OAK_WOOD,
+                Blocks.SPRUCE_WOOD,
+                Blocks.STRIPPED_SPRUCE_WOOD,
+                Blocks.BIRCH_WOOD,
+                Blocks.STRIPPED_BIRCH_WOOD,
+                Blocks.JUNGLE_WOOD,
+                Blocks.STRIPPED_JUNGLE_WOOD,
+                Blocks.ACACIA_WOOD,
+                Blocks.STRIPPED_ACACIA_WOOD,
+                Blocks.DARK_OAK_WOOD,
+                Blocks.STRIPPED_DARK_OAK_WOOD,
+                Blocks.MANGROVE_WOOD,
+                Blocks.STRIPPED_MANGROVE_WOOD,
+                Blocks.CRIMSON_HYPHAE,
+                Blocks.STRIPPED_CRIMSON_HYPHAE,
+                Blocks.WARPED_HYPHAE,
+                Blocks.STRIPPED_CRIMSON_HYPHAE
+        );
+        this.tag(LapidaryTags.Blocks.PETRIFIABLE).addTags(
+                BlockTags.LOGS,
+                BlockTags.PLANKS,
+                BlockTags.WOODEN_STAIRS,
+                BlockTags.WOODEN_SLABS
+        ).add(
+                Blocks.BAMBOO_BLOCK,
+                Blocks.STRIPPED_BAMBOO_BLOCK,
+                Blocks.BAMBOO_MOSAIC,
+                Blocks.BAMBOO_MOSAIC_STAIRS,
+                Blocks.BAMBOO_MOSAIC_SLAB
         );
     }
 

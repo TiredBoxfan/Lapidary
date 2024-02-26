@@ -7,6 +7,7 @@ import com.prestosaur.lapidary.item.LapidaryCreativeTabs;
 import com.prestosaur.lapidary.item.LapidaryItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DiodeBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;

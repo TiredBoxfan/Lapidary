@@ -1,5 +1,7 @@
-// 1.20.1	2024-02-26T13:19:18.9935438	Tags for minecraft:block mod id lapidary
+// 1.20.1	2024-02-26T15:48:33.4923903	Tags for minecraft:block mod id lapidary
 5a5f64ab892d17fda12365b036f7e894302706f3 data/forge/tags/blocks/stone.json
+4b9e2db40239320ac5e6a753d130c0e87162db5b data/lapidary/tags/blocks/bark_blocks.json
+14e47f87e692da972cd11e42a612dfeafe450285 data/lapidary/tags/blocks/petrifiable.json
 8faadbcb0d1f45aa5b53867de2df3b2e6f00d40a data/minecraft/tags/blocks/azalea_root_replaceable.json
 8faadbcb0d1f45aa5b53867de2df3b2e6f00d40a data/minecraft/tags/blocks/base_stone_overworld.json
 8faadbcb0d1f45aa5b53867de2df3b2e6f00d40a data/minecraft/tags/blocks/deepslate_ore_replaceables.json
