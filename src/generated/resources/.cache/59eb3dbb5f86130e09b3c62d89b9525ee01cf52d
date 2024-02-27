@@ -1,8 +1,9 @@
-// 1.20.1	2024-02-26T13:19:18.9955425	Loot Tables
+// 1.20.1	2024-02-26T19:36:28.7794642	Loot Tables
 89c511ddcd79f347cc7c199a77e0b232c042e7b2 data/lapidary/loot_tables/blocks/cracked_bricks.json
 0241ab231fd13b755de94c5d02d1e91803698c58 data/lapidary/loot_tables/blocks/cracked_end_stone_bricks.json
 30a3aaef415fc6ddafee99bc90614c494c325ece data/lapidary/loot_tables/blocks/cracked_mud_bricks.json
 c18a5409fefdeb12c318cb97852c1fce0fe7f9ad data/lapidary/loot_tables/blocks/cracked_purpur_block.json
+7a44f949e6351d5b73ebe7249efdf9aa94b136d3 data/lapidary/loot_tables/blocks/destabilizer.json
 b87d64f00ad0bbdfb1429feafc58304b428b1449 data/lapidary/loot_tables/blocks/end_stone_slab.json
 1bd368262d805b058b579dc7312c901197eeb044 data/lapidary/loot_tables/blocks/end_stone_stairs.json
 53c62298147b72c72b3e7cbad980d5c4ac35ebef data/lapidary/loot_tables/blocks/end_stone_wall.json

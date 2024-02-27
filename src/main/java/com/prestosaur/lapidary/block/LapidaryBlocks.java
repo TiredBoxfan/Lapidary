@@ -7,6 +7,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -90,6 +91,9 @@ public class LapidaryBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRANITE).mapColor(MapColor.COLOR_GREEN)));
     public static final RegistryObject<Block> POLISHED_JADE = registerBlock("polished_jade",
             () -> new Block(BlockBehaviour.Properties.copy(JADE.get())));
+
+    public static final RegistryObject<DestabilizerBlock> DESTABILIZER_BLOCK = registerBlock("destabilizer",
+            () -> new DestabilizerBlock(BlockBehaviour.Properties.of().instabreak().sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY)));
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return LapidaryItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
