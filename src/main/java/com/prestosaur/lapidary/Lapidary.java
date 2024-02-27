@@ -1,6 +1,8 @@
 package com.prestosaur.lapidary;
 
 import com.mojang.logging.LogUtils;
+import com.prestosaur.lapidary.block.LapidaryBlockEntityTypes;
+import com.prestosaur.lapidary.block.LapidaryBlockStateProperties;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import com.prestosaur.lapidary.enchantment.LapidaryEnchantments;
 import com.prestosaur.lapidary.item.LapidaryCreativeTabs;
@@ -35,6 +37,7 @@ public class Lapidary {
 
         LapidaryItems.ITEMS.register(modEventBus);
         LapidaryCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
+        LapidaryBlockEntityTypes.BLOCK_ENTITY_TYPES.register(modEventBus);
         LapidaryBlocks.BLOCKS.register(modEventBus);
         LapidaryEnchantments.ENCHANTMENTS.register(modEventBus);
 
