@@ -1,6 +1,8 @@
 package com.prestosaur.lapidary.block;
 
 import com.prestosaur.lapidary.Lapidary;
+import com.prestosaur.lapidary.block.diode.DestabilizerBlock;
+import com.prestosaur.lapidary.block.groups.BlockTriad;
 import com.prestosaur.lapidary.item.LapidaryItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -63,6 +65,21 @@ public class LapidaryBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(LapidaryBlocks.POLISHED_PERIDOTITE.get())));
     public static final BlockTriad POLISHED_PERIDOTITE_BRICKS_TRIAD = new BlockTriad(
             POLISHED_PERIDOTITE_BRICKS, "polished_peridotite_brick");
+
+    /*
+    public static final RegistryObject<Block> RHYOLITE = registerBlock("rhyolite",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRANITE).mapColor(MapColor.COLOR_PINK)));
+    public static final BlockTriad RHYOLITE_TRIAD = new BlockTriad(
+            RHYOLITE, "rhyolite");
+    public static final RegistryObject<Block> POLISHED_RHYOLITE = registerBlock("polished_rhyolite",
+            () -> new Block(BlockBehaviour.Properties.copy(LapidaryBlocks.RHYOLITE.get())));
+    public static final BlockTriad POLISHED_RHYOLITE_TRIAD = new BlockTriad(
+            POLISHED_RHYOLITE, "polished_rhyolite");
+    public static final RegistryObject<Block> POLISHED_RHYOLITE_BRICKS = registerBlock("polished_rhyolite_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(LapidaryBlocks.POLISHED_RHYOLITE.get())));
+    public static final BlockTriad POLISHED_RHYOLITE_BRICKS_TRIAD = new BlockTriad(
+            POLISHED_RHYOLITE_BRICKS, "polished_rhyolite_bricks");
+    */
 
     public static final RegistryObject<Block> CRACKED_BRICKS = registerBlock("cracked_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));

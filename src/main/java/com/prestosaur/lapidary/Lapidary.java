@@ -1,15 +1,12 @@
 package com.prestosaur.lapidary;
 
 import com.mojang.logging.LogUtils;
-import com.prestosaur.lapidary.block.LapidaryBlockEntityTypes;
-import com.prestosaur.lapidary.block.LapidaryBlockStateProperties;
+import com.prestosaur.lapidary.blockentity.LapidaryBlockEntityTypes;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import com.prestosaur.lapidary.enchantment.LapidaryEnchantments;
 import com.prestosaur.lapidary.item.LapidaryCreativeTabs;
 import com.prestosaur.lapidary.item.LapidaryItems;
 import net.minecraft.client.Minecraft;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DiodeBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -21,7 +18,6 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file

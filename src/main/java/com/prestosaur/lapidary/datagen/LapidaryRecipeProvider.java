@@ -1,11 +1,10 @@
 package com.prestosaur.lapidary.datagen;
 
-import com.prestosaur.lapidary.block.BlockTriad;
+import com.prestosaur.lapidary.block.groups.BlockTriad;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;

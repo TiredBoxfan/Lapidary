@@ -1,6 +1,6 @@
 package com.prestosaur.lapidary.datagen;
 
-import com.prestosaur.lapidary.block.BlockTriad;
+import com.prestosaur.lapidary.block.groups.BlockTriad;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import com.prestosaur.lapidary.tag.LapidaryTags;
 import net.minecraft.core.HolderLookup;
@@ -12,8 +12,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.common.data.ForgeBlockTagsProvider;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

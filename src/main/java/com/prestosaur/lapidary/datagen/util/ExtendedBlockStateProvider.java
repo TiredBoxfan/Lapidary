@@ -1,7 +1,6 @@
 package com.prestosaur.lapidary.datagen.util;
 
-import com.prestosaur.lapidary.Lapidary;
-import com.prestosaur.lapidary.block.BlockTriad;
+import com.prestosaur.lapidary.block.groups.BlockTriad;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;

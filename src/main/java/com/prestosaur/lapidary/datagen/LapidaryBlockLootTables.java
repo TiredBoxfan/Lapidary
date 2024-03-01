@@ -1,6 +1,6 @@
 package com.prestosaur.lapidary.datagen;
 
-import com.prestosaur.lapidary.block.BlockTriad;
+import com.prestosaur.lapidary.block.groups.BlockTriad;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;

@@ -1,4 +1,4 @@
-package com.prestosaur.lapidary.block;
+package com.prestosaur.lapidary.block.diode;
 
 import net.minecraft.util.StringRepresentable;
 import org.jetbrains.annotations.NotNull;

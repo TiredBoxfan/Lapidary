@@ -1,5 +1,6 @@
-package com.prestosaur.lapidary.block;
+package com.prestosaur.lapidary.block.groups;
 
+import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;

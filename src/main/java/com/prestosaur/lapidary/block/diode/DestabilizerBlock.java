@@ -1,5 +1,7 @@
-package com.prestosaur.lapidary.block;
+package com.prestosaur.lapidary.block.diode;
 
+import com.prestosaur.lapidary.blockentity.DestabilizerBlockEntity;
+import com.prestosaur.lapidary.blockstate.LapidaryBlockStateProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -15,16 +17,14 @@ import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
 public class DestabilizerBlock extends DiodeBlock implements EntityBlock {
     public static final EnumProperty<DestabilizerMode> MODE = LapidaryBlockStateProperties.MODE_DESTABILIZER;
 
-    protected DestabilizerBlock(Properties pProperties) {
+    public DestabilizerBlock(Properties pProperties) {
         super(pProperties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(POWERED, Boolean.valueOf(false)).setValue(MODE, DestabilizerMode.BOUNDS));
     }

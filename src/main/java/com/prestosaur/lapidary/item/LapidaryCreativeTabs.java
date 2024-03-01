@@ -1,7 +1,7 @@
 package com.prestosaur.lapidary.item;
 
 import com.prestosaur.lapidary.Lapidary;
-import com.prestosaur.lapidary.block.BlockTriad;
+import com.prestosaur.lapidary.block.groups.BlockTriad;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;

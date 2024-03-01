@@ -1,4 +1,4 @@
-package com.prestosaur.lapidary.block;
+package com.prestosaur.lapidary.blockentity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
