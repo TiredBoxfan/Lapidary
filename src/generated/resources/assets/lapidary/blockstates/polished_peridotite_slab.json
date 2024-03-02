@@ -4,7 +4,7 @@
       "model": "lapidary:block/polished_peridotite_slab"
     },
     "type=double": {
-      "model": "lapidary:block/polished_peridotite_slab_double"
+      "model": "lapidary:block/polished_peridotite"
     },
     "type=top": {
       "model": "lapidary:block/polished_peridotite_slab_top"

@@ -53,11 +53,9 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
         addCraftBrickSetAndStonecut(consumer, LapidaryBlocks.POLISHED_ANDESITE_BRICKS, LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD,
                 Blocks.POLISHED_ANDESITE, Blocks.ANDESITE);
 
-        twoByTwoChecker(consumer, RecipeCategory.BUILDING_BLOCKS, LapidaryBlocks.PERIDOTITE.get(),
+        twoByTwoChecker(consumer, RecipeCategory.BUILDING_BLOCKS, LapidaryBlocks.PERIDOTITE_GROUP.BASE_BLOCK.get(),
                 Items.QUARTZ, Items.COBBLED_DEEPSLATE);
-        addCraftTriadAndStonecut(consumer, LapidaryBlocks.PERIDOTITE_TRIAD, LapidaryBlocks.PERIDOTITE.get());
-        addCraftBrickSetAndStonecut(consumer, LapidaryBlocks.POLISHED_PERIDOTITE, LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD, LapidaryBlocks.PERIDOTITE.get());
-        addCraftBrickSetAndStonecut(consumer, LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS, LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS_TRIAD, LapidaryBlocks.POLISHED_PERIDOTITE.get(), LapidaryBlocks.PERIDOTITE.get());
+        addCraftCustomStoneGroupAndStonecut(consumer, LapidaryBlocks.PERIDOTITE_GROUP);
 
         addCraftCustomStoneGroupAndStonecut(consumer, LapidaryBlocks.RHYOLITE_GROUP);
 

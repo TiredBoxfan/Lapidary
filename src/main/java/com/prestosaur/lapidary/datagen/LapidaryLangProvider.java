@@ -40,6 +40,8 @@ public class LapidaryLangProvider extends LanguageProvider {
         this.addBlock(LapidaryBlocks.POLISHED_ANDESITE_BRICKS, "Polished Andesite Bricks");
         this.addTriad(LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD, "Polished Andesite Brick");
 
+        this.addCustomStoneGroup(LapidaryBlocks.PERIDOTITE_GROUP, "Peridotite");
+
         this.addCustomStoneGroup(LapidaryBlocks.RHYOLITE_GROUP, "Rhyolite");
 
         this.addBlock(LapidaryBlocks.CRACKED_BRICKS, "Cracked Bricks");

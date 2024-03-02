@@ -54,18 +54,8 @@ public class LapidaryBlocks {
     public static final BlockTriad POLISHED_ANDESITE_BRICK_TRIAD = new BlockTriad(
             LapidaryBlocks.POLISHED_ANDESITE_BRICKS, "polished_andesite_brick");
 
-    public static final RegistryObject<Block> PERIDOTITE = registerBlock("peridotite",
+    public static final CustomStoneGroup PERIDOTITE_GROUP = new CustomStoneGroup("peridotite",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRANITE).mapColor(MapColor.COLOR_GREEN)));
-    public static final BlockTriad PERIDOTITE_TRIAD = new BlockTriad(
-            PERIDOTITE, "peridotite");
-    public static final RegistryObject<Block> POLISHED_PERIDOTITE = registerBlock("polished_peridotite",
-            () -> new Block(BlockBehaviour.Properties.copy(LapidaryBlocks.PERIDOTITE.get())));
-    public static final BlockTriad POLISHED_PERIDOTITE_TRIAD = new BlockTriad(
-            POLISHED_PERIDOTITE, "polished_peridotite");
-    public static final RegistryObject<Block> POLISHED_PERIDOTITE_BRICKS = registerBlock("polished_peridotite_bricks",
-            () -> new Block(BlockBehaviour.Properties.copy(LapidaryBlocks.POLISHED_PERIDOTITE.get())));
-    public static final BlockTriad POLISHED_PERIDOTITE_BRICKS_TRIAD = new BlockTriad(
-            POLISHED_PERIDOTITE_BRICKS, "polished_peridotite_brick");
 
     public static final CustomStoneGroup RHYOLITE_GROUP = new CustomStoneGroup("rhyolite",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRANITE).mapColor(MapColor.COLOR_PINK)));

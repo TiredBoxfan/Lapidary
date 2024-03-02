@@ -20,7 +20,7 @@ public class LapidaryConfiguredFeatures {
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest deepslateReplaceable = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
-        register(context, ORE_PERIDOTITE, Feature.ORE, new OreConfiguration(deepslateReplaceable, LapidaryBlocks.PERIDOTITE.get().defaultBlockState(), 64));
+        register(context, ORE_PERIDOTITE, Feature.ORE, new OreConfiguration(deepslateReplaceable, LapidaryBlocks.PERIDOTITE_GROUP.BASE_BLOCK.get().defaultBlockState(), 64));
     }
 
     private static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

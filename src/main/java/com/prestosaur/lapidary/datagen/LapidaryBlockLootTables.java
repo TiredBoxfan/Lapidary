@@ -41,12 +41,7 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider {
         dropSelf(LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get());
         triadDrops(LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD);
 
-        dropSelf(LapidaryBlocks.PERIDOTITE.get());
-        triadDrops(LapidaryBlocks.PERIDOTITE_TRIAD);
-        dropSelf(LapidaryBlocks.POLISHED_PERIDOTITE.get());
-        triadDrops(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD);
-        dropSelf(LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS.get());
-        triadDrops(LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS_TRIAD);
+        customStoneGroupDrops(LapidaryBlocks.PERIDOTITE_GROUP);
 
         customStoneGroupDrops(LapidaryBlocks.RHYOLITE_GROUP);
 

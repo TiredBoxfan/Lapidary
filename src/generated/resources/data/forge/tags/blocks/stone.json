@@ -1,8 +1,8 @@
 {
   "values": [
-    "lapidary:rhyolite",
-    "lapidary:polished_rhyolite",
     "lapidary:peridotite",
-    "lapidary:polished_peridotite"
+    "lapidary:polished_peridotite",
+    "lapidary:rhyolite",
+    "lapidary:polished_rhyolite"
   ]
 }

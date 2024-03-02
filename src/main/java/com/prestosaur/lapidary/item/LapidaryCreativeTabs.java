@@ -52,15 +52,6 @@ public class LapidaryCreativeTabs {
                 output.accept(LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD.SLAB.get());
                 output.accept(LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD.WALL.get());
 
-                output.accept(LapidaryBlocks.PERIDOTITE.get());
-                output.accept(LapidaryBlocks.PERIDOTITE_TRIAD.STAIR.get());
-                output.accept(LapidaryBlocks.PERIDOTITE_TRIAD.SLAB.get());
-                output.accept(LapidaryBlocks.PERIDOTITE_TRIAD.WALL.get());
-                output.accept(LapidaryBlocks.POLISHED_PERIDOTITE.get());
-                output.accept(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD.STAIR.get());
-                output.accept(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD.SLAB.get());
-                output.accept(LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD.WALL.get());
-
                 output.accept(LapidaryBlocks.CRACKED_BRICKS.get());
 
                 output.accept(LapidaryBlocks.MOSSY_MUD_BRICKS.get());
@@ -113,15 +104,9 @@ public class LapidaryCreativeTabs {
                     LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get());
             putTriadAfter(event, LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD, LapidaryBlocks.POLISHED_ANDESITE_BRICKS.get());
 
-            putAfterChain(event, LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD.WALL.get(),
-                    LapidaryBlocks.PERIDOTITE.get(),
-                    LapidaryBlocks.POLISHED_PERIDOTITE.get(),
-                    LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS.get());
-            putTriadAfter(event, LapidaryBlocks.PERIDOTITE_TRIAD, LapidaryBlocks.PERIDOTITE.get());
-            putTriadAfter(event, LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD, LapidaryBlocks.POLISHED_PERIDOTITE.get());
-            putTriadAfter(event, LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS_TRIAD, LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS.get());
+            putCustomStoneGroupAfter(event, LapidaryBlocks.PERIDOTITE_GROUP, LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD.WALL.get());
 
-            putCustomStoneGroupAfter(event, LapidaryBlocks.RHYOLITE_GROUP, LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS_TRIAD.WALL.get());
+            putCustomStoneGroupAfter(event, LapidaryBlocks.RHYOLITE_GROUP, LapidaryBlocks.PERIDOTITE_GROUP.BRICK_TRIAD.WALL.get());
 
             putAfter(event, LapidaryBlocks.CRACKED_BRICKS.get(), Items.BRICKS);
 
