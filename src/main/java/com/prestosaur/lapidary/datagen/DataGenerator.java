@@ -28,6 +28,7 @@ public class DataGenerator {
         generator.addProvider(event.includeServer(), new LapidaryBlockTagsProvider(packOutput, lookupProvider, Lapidary.MODID, existingFileHelper));
         generator.addProvider(event.includeServer(), new LapidaryRecipeProvider(packOutput));
         generator.addProvider(event.includeServer(), new LapidaryWorldGenProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new LapidaryLangProvider(packOutput, "en_us"));
 
         generator.addProvider(event.includeServer(), new LootTableProvider(
                 packOutput,
