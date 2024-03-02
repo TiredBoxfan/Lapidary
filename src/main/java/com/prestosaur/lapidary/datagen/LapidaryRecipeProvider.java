@@ -2,6 +2,7 @@ package com.prestosaur.lapidary.datagen;
 
 import com.prestosaur.lapidary.block.groups.BlockTriad;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
+import com.prestosaur.lapidary.block.groups.CustomStoneGroup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
@@ -57,6 +58,8 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
         addCraftTriadAndStonecut(consumer, LapidaryBlocks.PERIDOTITE_TRIAD, LapidaryBlocks.PERIDOTITE.get());
         addCraftBrickSetAndStonecut(consumer, LapidaryBlocks.POLISHED_PERIDOTITE, LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD, LapidaryBlocks.PERIDOTITE.get());
         addCraftBrickSetAndStonecut(consumer, LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS, LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS_TRIAD, LapidaryBlocks.POLISHED_PERIDOTITE.get(), LapidaryBlocks.PERIDOTITE.get());
+
+        addCraftCustomStoneGroupAndStonecut(consumer, LapidaryBlocks.RHYOLITE_GROUP);
 
         smeltingResultFromBase(consumer, Blocks.BRICKS, LapidaryBlocks.CRACKED_BRICKS.get());
 
@@ -150,6 +153,12 @@ public class LapidaryRecipeProvider extends RecipeProvider implements ICondition
         addCraftStairsAndStonecut(consumer, triad.STAIR, material, alts);
         addCraftSlabAndStonecut(consumer, triad.SLAB, material, alts);
         addCraftWallAndStonecut(consumer, triad.WALL, material, alts);
+    }
+
+    private void addCraftCustomStoneGroupAndStonecut(Consumer<FinishedRecipe> consumer, CustomStoneGroup group) {
+        addCraftTriadAndStonecut(consumer, group.BASE_TRIAD, group.BASE_BLOCK.get());
+        addCraftBrickSetAndStonecut(consumer, group.POLISHED_BLOCK, group.POLISHED_TRIAD, group.BASE_BLOCK.get());
+        addCraftBrickSetAndStonecut(consumer, group.BRICK_BLOCK, group.BRICK_TRIAD, group.POLISHED_BLOCK.get(), group.BASE_BLOCK.get());
     }
 
     private void addCraftBrickSetAndStonecut(Consumer<FinishedRecipe> consumer, RegistryObject<Block> block, RegistryObject<StairBlock> stair, RegistryObject<SlabBlock> slab, RegistryObject<WallBlock> wall, ItemLike material, ItemLike... alts) {

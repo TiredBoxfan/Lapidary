@@ -2,6 +2,7 @@ package com.prestosaur.lapidary.datagen;
 
 import com.prestosaur.lapidary.block.groups.BlockTriad;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
+import com.prestosaur.lapidary.block.groups.CustomStoneGroup;
 import com.prestosaur.lapidary.tag.LapidaryTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -25,6 +26,9 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
+
+        addCustomStoneGroupTags(LapidaryBlocks.RHYOLITE_GROUP);
+
         addTriadKindTags(
                 LapidaryBlocks.POLISHED_GRANITE_BRICK_TRIAD,
                 LapidaryBlocks.POLISHED_DIORITE_BRICK_TRIAD,
@@ -230,6 +234,38 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider {
             this.tag(blockTag).add(triad.STAIR.get());
             this.tag(blockTag).add(triad.SLAB.get());
             this.tag(blockTag).add(triad.WALL.get());
+        }
+    }
+
+    private void addCustomStoneGroupTags(CustomStoneGroup ... groups) {
+        for (CustomStoneGroup group : groups) {
+            this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
+                    group.BASE_BLOCK.get(),
+                    group.POLISHED_BLOCK.get(),
+                    group.BRICK_BLOCK.get()
+            );
+            BlockTriad[] triads = {
+                group.BASE_TRIAD,
+                group.POLISHED_TRIAD,
+                group.BRICK_TRIAD
+            };
+            addTriadKindTags(triads);
+            addTriadTag(BlockTags.MINEABLE_WITH_PICKAXE, triads);
+
+            this.tag(Tags.Blocks.STONE).add(
+                    group.BASE_BLOCK.get(),
+                    group.POLISHED_BLOCK.get()
+            );
+            this.tag(BlockTags.BASE_STONE_OVERWORLD).add(group.BASE_BLOCK.get());
+            this.tag(BlockTags.OVERWORLD_CARVER_REPLACEABLES).add(group.BASE_BLOCK.get());
+            this.tag(BlockTags.NETHER_CARVER_REPLACEABLES).add(group.BASE_BLOCK.get());
+            this.tag(BlockTags.DEEPSLATE_ORE_REPLACEABLES).add(group.BASE_BLOCK.get());
+            this.tag(BlockTags.DRIPSTONE_REPLACEABLE).add(group.BASE_BLOCK.get());
+            this.tag(BlockTags.MOSS_REPLACEABLE).add(group.BASE_BLOCK.get());
+            this.tag(BlockTags.LUSH_GROUND_REPLACEABLE).add(group.BASE_BLOCK.get());
+            this.tag(BlockTags.AZALEA_ROOT_REPLACEABLE).add(group.BASE_BLOCK.get());
+            this.tag(BlockTags.SCULK_REPLACEABLE_WORLD_GEN).add(group.BASE_BLOCK.get());
+            this.tag(BlockTags.SCULK_REPLACEABLE).add(group.BASE_BLOCK.get());
         }
     }
 }

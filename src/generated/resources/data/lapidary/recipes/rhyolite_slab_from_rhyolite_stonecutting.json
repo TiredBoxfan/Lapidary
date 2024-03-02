@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "lapidary:rhyolite"
+  },
+  "result": "lapidary:rhyolite_slab"
+}

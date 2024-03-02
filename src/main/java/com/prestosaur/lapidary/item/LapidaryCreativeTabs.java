@@ -3,6 +3,7 @@ package com.prestosaur.lapidary.item;
 import com.prestosaur.lapidary.Lapidary;
 import com.prestosaur.lapidary.block.groups.BlockTriad;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
+import com.prestosaur.lapidary.block.groups.CustomStoneGroup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
@@ -120,6 +121,8 @@ public class LapidaryCreativeTabs {
             putTriadAfter(event, LapidaryBlocks.POLISHED_PERIDOTITE_TRIAD, LapidaryBlocks.POLISHED_PERIDOTITE.get());
             putTriadAfter(event, LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS_TRIAD, LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS.get());
 
+            putCustomStoneGroupAfter(event, LapidaryBlocks.RHYOLITE_GROUP, LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS_TRIAD.WALL.get());
+
             putAfter(event, LapidaryBlocks.CRACKED_BRICKS.get(), Items.BRICKS);
 
             putAfter(event, LapidaryBlocks.CRACKED_MUD_BRICKS.get(), Items.MUD_BRICKS);
@@ -159,5 +162,16 @@ public class LapidaryCreativeTabs {
 
     private static void putTriadAfter(BuildCreativeModeTabContentsEvent event, BlockTriad triad, ItemLike start) {
         putAfterChain(event, start, triad.STAIR.get(), triad.SLAB.get(), triad.WALL.get());
+    }
+
+    private static void putCustomStoneGroupAfter(BuildCreativeModeTabContentsEvent event, CustomStoneGroup group, ItemLike start) {
+        putAfterChain(event, start,
+                group.BASE_BLOCK.get(),
+                group.POLISHED_BLOCK.get(),
+                group.BRICK_BLOCK.get()
+        );
+        putTriadAfter(event, group.BASE_TRIAD, group.BASE_BLOCK.get());
+        putTriadAfter(event, group.POLISHED_TRIAD, group.POLISHED_BLOCK.get());
+        putTriadAfter(event, group.BRICK_TRIAD, group.BRICK_BLOCK.get());
     }
 }

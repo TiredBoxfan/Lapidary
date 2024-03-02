@@ -1,6 +1,7 @@
 package com.prestosaur.lapidary.datagen.util;
 
 import com.prestosaur.lapidary.block.groups.BlockTriad;
+import com.prestosaur.lapidary.block.groups.CustomStoneGroup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -58,6 +59,15 @@ public abstract class ExtendedBlockStateProvider extends BlockStateProvider {
         stairAllWithItem(triad.STAIR.get(), texture);
         slabAllWithItem(triad.SLAB.get(), texture);
         wallAllWithItem(triad.WALL.get(), texture);
+    }
+
+    protected void customStoneGroupAllWithItem(CustomStoneGroup group) {
+        cubeAllWithItem(group.BASE_BLOCK.get());
+        triadAllWithItem(group.BASE_TRIAD, blockTexture(group.BASE_BLOCK.get()));
+        cubeAllWithItem(group.POLISHED_BLOCK.get());
+        triadAllWithItem(group.POLISHED_TRIAD, blockTexture(group.POLISHED_BLOCK.get()));
+        cubeAllWithItem(group.BRICK_BLOCK.get());
+        triadAllWithItem(group.BRICK_TRIAD, blockTexture(group.BRICK_BLOCK.get()));
     }
 
     protected void cubeMirrorWithItem(Block block) {

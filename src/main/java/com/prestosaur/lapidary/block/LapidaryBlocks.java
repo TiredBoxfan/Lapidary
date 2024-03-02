@@ -3,6 +3,7 @@ package com.prestosaur.lapidary.block;
 import com.prestosaur.lapidary.Lapidary;
 import com.prestosaur.lapidary.block.diode.DestabilizerBlock;
 import com.prestosaur.lapidary.block.groups.BlockTriad;
+import com.prestosaur.lapidary.block.groups.CustomStoneGroup;
 import com.prestosaur.lapidary.item.LapidaryItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -65,6 +66,9 @@ public class LapidaryBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(LapidaryBlocks.POLISHED_PERIDOTITE.get())));
     public static final BlockTriad POLISHED_PERIDOTITE_BRICKS_TRIAD = new BlockTriad(
             POLISHED_PERIDOTITE_BRICKS, "polished_peridotite_brick");
+
+    public static final CustomStoneGroup RHYOLITE_GROUP = new CustomStoneGroup("rhyolite",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRANITE).mapColor(MapColor.COLOR_PINK)));
 
     /*
     public static final RegistryObject<Block> RHYOLITE = registerBlock("rhyolite",

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "lapidary:block/polished_rhyolite_slab"
+    },
+    "type=double": {
+      "model": "lapidary:block/polished_rhyolite"
+    },
+    "type=top": {
+      "model": "lapidary:block/polished_rhyolite_slab_top"
+    }
+  }
+}

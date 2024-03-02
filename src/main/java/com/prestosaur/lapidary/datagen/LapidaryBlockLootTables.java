@@ -2,6 +2,7 @@ package com.prestosaur.lapidary.datagen;
 
 import com.prestosaur.lapidary.block.groups.BlockTriad;
 import com.prestosaur.lapidary.block.LapidaryBlocks;
+import com.prestosaur.lapidary.block.groups.CustomStoneGroup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.ItemLike;
@@ -47,6 +48,8 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider {
         dropSelf(LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS.get());
         triadDrops(LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS_TRIAD);
 
+        customStoneGroupDrops(LapidaryBlocks.RHYOLITE_GROUP);
+
         dropSelf(LapidaryBlocks.CRACKED_BRICKS.get());
 
         dropSelf(LapidaryBlocks.MOSSY_MUD_BRICKS.get());
@@ -84,5 +87,14 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider {
         dropSelf(triad.STAIR.get());
         dropSlab(triad.SLAB.get());
         dropSelf(triad.WALL.get());
+    }
+
+    private void customStoneGroupDrops(CustomStoneGroup group) {
+        dropSelf(group.BASE_BLOCK.get());
+        triadDrops(group.BASE_TRIAD);
+        dropSelf(group.POLISHED_BLOCK.get());
+        triadDrops(group.POLISHED_TRIAD);
+        dropSelf(group.BRICK_BLOCK.get());
+        triadDrops(group.BRICK_TRIAD);
     }
 }

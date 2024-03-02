@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_post",
+  "textures": {
+    "wall": "lapidary:block/polished_rhyolite_bricks"
+  }
+}

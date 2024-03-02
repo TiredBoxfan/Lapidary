@@ -52,6 +52,8 @@ public class LapidaryBlockStateProvider extends ExtendedBlockStateProvider {
         cubeAllWithItem(LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS.get());
         triadAllWithItem(LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS_TRIAD, blockTexture(LapidaryBlocks.POLISHED_PERIDOTITE_BRICKS.get()));
 
+        customStoneGroupAllWithItem(LapidaryBlocks.RHYOLITE_GROUP);
+
         cubeAllWithItem(LapidaryBlocks.CRACKED_BRICKS.get());
 
         cubeMirrorWithItem(LapidaryBlocks.MOSSY_MUD_BRICKS.get());
