@@ -61,11 +61,18 @@ public abstract class ExtendedBlockStateProvider extends BlockStateProvider {
         wallAllWithItem(triad.WALL.get(), texture);
     }
 
+    protected void triadAllWithItemSlab(BlockTriad triad, ResourceLocation texture) {
+        stairAllWithItem(triad.STAIR.get(), texture);
+        slabBlockSide(triad.SLAB.get(), texture.withSuffix("_slab_side"), texture);
+        simpleItemFromBlock(triad.SLAB.get());
+        wallAllWithItem(triad.WALL.get(), texture);
+    }
+
     protected void customStoneGroupAllWithItem(CustomStoneGroup group) {
         cubeAllWithItem(group.BASE_BLOCK.get());
         triadAllWithItem(group.BASE_TRIAD, blockTexture(group.BASE_BLOCK.get()));
         cubeAllWithItem(group.POLISHED_BLOCK.get());
-        triadAllWithItem(group.POLISHED_TRIAD, blockTexture(group.POLISHED_BLOCK.get()));
+        triadAllWithItemSlab(group.POLISHED_TRIAD, blockTexture(group.POLISHED_BLOCK.get()));
         cubeAllWithItem(group.BRICK_BLOCK.get());
         triadAllWithItem(group.BRICK_TRIAD, blockTexture(group.BRICK_BLOCK.get()));
     }

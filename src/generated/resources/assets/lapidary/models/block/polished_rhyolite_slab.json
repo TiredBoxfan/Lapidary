@@ -2,7 +2,7 @@
   "parent": "minecraft:block/slab",
   "textures": {
     "bottom": "lapidary:block/polished_rhyolite",
-    "side": "lapidary:block/polished_rhyolite",
+    "side": "lapidary:block/polished_rhyolite_slab_side",
     "top": "lapidary:block/polished_rhyolite"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "lapidary:block/polished_peridotite",
+    "side": "lapidary:block/polished_peridotite_slab_side"
+  }
+}

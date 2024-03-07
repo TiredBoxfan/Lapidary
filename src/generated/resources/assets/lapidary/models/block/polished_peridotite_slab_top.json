@@ -2,7 +2,7 @@
   "parent": "minecraft:block/slab_top",
   "textures": {
     "bottom": "lapidary:block/polished_peridotite",
-    "side": "lapidary:block/polished_peridotite",
+    "side": "lapidary:block/polished_peridotite_slab_side",
     "top": "lapidary:block/polished_peridotite"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "lapidary:block/polished_rhyolite",
+    "side": "lapidary:block/polished_rhyolite_slab_side"
+  }
+}

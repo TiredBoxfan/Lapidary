@@ -4,7 +4,7 @@
       "model": "lapidary:block/polished_rhyolite_slab"
     },
     "type=double": {
-      "model": "lapidary:block/polished_rhyolite"
+      "model": "lapidary:block/polished_rhyolite_slab_double"
     },
     "type=top": {
       "model": "lapidary:block/polished_rhyolite_slab_top"
