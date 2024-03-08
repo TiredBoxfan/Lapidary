@@ -93,4 +93,10 @@ public abstract class ExtendedBlockStateProvider extends BlockStateProvider {
 
         slabBlock(slab, bottomslab, topslab, doubleslab);
     }
+
+    protected void columnBlock(Block block, ResourceLocation sideTexture, ResourceLocation endTexture) {
+        String name = ForgeRegistries.BLOCKS.getKey(block).getPath();
+        ModelFile model = models().cubeColumn(name, sideTexture, endTexture);
+        simpleBlock(block, model);
+    }
 }

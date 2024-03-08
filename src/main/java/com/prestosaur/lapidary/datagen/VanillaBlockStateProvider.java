@@ -7,6 +7,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class VanillaBlockStateProvider extends ExtendedBlockStateProvider {
@@ -36,6 +37,15 @@ public class VanillaBlockStateProvider extends ExtendedBlockStateProvider {
         slabBlockSide((SlabBlock) Blocks.POLISHED_DEEPSLATE_SLAB,
                 new ResourceLocation(Lapidary.MODID, "block/polished_deepslate_slab_side"),
                 blockTexture(Blocks.POLISHED_DEEPSLATE));
+
+        ResourceLocation sandstoneSide = new ResourceLocation("block/sandstone");
+        ResourceLocation sandstoneTop = new ResourceLocation("block/sandstone_top");
+        columnBlock(Blocks.SANDSTONE, sandstoneSide, sandstoneTop);
+        stairsBlock((StairBlock) Blocks.SANDSTONE_STAIRS, sandstoneSide, sandstoneTop, sandstoneTop);
+        slabBlockSide((SlabBlock) Blocks.SANDSTONE_SLAB, sandstoneSide, sandstoneTop);
+        cubeAll(Blocks.CUT_SANDSTONE);
+        slabBlockSide((SlabBlock) Blocks.CUT_SANDSTONE_SLAB, new ResourceLocation(Lapidary.MODID, "block/cut_sandstone_slab_side"), blockTexture(Blocks.CUT_SANDSTONE));
+        columnBlock(Blocks.CHISELED_SANDSTONE, blockTexture(Blocks.CHISELED_SANDSTONE), new ResourceLocation("block/cut_sandstone"));
 
         slabBlockSide((SlabBlock) Blocks.POLISHED_BLACKSTONE_SLAB,
                 new ResourceLocation(Lapidary.MODID, "block/polished_blackstone_slab_side"),
