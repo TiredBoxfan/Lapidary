@@ -35,6 +35,8 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider {
                 LapidaryBlocks.POLISHED_GRANITE_BRICK_TRIAD,
                 LapidaryBlocks.POLISHED_DIORITE_BRICK_TRIAD,
                 LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD,
+                LapidaryBlocks.POLISHED_SANDSTONE_TRIAD,
+                LapidaryBlocks.POLISHED_RED_SANDSTONE_TRIAD,
                 LapidaryBlocks.NETHERRACK_TRIAD,
                 LapidaryBlocks.NETHERRACK_TRIAD,
                 LapidaryBlocks.END_STONE_TRIAD
@@ -44,6 +46,8 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider {
                 LapidaryBlocks.POLISHED_GRANITE_BRICK_TRIAD,
                 LapidaryBlocks.POLISHED_DIORITE_BRICK_TRIAD,
                 LapidaryBlocks.POLISHED_ANDESITE_BRICK_TRIAD,
+                LapidaryBlocks.POLISHED_SANDSTONE_TRIAD,
+                LapidaryBlocks.POLISHED_RED_SANDSTONE_TRIAD,
                 LapidaryBlocks.NETHERRACK_TRIAD,
                 LapidaryBlocks.NETHERRACK_TRIAD,
                 LapidaryBlocks.END_STONE_TRIAD
@@ -71,6 +75,14 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider {
                 LapidaryBlocks.MOSSY_MUD_BRICKS.get(),
                 LapidaryBlocks.CRACKED_MUD_BRICKS.get(),
 
+                LapidaryBlocks.POLISHED_SANDSTONE.get(),
+                LapidaryBlocks.CUT_SANDSTONE_STAIRS.get(),
+                LapidaryBlocks.CUT_SANDSTONE_WALL.get(),
+
+                LapidaryBlocks.POLISHED_RED_SANDSTONE.get(),
+                LapidaryBlocks.CUT_RED_SANDSTONE_STAIRS.get(),
+                LapidaryBlocks.CUT_RED_SANDSTONE_WALL.get(),
+
                 LapidaryBlocks.CRACKED_END_STONE_BRICKS.get(),
 
                 LapidaryBlocks.PURPUR_WALL.get(),
@@ -79,11 +91,17 @@ public class LapidaryBlockTagsProvider extends BlockTagsProvider {
                 LapidaryBlocks.JADE.get(),
                 LapidaryBlocks.POLISHED_JADE.get()
         );
+        this.tag(BlockTags.STAIRS).add(
+                LapidaryBlocks.CUT_SANDSTONE_STAIRS.get(),
+                LapidaryBlocks.CUT_RED_SANDSTONE_STAIRS.get()
+        );
         this.tag(BlockTags.WALLS).add(
                 LapidaryBlocks.STONE_WALL.get(),
                 LapidaryBlocks.POLISHED_GRANITE_WALL.get(),
                 LapidaryBlocks.POLISHED_DIORITE_WALL.get(),
                 LapidaryBlocks.POLISHED_ANDESITE_WALL.get(),
+                LapidaryBlocks.CUT_SANDSTONE_WALL.get(),
+                LapidaryBlocks.CUT_RED_SANDSTONE_WALL.get(),
                 LapidaryBlocks.PURPUR_WALL.get()
         );
         this.tag(BlockTags.INFINIBURN_OVERWORLD).add(

@@ -50,6 +50,16 @@ public class LapidaryLangProvider extends LanguageProvider {
         this.addTriad(LapidaryBlocks.MOSSY_MUD_BRICK_TRIAD, "Mossy Mud Brick");
         this.addBlock(LapidaryBlocks.CRACKED_MUD_BRICKS, "Cracked Mud Bricks");
 
+        this.addBlock(LapidaryBlocks.POLISHED_SANDSTONE, "Polished Sandstone");
+        this.addTriad(LapidaryBlocks.POLISHED_SANDSTONE_TRIAD, "Polished Sandstone");
+        this.addBlock(LapidaryBlocks.CUT_SANDSTONE_STAIRS, "Cut Sandstone Stairs");
+        this.addBlock(LapidaryBlocks.CUT_SANDSTONE_WALL, "Cut Sandstone Wall");
+
+        this.addBlock(LapidaryBlocks.POLISHED_RED_SANDSTONE, "Polished Red Sandstone");
+        this.addTriad(LapidaryBlocks.POLISHED_RED_SANDSTONE_TRIAD, "Polished Red Sandstone");
+        this.addBlock(LapidaryBlocks.CUT_RED_SANDSTONE_STAIRS, "Cut Red Sandstone Stairs");
+        this.addBlock(LapidaryBlocks.CUT_RED_SANDSTONE_WALL, "Cut Red Sandstone Wall");
+
         this.addTriad(LapidaryBlocks.NETHERRACK_TRIAD, "Netherrack");
 
         this.addTriad(LapidaryBlocks.END_STONE_TRIAD, "End Stone");

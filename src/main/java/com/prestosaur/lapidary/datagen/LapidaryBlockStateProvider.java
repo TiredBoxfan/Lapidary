@@ -5,6 +5,7 @@ import com.prestosaur.lapidary.block.LapidaryBlocks;
 import com.prestosaur.lapidary.datagen.util.ExtendedBlockStateProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class LapidaryBlockStateProvider extends ExtendedBlockStateProvider {
@@ -50,6 +51,16 @@ public class LapidaryBlockStateProvider extends ExtendedBlockStateProvider {
         triadAllWithItem(LapidaryBlocks.MOSSY_MUD_BRICK_TRIAD,
                 new ResourceLocation(Lapidary.MODID, "block/mossy_mud_bricks"));
         cubeMirrorWithItem(LapidaryBlocks.CRACKED_MUD_BRICKS.get());
+
+        cubeAllWithItem(LapidaryBlocks.POLISHED_SANDSTONE.get());
+        triadAllWithItemSlab(LapidaryBlocks.POLISHED_SANDSTONE_TRIAD, blockTexture(LapidaryBlocks.POLISHED_SANDSTONE.get()));
+        stairAllWithItem(LapidaryBlocks.CUT_SANDSTONE_STAIRS.get(), blockTexture(Blocks.CUT_SANDSTONE));
+        wallAllWithItem(LapidaryBlocks.CUT_SANDSTONE_WALL.get(), blockTexture(Blocks.CUT_SANDSTONE));
+
+        cubeAllWithItem(LapidaryBlocks.POLISHED_RED_SANDSTONE.get());
+        triadAllWithItemSlab(LapidaryBlocks.POLISHED_RED_SANDSTONE_TRIAD, blockTexture(LapidaryBlocks.POLISHED_RED_SANDSTONE.get()));
+        stairAllWithItem(LapidaryBlocks.CUT_RED_SANDSTONE_STAIRS.get(), blockTexture(Blocks.CUT_RED_SANDSTONE));
+        wallAllWithItem(LapidaryBlocks.CUT_RED_SANDSTONE_WALL.get(), blockTexture(Blocks.CUT_RED_SANDSTONE));
 
         triadAllWithItem(LapidaryBlocks.NETHERRACK_TRIAD,
                 new ResourceLocation("block/netherrack"));

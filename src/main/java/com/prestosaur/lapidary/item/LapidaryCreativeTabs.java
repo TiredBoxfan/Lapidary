@@ -115,6 +115,18 @@ public class LapidaryCreativeTabs {
                     LapidaryBlocks.MOSSY_MUD_BRICKS.get());
             putTriadAfter(event, LapidaryBlocks.MOSSY_MUD_BRICK_TRIAD, LapidaryBlocks.MOSSY_MUD_BRICKS.get());
 
+            putAfter(event, LapidaryBlocks.CUT_SANDSTONE_STAIRS.get(), Blocks.CUT_SANDSTONE);
+            putAfter(event, LapidaryBlocks.CUT_SANDSTONE_WALL.get(), Blocks.CUT_SANDSTONE_SLAB);
+            putAfterChain(event, Blocks.SMOOTH_SANDSTONE_SLAB,
+                    LapidaryBlocks.POLISHED_SANDSTONE.get());
+            putTriadAfter(event, LapidaryBlocks.POLISHED_SANDSTONE_TRIAD, LapidaryBlocks.POLISHED_SANDSTONE.get());
+
+            putAfter(event, LapidaryBlocks.CUT_RED_SANDSTONE_STAIRS.get(), Blocks.CUT_RED_SANDSTONE);
+            putAfter(event, LapidaryBlocks.CUT_RED_SANDSTONE_WALL.get(), Blocks.CUT_RED_SANDSTONE_SLAB);
+            putAfterChain(event, Blocks.SMOOTH_RED_SANDSTONE_SLAB,
+                    LapidaryBlocks.POLISHED_RED_SANDSTONE.get());
+            putTriadAfter(event, LapidaryBlocks.POLISHED_RED_SANDSTONE_TRIAD, LapidaryBlocks.POLISHED_RED_SANDSTONE.get());
+
             putTriadAfter(event, LapidaryBlocks.NETHERRACK_TRIAD, Items.NETHERRACK);
 
             putTriadAfter(event, LapidaryBlocks.END_STONE_TRIAD, Items.END_STONE);

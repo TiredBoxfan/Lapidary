@@ -9,8 +9,12 @@
     "lapidary:polished_granite_brick_stairs",
     "lapidary:polished_diorite_brick_stairs",
     "lapidary:polished_andesite_brick_stairs",
+    "lapidary:polished_sandstone_stairs",
+    "lapidary:polished_red_sandstone_stairs",
     "lapidary:netherrack_stairs",
     "lapidary:netherrack_stairs",
-    "lapidary:end_stone_stairs"
+    "lapidary:end_stone_stairs",
+    "lapidary:cut_sandstone_stairs",
+    "lapidary:cut_red_sandstone_stairs"
   ]
 }

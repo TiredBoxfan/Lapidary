@@ -60,21 +60,6 @@ public class LapidaryBlocks {
     public static final CustomStoneGroup RHYOLITE_GROUP = new CustomStoneGroup("rhyolite",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRANITE).mapColor(MapColor.COLOR_PINK)));
 
-    /*
-    public static final RegistryObject<Block> RHYOLITE = registerBlock("rhyolite",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRANITE).mapColor(MapColor.COLOR_PINK)));
-    public static final BlockTriad RHYOLITE_TRIAD = new BlockTriad(
-            RHYOLITE, "rhyolite");
-    public static final RegistryObject<Block> POLISHED_RHYOLITE = registerBlock("polished_rhyolite",
-            () -> new Block(BlockBehaviour.Properties.copy(LapidaryBlocks.RHYOLITE.get())));
-    public static final BlockTriad POLISHED_RHYOLITE_TRIAD = new BlockTriad(
-            POLISHED_RHYOLITE, "polished_rhyolite");
-    public static final RegistryObject<Block> POLISHED_RHYOLITE_BRICKS = registerBlock("polished_rhyolite_bricks",
-            () -> new Block(BlockBehaviour.Properties.copy(LapidaryBlocks.POLISHED_RHYOLITE.get())));
-    public static final BlockTriad POLISHED_RHYOLITE_BRICKS_TRIAD = new BlockTriad(
-            POLISHED_RHYOLITE_BRICKS, "polished_rhyolite_bricks");
-    */
-
     public static final RegistryObject<Block> CRACKED_BRICKS = registerBlock("cracked_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
 
@@ -84,6 +69,26 @@ public class LapidaryBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.MUD_BRICKS)));
     public static final BlockTriad MOSSY_MUD_BRICK_TRIAD = new BlockTriad(
             MOSSY_MUD_BRICKS, "mossy_mud_brick");
+
+    public static final RegistryObject<Block> POLISHED_SANDSTONE = registerBlock("polished_sandstone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CUT_SANDSTONE)));
+    public static final BlockTriad POLISHED_SANDSTONE_TRIAD = new BlockTriad(
+            POLISHED_SANDSTONE, "polished_sandstone");
+    public static final RegistryObject<StairBlock> CUT_SANDSTONE_STAIRS = registerBlock("cut_sandstone_stairs",
+            () -> new StairBlock(Blocks.CUT_SANDSTONE::defaultBlockState,
+                    BlockBehaviour.Properties.copy(Blocks.CUT_SANDSTONE)));
+    public static final RegistryObject<WallBlock> CUT_SANDSTONE_WALL = registerBlock("cut_sandstone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CUT_SANDSTONE)));
+
+    public static final RegistryObject<Block> POLISHED_RED_SANDSTONE = registerBlock("polished_red_sandstone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CUT_RED_SANDSTONE)));
+    public static final BlockTriad POLISHED_RED_SANDSTONE_TRIAD = new BlockTriad(
+            POLISHED_RED_SANDSTONE, "polished_red_sandstone");
+    public static final RegistryObject<StairBlock> CUT_RED_SANDSTONE_STAIRS = registerBlock("cut_red_sandstone_stairs",
+            () -> new StairBlock(Blocks.CUT_RED_SANDSTONE::defaultBlockState,
+                    BlockBehaviour.Properties.copy(Blocks.CUT_RED_SANDSTONE)));
+    public static final RegistryObject<WallBlock> CUT_RED_SANDSTONE_WALL = registerBlock("cut_red_sandstone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CUT_RED_SANDSTONE)));
 
     public static final BlockTriad NETHERRACK_TRIAD = new BlockTriad(
             () -> Blocks.NETHERRACK, "netherrack");

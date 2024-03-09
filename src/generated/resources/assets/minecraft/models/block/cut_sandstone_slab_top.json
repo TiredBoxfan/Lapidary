@@ -2,7 +2,7 @@
   "parent": "minecraft:block/slab_top",
   "textures": {
     "bottom": "minecraft:block/cut_sandstone",
-    "side": "lapidary:block/cut_sandstone_slab_side",
+    "side": "minecraft:block/cut_sandstone",
     "top": "minecraft:block/cut_sandstone"
   }
 }

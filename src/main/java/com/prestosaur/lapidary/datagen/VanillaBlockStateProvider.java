@@ -44,8 +44,9 @@ public class VanillaBlockStateProvider extends ExtendedBlockStateProvider {
         stairsBlock((StairBlock) Blocks.SANDSTONE_STAIRS, sandstoneSide, sandstoneTop, sandstoneTop);
         slabBlockSide((SlabBlock) Blocks.SANDSTONE_SLAB, sandstoneSide, sandstoneTop);
         cubeAll(Blocks.CUT_SANDSTONE);
-        slabBlockSide((SlabBlock) Blocks.CUT_SANDSTONE_SLAB, new ResourceLocation(Lapidary.MODID, "block/cut_sandstone_slab_side"), blockTexture(Blocks.CUT_SANDSTONE));
-        columnBlock(Blocks.CHISELED_SANDSTONE, blockTexture(Blocks.CHISELED_SANDSTONE), new ResourceLocation("block/cut_sandstone"));
+        //slabBlockSide((SlabBlock) Blocks.CUT_SANDSTONE_SLAB, new ResourceLocation(Lapidary.MODID, "block/polished_sandstone_slab_side"), blockTexture(Blocks.CUT_SANDSTONE));
+        slabBlock((SlabBlock) Blocks.CUT_SANDSTONE_SLAB, blockTexture(Blocks.CUT_SANDSTONE), blockTexture(Blocks.CUT_SANDSTONE));
+        columnBlock(Blocks.CHISELED_SANDSTONE, blockTexture(Blocks.CHISELED_SANDSTONE), new ResourceLocation(Lapidary.MODID, "block/polished_sandstone"));
 
         ResourceLocation redSandstoneSide = new ResourceLocation("block/red_sandstone");
         ResourceLocation redSandstoneTop = new ResourceLocation("block/red_sandstone_top");
@@ -53,8 +54,9 @@ public class VanillaBlockStateProvider extends ExtendedBlockStateProvider {
         stairsBlock((StairBlock) Blocks.RED_SANDSTONE_STAIRS, redSandstoneSide, redSandstoneTop, redSandstoneTop);
         slabBlockSide((SlabBlock) Blocks.RED_SANDSTONE_SLAB, redSandstoneSide, redSandstoneTop);
         cubeAll(Blocks.CUT_RED_SANDSTONE);
-        slabBlockSide((SlabBlock) Blocks.CUT_RED_SANDSTONE_SLAB, new ResourceLocation(Lapidary.MODID, "block/cut_red_sandstone_slab_side"), blockTexture(Blocks.CUT_RED_SANDSTONE));
-        columnBlock(Blocks.CHISELED_RED_SANDSTONE, blockTexture(Blocks.CHISELED_RED_SANDSTONE), new ResourceLocation("block/cut_red_sandstone"));
+        //slabBlockSide((SlabBlock) Blocks.CUT_RED_SANDSTONE_SLAB, new ResourceLocation(Lapidary.MODID, "block/polished_red_sandstone_slab_side"), blockTexture(Blocks.CUT_RED_SANDSTONE));
+        slabBlock((SlabBlock) Blocks.CUT_RED_SANDSTONE_SLAB, blockTexture(Blocks.CUT_RED_SANDSTONE), blockTexture(Blocks.CUT_RED_SANDSTONE));
+        columnBlock(Blocks.CHISELED_RED_SANDSTONE, blockTexture(Blocks.CHISELED_RED_SANDSTONE), new ResourceLocation(Lapidary.MODID,"block/polished_red_sandstone"));
 
         slabBlockSide((SlabBlock) Blocks.POLISHED_BLACKSTONE_SLAB,
                 new ResourceLocation(Lapidary.MODID, "block/polished_blackstone_slab_side"),

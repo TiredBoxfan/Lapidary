@@ -51,6 +51,16 @@ public class LapidaryBlockLootTables extends BlockLootSubProvider {
         triadDrops(LapidaryBlocks.MOSSY_MUD_BRICK_TRIAD);
         dropSelf(LapidaryBlocks.CRACKED_MUD_BRICKS.get());
 
+        dropSelf(LapidaryBlocks.POLISHED_SANDSTONE.get());
+        triadDrops(LapidaryBlocks.POLISHED_SANDSTONE_TRIAD);
+        dropSelf(LapidaryBlocks.CUT_SANDSTONE_STAIRS.get());
+        dropSelf(LapidaryBlocks.CUT_SANDSTONE_WALL.get());
+
+        dropSelf(LapidaryBlocks.POLISHED_RED_SANDSTONE.get());
+        triadDrops(LapidaryBlocks.POLISHED_RED_SANDSTONE_TRIAD);
+        dropSelf(LapidaryBlocks.CUT_RED_SANDSTONE_STAIRS.get());
+        dropSelf(LapidaryBlocks.CUT_RED_SANDSTONE_WALL.get());
+
         triadDrops(LapidaryBlocks.NETHERRACK_TRIAD);
 
         triadDrops(LapidaryBlocks.END_STONE_TRIAD);
